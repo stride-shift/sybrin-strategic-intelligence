@@ -1,0 +1,150 @@
+HYPERAUTOMATION PRODUCTS
+Sybrin Platform - Low-code application development platform with:
+AppBuilder - Drag-and-drop application designer
+Data Modeler - Tool for creating Entity Relationship Diagrams
+Sybrin Process and Rules Engine - Business rules standardization
+Themes and Style Builder - Customizable application branding
+Sybrin Developer Tools - VS Code extension for custom plugins
+Accelerator Apps - Pre-built application templates
+Digital Signatures - Electronic signature solution with encryption and compliance
+Content Delivery Network (CDN) - Data acceleration with caching nodes
+Document Management System (DMS) - Comprehensive document management including:
+Document Capture (scan, bulk import, drag-drop, mobile, email)
+Document Generation
+Document Repositories/Types
+Document Indexing and Classification
+OCR, OMR, ICR, MICR capabilities
+Document Search and Retrieval
+Document Viewer
+Records Management
+Image Pre-Processing/IQA
+Data Import and Export
+CMIS Service (Content Management Interoperability)
+Data Context API
+Case Builder/Case Management - Workflow and case tracking system
+Customer Communications & Experience Manager (CCX) - Omni-channel correspondence management
+Intelligent Document Processing (IDP) - AI-powered document data extraction
+Sybrin Vitals - System monitoring and auto-recovery solution
+PAYMENTS & CLEARING PRODUCTS
+Payments Hub - Centralized payments ecosystem supporting:
+Domestic payments (Real Time, RTGS, Cheque, EFT, Bill Payments)
+Cross-border payments (TCIB, Remittances, SWIFT)
+Alternative payments (P2P, Biometric, QR Code, Proxy)
+Payment Management components
+Integration Management
+Commission and Charges
+Liquidity Management
+Mandate Manager
+Recurring Payments Manager
+Debit Orders Manager
+Settlement Management
+Anti-Money Laundering integration
+Fraud Risk Management integration
+Reconciliations
+EFT Payments - Electronic funds transfer management
+Cheque Processing Module - Digital cheque truncation and clearing
+SignPay - Mandate management for collections and debit orders
+TCIB (Transactions Cleared on an Immediate Basis) - SADC cross-border payment system
+Switch Manager - Payment switch operations management for:
+ACH Switch - Automated Clearing House switch
+Mojaloop Instant Payment Switch - Open-source payment switch
+Corporate-to-Bank (C2B) - Corporate banking platform with:
+Corporate Registration
+User Management
+Transactional Services
+Payment Services
+Trade Finance and Supply Chain Services
+Lending and Credit Services
+Value-Added Services
+Digital Branch - Branch digitization solution including:
+Teller functionality
+Cash Vault Management
+Queue Management integration
+Bill payments processing
+UniTeller - Teller interface system
+DIGITAL ONBOARDING PRODUCTS
+No-Code Journey Builder - Visual onboarding workflow creator
+Identity Name Screening - Sanctions and PEP screening with integrations to:
+Acuris
+LexisNexis
+Castellum.ai
+Internal lists
+Operations Workspace - Account opening exception handling
+Compliance Workspace - KYC/AML case management
+IDENTITY VERIFICATION PRODUCTS
+Liveness, Selfie Capture & Compare - Biometric verification with:
+Active liveness detection
+Passive liveness detection
+Facial comparison
+Deepfake detection
+Intelligent Document Capture & Extraction (Sybrin ID Capture) - ID/passport capture with:
+Mobile SDKs (iOS and Android)
+Web APIs
+MRZ and PDF417 barcode reading
+Auto-cropping
+Offline functionality
+Document Fraud Detection (DocFraud) - Document authenticity verification with:
+Metadata checks
+Photocopy/scan detection
+Physical tampering detection
+Screen-recapture detection
+Digital tampering detection
+FRAUD RISK MANAGEMENT
+Transaction Monitoring - Real-time fraud detection with:
+Tazama engine integration
+Configuration Manager
+Rule Builder
+ISO 20022 support
+Integration with Compliance Workspace
+ADDITIONAL SOLUTIONS
+WebAssist - Hardware communication component for scanners and biometric devices
+Incident Tracker - Online portal for logging support issues
+Loan Management System (LMS) - Through strategic partnerships
+Employee Due Diligence (EDD) - Conflict of interest and employee compliance management
+i-Kaw (Philippines-specific) - Complete compliance solution
+TCIB Integration Microservice - Connector for TCIB scheme
+PROFESSIONAL SERVICES
+Sybrin Knowledge Centre (SKC) - Training services:
+Standard Classroom Training
+Customized Workshop-Based Training
+eLearning Platform
+Graduate Programs
+Leadership Programs
+Education Assistance
+Implementation Services:
+Business Analysis
+UX Design
+Project Management
+Development & Implementation
+Quality Assurance & Testing
+COE (Center of Excellence) Consultants
+Cloud Migration Services
+Upgrade Services
+Support Services:
+24/7 Helpdesk
+Service Delivery Champions
+In-region support partners
+Service Level Agreements (SLAs)
+Incident management
+Consulting Services:
+Digital Strategy & Roadmap
+Architecture Design
+Design Sprints
+Prototyping
+Staff Augmentation
+Custom Development
+Partner Program:
+Referral Partnership
+System Integrator Partnership
+Build/OEM Partnership
+Training and enablement
+Marketing support
+Partner Manager support
+EMPLOYEE BENEFITS & PROGRAMS (Internal)
+Syborg Rewards (internal rewards platform)
+Medical Aid
+Group Risk Plan
+Employee Wellness Program
+LinkedIn Learning access
+This represents the complete catalog of Sybrin's products, solutions, and services
+

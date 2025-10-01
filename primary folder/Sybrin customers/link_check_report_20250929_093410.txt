@@ -1,0 +1,193 @@
+LINK CHECK DETAILED REPORT
+Generated: 2025-09-29 09:34:10.131483
+================================================================================
+
+Text: Bare URL
+URL: https://www.centralbank.go.ke
+Status: ✅ OK
+Status Code: 200
+----------------------------------------
+Text: Bare URL
+URL: https://www.centralbank.go.ke/reports/bank-supervision-and-banking-sector-reports/
+Status: ✅ OK
+Status Code: 200
+----------------------------------------
+Text: Bare URL
+URL: https://www.boz.zm
+Status: ✅ OK
+Status Code: 200
+----------------------------------------
+Text: Bare URL
+URL: https://www.boz.zm/financial-institutions.htm
+Status: ✅ OK
+Status Code: 200
+----------------------------------------
+Text: Bare URL
+URL: https://www.resbank.co.za
+Status: ✅ OK
+Status Code: 200
+----------------------------------------
+Text: Bare URL
+URL: https://www.bot.go.tz/BankingSupervision/RegisteredBanks
+Status: ✅ OK
+Status Code: 200
+Redirected to: https://www.bot.go.tz/Error/Index/404
+----------------------------------------
+Text: Bare URL
+URL: https://www.bot.go.tz
+Status: ✅ OK
+Status Code: 200
+----------------------------------------
+Text: Bare URL
+URL: https://www.resbank.co.za/en/home/what-we-do/Prudentialregulation/sa-registered-banks-and-representative-offices
+Status: ✅ OK
+Status Code: 200
+----------------------------------------
+Text: Bare URL
+URL: https://www.cbe.org.eg
+Status: ✅ OK
+Status Code: 200
+----------------------------------------
+Text: Bare URL
+URL: https://www.cbe.org.eg/en/BankingSupervision/Pages/BanksListing.aspx
+Status: ✅ OK
+Status Code: 200
+----------------------------------------
+Text: Bare URL
+URL: https://www.bon.com.na/Bank/Banking-Supervision/The-Banking-System.aspx
+Status: ❌ Not Found
+Status Code: 404
+----------------------------------------
+Text: Bare URL
+URL: https://www.rbz.co.zw
+Status: ✅ OK
+Status Code: 200
+----------------------------------------
+Text: Bare URL
+URL: https://www.bon.com.na
+Status: ✅ OK
+Status Code: 200
+----------------------------------------
+Text: Bare URL
+URL: https://www.bog.gov.gh/supervision-regulation/register-of-licensed-institutions/
+Status: ✅ OK
+Status Code: 200
+----------------------------------------
+Text: Bare URL
+URL: https://www.bou.or.ug/bouwebsite/FinancialStability/financialinstitutions.html
+Status: ❌ Not Found
+Status Code: 404
+----------------------------------------
+Text: Bare URL
+URL: https://www.bou.or.ug
+Status: ✅ OK
+Status Code: 200
+Redirected to: https://www.bou.or.ug/bouwebsite/BOU-HOME/
+----------------------------------------
+Text: Bare URL
+URL: https://www.rbm.mw
+Status: ✅ OK
+Status Code: 200
+----------------------------------------
+Text: Bare URL
+URL: https://www.rbz.co.zw/index.php/financial-stability/bank-regulation-supervision
+Status: ✅ OK
+Status Code: 200
+Redirected to: https://validate.perfdrive.com/?ssa=8cb8d046-fe55-4b59-bae9-9ebcbc468b5a&ssb=84179275628&ssc=https%3A%2F%2Fwww.rbz.co.zw%2Findex.php%2Ffinancial-stability%2Fbank-regulation-supervision&ssi=dc25bff1-dezy-49cd-a66b-db2f23155cf8&ssk=botmanager_support@radware.com&ssm=37202914062879456101771886239479&ssn=dfbd6489d58ea406fd4c1fe17a31c5ed49fcb351d9a7-344d-4cc7-8ea815&sso=e928ec91-9b8fdb86b5ef03f2bbfe805c9c8f5ea6572cebb3754d3d21&ssp=64528496491759150941175919361708425&ssq=67043493124238826563931242689539264157383&ssr=MTUyLjExMC4xNTIuMzc=&sst=Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64)%20AppleWebKit/537.36&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDBiMzUxZDlhNy0zNDRkLTRjYzctOGM5MS05YjhmZGI4NmI1ZWYxLTE3NTkxMzEyNDIyMjQwLTAwMDY0NWMxOTUwY2VjYWE0ODIxMCIsInJkIjoicmJ6LmNvLnp3IiwidXpteCI6IjdmOTAwMDZiZmNiNTJkLTJjYjUtNGI4Yi04Y2JjLWY5NmNhMTM0OTIxNzEtMTc1OTEzMTI0MjIyNDAtYWE3ZDU3ZmZkNTVjODYyYjEwIn0=
+----------------------------------------
+Text: Bare URL
+URL: https://www.rbm.mw/Supervision
+Status: ✅ OK
+Status Code: 200
+----------------------------------------
+Text: Bare URL
+URL: https://www.bancomoc.mz/en/financial-system/credit-institutions/
+Status: ❌ Not Found
+Status Code: 404
+----------------------------------------
+Text: Bare URL
+URL: https://www.bancomoc.mz
+Status: ✅ OK
+Status Code: 200
+----------------------------------------
+Text: Bare URL
+URL: https://www.bankofbotswana.bw
+Status: ✅ OK
+Status Code: 200
+----------------------------------------
+Text: Bare URL
+URL: https://www.bog.gov.gh
+Status: ✅ OK
+Status Code: 200
+----------------------------------------
+Text: Bare URL
+URL: https://www.bankofbotswana.bw/content/commercial-banks
+Status: ❌ Not Found
+Status Code: 404
+----------------------------------------
+Text: Bare URL
+URL: https://www.bnr.rw
+Status: ✅ OK
+Status Code: 200
+----------------------------------------
+Text: Bare URL
+URL: https://www.bnr.rw/financial-stability/supervision/licensed-banks/
+Status: ✅ OK
+Status Code: 200
+----------------------------------------
+Text: Bare URL
+URL: https://www.bsp.gov.ph/SitePages/FinancialStability/DirectoryOfBSFI.aspx
+Status: ❌ Not Found
+Status Code: 404
+----------------------------------------
+Text: Bare URL
+URL: https://www.bsp.gov.ph
+Status: ✅ OK
+Status Code: 200
+Redirected to: https://www.bsp.gov.ph/SitePages/Default.aspx
+----------------------------------------
+Text: Bare URL
+URL: https://www.centralbank.go.ke/bank-supervision/commercial-banks-mortgage-finance-institutions/
+Status: ⏱️ Timeout
+Status Code: None
+Error: Connection timed out
+----------------------------------------
+Text: Bare URL
+URL: https://www.gsma.com/sotir/
+Status: ✅ OK
+Status Code: 200
+----------------------------------------
+Text: Bare URL
+URL: https://www.worldbank.org/en/publication/globalfindex
+Status: ✅ OK
+Status Code: 200
+----------------------------------------
+Text: Bare URL
+URL: https://www.bsp.gov.ph/Regulations/Issuances/2020/c1105.pdf
+Status: ✅ OK
+Status Code: 200
+----------------------------------------
+Text: Bare URL
+URL: https://www.afdb.org
+Status: ✅ OK
+Status Code: 200
+Redirected to: https://www.afdb.org/en
+----------------------------------------
+Text: Bare URL
+URL: https://data.imf.org/FAS
+Status: ✅ OK
+Status Code: 200
+Redirected to: https://data.imf.org/en/datasets/IMF.STA:FAS
+----------------------------------------
+Text: Bare URL
+URL: https://www.centralbank.org.ls
+Status: ✅ OK
+Status Code: 200
+Redirected to: https://centralbank.org.ls/
+----------------------------------------
+Text: Bare URL
+URL: https://www.centralbank.org.ls/index.php/financial-institutions/licensed-banks
+Status: ❌ Not Found
+Status Code: 404
+Redirected to: https://centralbank.org.ls/financial-institutions/licensed-banks
+----------------------------------------

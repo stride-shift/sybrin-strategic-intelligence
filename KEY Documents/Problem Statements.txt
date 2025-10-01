@@ -1,0 +1,66 @@
+Consolidated Problem Statements for Strideshift
+Research
+1. Market Understanding & Decision Makers
+ What is the true demand and willingness-to-pay for Sybrin’s solutions in the
+Philippines and African markets — specifically Digital Onboarding, Payments
+Processing (EFT, e-checks, instant payments), and Fraud & Risk Management
+offerings?
+ How do different market segments (commercial banks, rural banks, MFIs,
+digital banks) value these solution types, and which are seen as must-have vs
+optional?
+ Who are the real decision makers in banks (often not the formal title holders),
+and how do influence networks and cultural nuances affect buying decisions?
+ How do trust and relationship dynamics (e.g., politeness in Philippines,
+hierarchy in African banks) affect Sybrin’s ability to qualify and close
+opportunities?
+
+2. Competitive Landscape & Pricing
+ How should Sybrin price Smart Teller and Payments upgrades, knowing
+existing clients may be forced into tenders when required to re-buy?
+ What are the optimum price points and preferred models (CapEx, subscription,
+transaction-based) by customer type (rural, digital, MFI, commercial)?
+ How can Sybrin overcome its proof of value vs pricing challenge, where
+competitors undercut on price to buy market share?
+
+3. Regulatory & Compliance
+ What are the compliance requirements and costs (licenses, certifications,
+permits) for entering and scaling in target markets, and could they be prohibitive
+(e.g., $500k+)?
+ How stable or fluid are regulatory environments in the Philippines and Africa,
+and what changes are expected in the next 3–5 years?
+ Can industry bodies or associations provide faster market access and
+credibility?
+
+4. Partnerships & Ecosystem Fit
+ Why has Sybrin’s partner/reseller model underperformed in the Philippines,
+and how should it be adapted?
+
+ Which 2–3 strategic partners would be most critical to widen reach and
+strengthen positioning?
+
+5. Product Modernization & Differentiation
+ How can Sybrin best consolidate fragmented teller systems (Web Teller,
+VPC, Paperless, Uniteller) into a unified Smart Teller, ensuring feature parity,
+migration ease, and scalability?
+ How large is the re-monetization opportunity with existing 33 clients and 59
+teller-related solutions generating only ~R10m revenue?
+ Which emerging global teller trends (self-service, mobile tellers, universal
+banker/advisory roles) are most important for Sybrin to align with?
+
+6. Sales Execution & Outreach
+ How can Sybrin build trust as a new entrant in the Philippines and overcome
+limited on-the-ground presence?
+ How to better understand decision-making timelines and influence networks
+in key markets?
+ Which channels, events, or media are most effective to position Sybrin as a
+compliance-first thought leader, given limited LinkedIn usage in some
+markets?
+
+7. Geography-Specific Strategy
+ South Africa: Is there any realistic payments market opportunity, or is it too
+saturated and better to double down on Africa/Philippines?
+ Africa: Where are the strongest use cases for e-checks (social grants, informal
+lending, rentals, BNPL), and how should they be priced (per issue, per cashing,
+per transfer)?
+ Philippines: What compliance-first positioning strategies would differentiate
+Sybrin most effectively against local/regional competitors?

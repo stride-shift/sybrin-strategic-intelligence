@@ -1,0 +1,1120 @@
+﻿Speaker 0:
+
+
+hi
+
+
+Speaker 1:
+
+
+hello everyone
+
+
+Speaker 2:
+
+
+hi everyone
+
+
+Speaker 1:
+
+
+hi so before we get started with anybody else let me just kind of highlight sorry
+
+
+Speaker 2:
+
+
+duncan's just trying to call me
+
+
+Speaker 0:
+
+
+yep
+
+
+Speaker 2:
+
+
+hello duncan think he managed to see the mic
+
+
+Speaker 1:
+
+
+okay so basically what i've done is i generated original questions assumptions to check about those questions possible desired outcomes that asking those questions basically and then alternatives plus additions and we can work through it
+
+
+Speaker 2:
+
+
+great i'm i'm letting ryan
+
+
+Speaker 1:
+
+
+yep
+
+
+Speaker 2:
+
+
+hello ryan hi
+
+
+Speaker 0:
+
+
+ryan hi yordan
+
+
+Speaker 2:
+
+
+alright how are you
+
+
+Speaker 0:
+
+
+yeah all good thank you
+
+
+Speaker 2:
+
+
+good and apologies for not adding the link initially
+
+
+Speaker 0:
+
+
+oh no no stress i just i thought i was doing something wrong i couldn't find it
+
+
+Speaker 2:
+
+
+it was me hi shi
+
+
+Speaker 3:
+
+
+oh nith hi how are you
+
+
+Speaker 2:
+
+
+alright good
+
+
+Speaker 4:
+
+
+how are you
+
+
+Speaker 3:
+
+
+good thank you thanks i see you sent it through on whatsapp as well i appreciate it but i got it from duncan my name hi everyone good
+
+
+Speaker 2:
+
+
+and there's duncan
+
+
+Speaker 0:
+
+
+so if
+
+
+Speaker 5:
+
+
+this was a test you all would have passed
+
+
+Speaker 2:
+
+
+duncan can you are you with us i think you're on mute
+
+
+Speaker 4:
+
+
+hi everyone sorry i'm clicking the wrong mute icon
+
+
+Speaker 0:
+
+
+hey duncan
+
+
+Speaker 2:
+
+
+hi how are you doing
+
+
+Speaker 0:
+
+
+hi duncan
+
+
+Speaker 4:
+
+
+all good thank you
+
+
+Speaker 2:
+
+
+so from our side we're ready to jump in is there anything that before we jump in with this process of deep diving is there anything you wanna speak to before then
+
+
+Speaker 4:
+
+
+nothing from my side
+
+
+Speaker 0:
+
+
+nothing all good thanks
+
+
+Speaker 2:
+
+
+okay great justin lead us away
+
+
+Speaker 1:
+
+
+cool so essentially the process that we kind of wanna follow today is unpacking the research questions that you shared with us and in order to do so what we wanna do is look at just making sure that we're on the same page in terms of the higher level outcomes you're trying to achieve by answering those questions what underlying assumptions are buried in those questions that we just need to make explicit and possibly even challenge and then what additional or perhaps even better questions should we be asking instead the reason for this is if we're starting to set up a kind of a human plus agentic research process we wanna make sure that we're asking the right questions from the get go and these questions may be the right questions they just may not be sufficient or complete so that's the one thing we we do wanna look at jonas has already been running looking at the npo setup and obviously in order to do that effectively we kinda just need to nail down specific objectives and also what already exists i know that you've already mentioned some things in previous conversations and we'll definitely go to those transcripts and unpack them as well but it's nice to have it all in one place so to a large extent the the right or best answer depends on some of the conditions that you need to be met and some of the things that you want to achieve other than the the really high level obvious thing so i'm not gonna speak abstractly for much longer i think i'm gonna launch into a deep dive into the questions and then janis can come in a little bit later and talk a little bit about what he's doing and janis from the npo side one of the things we wanna do is just unpack some of the conditions so that or that the answer would be conditional upon so if scenario a applies then this is the route we need to go if scenario b applies and then come up with three recommendations that we can kinda weigh up so basically just narrow the problem space down to a much easier set of decisions to make and then as we proceed with the month we will have a back and forth and refine everything obviously as we learn more okay so let me just share my screen here and so to a large extent really
+
+
+Speaker 0:
+
+
+yep sorry about that just a question from my side and and sorry i'm just sort of catching up a little bit but duncan thanks i saw that statement of work or scope of work that was sent to you earlier i just wanted to clarify this session is just to cover the nonprofit right is this session only specifically for that or is it any other that we put forward
+
+
+Speaker 2:
+
+
+it's it's it's all the problem statements i mean if necessary we'll spend more time unpacking in later conversations but our intention here was to cover them all
+
+
+Speaker 0:
+
+
+okay okay great thank you that helps thank you
+
+
+Speaker 1:
+
+
+yeah but we can maybe go through this quite quickly and have a couple of action items that we can come back to and then we can spend more time on the on the npo if needed alright so let me just share k so just a quick review of what it is that i've done here this is just meant to be a scaffold it's not meant to be right and certainly the idea is there's a straw man here you can throw spears at it or you can say what's missing it's just a way to help us structure our thinking a little bit more and make it systematic so in this document of here i've covered the six question sets that you provided and also what we wanna see is if there's an interdependency between these sections where answering one set of research questions will actually help us answer another set of research questions with more clarity so i think the best thing to do is just to dive in how i did this is i put in information i have about cybrin and then based on that try to interrogate why you're asking these questions what the outcomes would be and then also to unpack the assumptions alright so let's just start with market understanding and then feel free to interrupt or redirect this is meant to be organic and if thoughts pop into your head oh right so the first set of questions that we want to research are related to market understanding and decision makers and your initial questions were framed as such i'm not going to read them back to you unless you want me to but what we can do is sort of look at what are some of these these could be completely wrong so do correct them and everything you say will be caught in this transcript and then we will use it to to update it so your initial questions were what is the true demand and willingness to pay for cyberin solutions in the philippines and african markets how do different market segments value these solution types who are the real decision makers and banks and how do trust and relationship dynamics affect cyberin's ability to close opportunities so some of the assumptions should i just zoom in a bit is that a bit easier
+
+
+Speaker 2:
+
+
+that's great
+
+
+Speaker 1:
+
+
+alright so some assumptions that we need to check is that cyberin's african market expertise translates to the philippines that your compliance risk management focus aligns with new market priorities that six hundred plus installations provide sufficient credibility in new markets that enterprise banks are the right target versus digital first challenges that their full service implementation model fits new market preferences so just have a look at these for a second and see what sorts of thoughts they spark and yeah then we just take the conversation from there go ahead duncan
+
+
+Speaker 4:
+
+
+yep so i think the first thing that i was thinking is i suppose there's a difference between cybren and its perception on the one hand versus the various sets of products that we offer on the other and you know it might sometimes be and i i i just say this because i've heard the comments being made that you know cybren is very well known for instance in the east african markets for its payment solutions because that's traditionally you know what was was offered there so you know sometimes the the the cybern brand is actually subservient to the product name brand so so that's maybe something to think about because i think that creates a very different dynamic and variables
+
+
+Speaker 3:
+
+
+good point
+
+
+Speaker 0:
+
+
+so
+
+
+Speaker 1:
+
+
+in terms of these outcomes would you say that these are the outcomes that you're trying to achieve by asking these market and decision makers or these questions about the market and decision makers go ahead sheena
+
+
+Speaker 3:
+
+
+hi i don't think that the prioritized market entry ryan correct me if i'm wrong here but is that decide between philippines versus deeper africa penetration i think we have decided on focusing on very specific african countries for this coming year given the capacity that we have as well as the philippines i think for me the question around does cyprin's african market expertise translate to the philippines was not necessarily something i was trying to get out of from the philippines conversation it was more around do all those solutions are fit for that market and are they prepared to pay for those solutions if that makes sense
+
+
+Speaker 1:
+
+
+okay so i think it's also useful when we're framing this to say okay there's a decision that's already been made and now we just want to answer a question relative to that decision we don't wanna necessarily question the preceding decision so the idea is you want to penetrate the philippines and now you're simply asking a question that extends from that decision is that
+
+
+Speaker 0:
+
+
+yes
+
+
+Speaker 3:
+
+
+yeah right
+
+
+Speaker 2:
+
+
+so it's not it's not a either or philippines or africa it's gonna be both and selected countries have been defined
+
+
+Speaker 0:
+
+
+so i think at the moment in terms of geographies and territory i mean we we sort of say that we you know an african player and to a large extent we are because we've got operations in quite a few countries across africa we've got clients i think in total we've got about twenty countries where we have at least one client so it's quite vast and varied but in saying that we've realized that you know when we say we're an african player we are but it's also new ones so know like as an example we've made a strategic call at the moment and obviously all of this is subject to change but you know as we sit here today i think as an example in africa we're not gonna be focused on sort of northwest french speaking africa generally and we're not nigeria's you know off the cards completely so any opportunity coming out of nigeria we just immediately say no thank you
+
+
+Speaker 1:
+
+
+alright
+
+
+Speaker 0:
+
+
+so that's an example and then in terms of the other you know french speaking northwest african nations in africa it's just too complicated there's language there's local partners there's corruption there's the usual stuff so and it's not really where we have too much of a client base anyway the only exception i think in northwest africa is ghana we still see that as a a big market for us going forward given you know i think a whole lot of things that have happened recently over the last eighteen to twenty four months and in fact shona and i are actually gonna be going there for a week in about a month's time so and that's something that we haven't done for quite some time but i think we're very keen on that and then yeah i mean our our strongholds are you know very much traditionally east africa as as dan can mention but what we're trying to do is just go through a process of working out which kind of target i mean i'll give you an example so why this came about is that in the commercial office space which is basically set up to try and target new clients right we we had this sort of it was a little bit i suppose optimistic but we had a view that we were gonna try and target fourteen countries in one year right now we've we've we've got limited people and limited budget etcetera so that's just not possible so this year what we're trying to do is just we've got an idea but what we're trying to do is maybe just validate what we're thinking through this process to say you know these are the four or five countries that we think of we're thinking of targeting in in in africa for various different reasons maybe it's because we see that there's a green economy and the financial services companies are all starting to make money i mean not that's the case in malawi but the economy is actually you know it's actually going backwards but the banks have all increased profits by like double digits year on year for the last two three years type of thing so despite you know what the economy is doing it could still be opportunity for us so sort of each country is very different there's all the regulatory changes that are coming in and that's a good timing thing for us if those are coming in in terms of some of our products and then decommissioning of checks is an example that's a big it's a big risk and a big opportunity for us as well so yeah i think we you know we sort of look at it on a per country basis against our product sets and what we offer them and also trying to understand you know where there's risk and where there's opportunity in terms of either like some of our older legacy tech fall in a way because of changes and then some of the stuff that we could possibly build out build out as a new product to replace or it's obviously not exclusive to replace the older tech but obviously any opportunity that we feel that we could potentially look at then that we're going to a process to really identify that that product and that opportunity not only for that country but for for others as well because we wanna try and obviously you know have our our opportunities as broad as possible against all of the countries in the way where we operate yeah i mean the south african ones are very interesting discussions so we are we are we focused on africa and we focused on the philippines we're not focused on southeast asia as an example at the moment it's exclusively philippines and i think it's the right approach it's like get off the ground get some credibility get some press get some clients and then just keep building from there and if we continue to build on in the philippines and you know we have a sustainable model there and we you know go to profit because we we end up making territory there still then i think it changes the conversation around well doubling down on philippines versus going to other you know asian countries like indonesia malaysia thailand vietnam etcetera
+
+
+Speaker 1:
+
+
+okay
+
+
+Speaker 0:
+
+
+we've seen i mean the way this came about is is in terms of expanding into you know the broader southeast asia market is just through the success of time bank in those markets so we know that time bank got pretty well and we sort of have met with them over the last couple of years you know quite a few times and you know i think what they effectively suggesting is that you know that there's a there's a lot of opportunity for businesses like ours given where the financial services industries in those countries is likely to hit right in terms of banking and the bank etcetera so if you sort of you know follow if you can align with with people you know either existing banks or or the new start up banks or challenger banks in those industries i think over the medium term it's quite a good strategy and you know even compared to africa they're sort of saying like they're not even interested in at all they don't even wanna touch it quite interesting compared to where we've come from you know in terms of our history i'm not saying that we we're not gonna be focusing on africa i still think there's lots of opportunity for us it's just like the i think almost have to put in double the effort in africa to get the same returns is what what we're hearing from the time bank that's enough mhmm so that proves to be true or not i can't say for us but it certainly you know has given us a lot of food for thought when it comes to pursuing different options yeah into the last strategy awesome
+
+
+Speaker 1:
+
+
+so there's just something i just wanna return to from what you were talking about before so just in terms of the question it says is the true demand and willingness to pay for cyber and solutions in the philippines and you've given us a lot of context this is exactly what we need
+
+
+Speaker 0:
+
+
+k
+
+
+Speaker 1:
+
+
+for you to speak and just get a lot of context out and we'll make sense of it later the interesting thing about demand is that demand is quite regularly changing and i did some preliminary research on this question just to kinda get a feel for it and one of the interesting thing that's emerging is when you look at the different age groups and the role that trust and relationship plays
+
+
+Speaker 0:
+
+
+yes
+
+
+Speaker 1:
+
+
+and what kinds of products they're happy to use and what they demand you actually see significantly different profiles
+
+
+Speaker 0:
+
+
+sure
+
+
+Speaker 1:
+
+
+and so some of the the traditional wisdom around working in these geographies are actually starting to change significantly and some of the assumptions about the the cultural or the role the culture plays are also shifting so what some of that preliminary research threw up is you know when you start to do the segmentation and you look not just in terms of the age group but also some of the cultural shifts between generations that tells us a lot about different opportunities for different groups now coming back to the part about the first question is i heard you say that you're also open to developing additional solutions relative to opportunities or demand rather than simply saying here are the solutions we have and what is the appetite for that
+
+
+Speaker 0:
+
+
+yeah no agreed think i mean just to maybe caveat that a little bit but that also is limited so we've gotta be very careful about what we choose to do better and i think i mean with respect to some of my predecessors probably you know there's a lot more discipline and there's a lot more analysis and there's a lot more understanding that now gets done before we just decide to run off and build build something new so we can't we've been at the classic you know saying is you know if we build it they will come that's not necessarily true
+
+
+Speaker 4:
+
+
+i think
+
+
+Speaker 0:
+
+
+you know obviously with tools like this now it's quite useful because we can try and get better understandings and insights before we go and even you know and then go send this check-in in the market obviously and get a view for what people be willing to pay for it and then we can run our commercial models on top of it and actually understand whether it's worthwhile commercially for us okay i mean a classic example is like at the moment you know a a large part of our revenue is generated from check processing if you can believe that but that is still the case and in a lot of countries they they're starting the process of decommissioning checks so botswana has already decommissioned checks south africa has already decommissioned you know and then zambia is meant to be decommissioning at the end of this year but it's gonna be delayed and kenya want to start decommissioning as well and you know the reality is for us is obviously a significant risk so what we're trying to do is counter that in a number of different ways thankfully we do emt processing so generally when you check volumes decline your emt price processing goes up but unfortunately our software is not our commercial model our billing models aren't transaction based so we we run a very integrated software commercial model in this business at the moment and i think that we could look to change but it's not gonna be an easy exercise so there is some leverage for us to say well you know we we process in double amount of eft so we're gonna have to increase that probably not gonna cater for all the losses that we would suffer in the event that checks get decommissioned however based on what's been you know happening in some of the conversations with the central banks and certainly in zambia and kenya and now malawi you know there's an opportunity to actually build a product which will replace checks but it'll be an electronic version so i mean it's a it's a bad name for it but we we we sort of started off provisionally calling them echeck solution from maybe called like an electronic payment or an epo or something but if it there's a whole lot of use cases why you can't just easily decommission checks in some of these territories and one of the the most obvious is is that peep people actually use checks as a form of buy now pay later so they they actually postdate checks and then they they use that as a as an an option to effectively receive a product like a physical good or a service in advance and the supplier is willing to accept payments a bit later on whether that's two weeks three weeks or a month later because they effectively still get the deal and then the cash just flows a little bit later on so that is a big use case it's obviously used for loans it's used for government disbursements and all of other things and they're still an underbanked community and people still wanna trade in cash they still wanna get their their check and they wanna go cash it in in the branch and actually get the cash out so which is so that's just a classic example of what we're doing and then you know in terms of keeping with the times as well you know we know that the whole continent is moving towards instant payments i mean that's a big theme for us you know there's these local domestic instant payment schemes you see it in kenya it's called ipso which is pesalink and then in south africa it's payshell and then you're starting to go into the realm of cross border instant payments so you have pep's out of the north and then you've got pcb out of the south and they're all trying to get as many countries and many financial institutions onto the instant payment schemes or headers as quickly as possible right i mean that's pretty interesting for me and what we're doing there is we're providing connectors for our clients to connect to these schemes whether it's domestic or cross border because obviously it's a new payment rail and you gotta integrate your payment systems with them but in addition to that we're gonna build out an an instant eft processing capability because at the moment we do check processing and we do eft processing but the eft processing is both so given where everything's going as an example there we can't wait for you know we're gonna go and build out an instant eft processing module which will just become another option as part of the payments solution just makes sense so those are like you know two two sort of very simple examples of what we're looking at doing you know i think for for us to go and build i mean there's one insurance player which i can mention a little bit but you know we it's quite muted at the moment because we i mean just in terms of the cycle where we act as a business is that the business has spent a lot of money and we capitalized a lot of costs in in relation to this we we you know there's been a lot of software development time put into building out new versions of our software plus some of the newer stuff that what i haven't mentioned but new products that we built out for my side lastly it's just we'll still keep building some stuff in the background but let's go and solve the stuff that we've just booked right because we need to get a return on this and we you know this assumption at the moment is that we wouldn't have built it unless there was a market for it we could be proven to be wrong we see if that is the case we've made some mistakes fine but we just don't wanna carry on making them effectively and so yeah it's a it's a bit of a it's a bit of a you know probably not new product for us as a product business is a continuum right if you wanna grow you have to look at building up new opportunities and and products and and then commercializing because that's because mean they will like checks it will end of life will come eventually yeah it's it's to it's to keep your revenue your annuity revenues but try and grow and expand on them as much as possible
+
+
+Speaker 1:
+
+
+okay that that's really really useful context and i i just wanna say something actually for the benefit of the transcript more than the people on the call because so what would be super useful for us is if we could get a view of what currently exists and what's in your pipeline
+
+
+Speaker 0:
+
+
+k
+
+
+Speaker 1:
+
+
+for this bit of research
+
+
+Speaker 0:
+
+
+k
+
+
+Speaker 1:
+
+
+then what we what i'm hearing is that there are just legacy things that you're gonna have to live with nonetheless yeah and that also means that you're not just looking at what you have relative to demand you're also looking how you looking at how you can frame things so that they fit in with perception or demand k so there are things that are just not gonna change within the next two to three years sure and you still have to make that work relative to this demand so duncan i'm gonna come back to you in a moment but for the for the benefit of this transcript in terms of the report that we deliver it makes sense to carve it up in terms of these different perspectives so demand relative to products that exist demand relative to products that are in your pipeline demand that exists right now demand that we're projecting for six months to twelve months as technology changes as you have generational shifts as you know regulations come into play that might still be gaining traction
+
+
+Speaker 0:
+
+
+and and those are big big ticket items for us i mean especially the change in regulation you know what i mean yep like as an example the philippines central bank just issued a mandate to all financial institutions to say you know if you are gonna be processing instant payments then you have to run a forward risk management solution on top of it so you have to run something to pick up where the payments are potentially fraudulent or not and they're able to cater for that yeah if you're gonna be processing instant payments
+
+
+Speaker 1:
+
+
+and then
+
+
+Speaker 2:
+
+
+i'm gonna ask ryan could anyone have seen that coming
+
+
+Speaker 0:
+
+
+possibly i mean yeah shana maybe you can talk to that shana's a lot of friends from the philippines so
+
+
+Speaker 3:
+
+
+yeah i think if you look at where they were alison from being on the gray list they transitioned to digital payments more than likely yeah
+
+
+Speaker 2:
+
+
+so i propose that you know if regulation is a key signal for you we could have a kind of an always on regulation reporting tool that gives real time updates around the regulations that are in effect per country
+
+
+Speaker 5:
+
+
+yeah so i agree with that certainly my research says that one of your entry points is what are the sort of regulatory tailwinds that you could ride on the back of and so for example you mentioned vietnam very briefly but one of the things that they've done is they've created that sandbox regulatory sandbox yeah and so part of the idea would be also and again i'm also saying this for the transcript is how do we work with you to identify what i call the meta trends and so these regulatory sandboxes are apparently quite a big deal yeah and so we should be trying to identify which countries are going to be deploying those environments so that you could piggyback off that the other thing you talk a lot about are instant payments or what is known as real time payments
+
+
+Speaker 0:
+
+
+yes
+
+
+Speaker 5:
+
+
+and so wherever we see countries that have an emergence of digital currencies and or real time payments we should be trying to identify those and then fast track you into those environments because you already have global credibility around those capabilities in the market
+
+
+Speaker 0:
+
+
+sure yeah we just don't have a product yet we're working on that one
+
+
+Speaker 1:
+
+
+we can assume
+
+
+Speaker 0:
+
+
+you know duncan's duncan's hands up duncan's there
+
+
+Speaker 1:
+
+
+you go go ahead duncan
+
+
+Speaker 4:
+
+
+no worries and i think a lot of it's kind of been touched on or surfaced but just the first thing justin you mentioned cultural trends and i think it's critical to understand those you know and and trending in general but i also think you know and and it's a little bit different maybe in the philippines than in africa and we are now progressively more engaging with central banks and regulators but the reality is historically we don't we we're a business to business b to b you know so that means if there is a trend we need to hop onto a financial service provider or a bank who has caught that trend mhmm it's it's difficult for us you know save things that we're doing now with gates and mojo loop etcetera to to really be the trendsetter or to be the first to market when there's a trend now that plays in in terms of you know my next point which was just i don't know if strideshift if the research that you've done actually has taken into account all of the stuff that we have done and and are doing from an offering or from a a product perspective and if not i think then you know let's let's maybe provide you with all of that information as much as we can because i think that you know that that will make that question you know what is it that we do a little bit clearer and it's an easier one to answer and then you know maybe that will help us the third thing is and this is a very simple way of thinking about it but it might be useful you know just to to not get caught up in all of the longer term with more you know strategic stuff and the more abstract things ron please jump in here but in in if i you know if i were just sort of an outsider observer and i didn't know much about this i would say my very simple problem statement is i have a set of products and offerings i have some in the pipeline that i'm developing but i'm not sure which horses to back there because i have limited funds and i need to hit a certain revenue target now historically our revenue for the past couple of years has been made up much more of services in other words products being implemented projects than they have been of new sales of software and that's definitely something we need to change because if you move from the one year problem statement to the two three four year problem statement it changes the dynamic of our financials to the point where our recurring revenue our annuities the source of that is software it is not services services is a once off thing it's very costly to deliver that so your margins are very different whereas software obviously has a very different character to it so so for me that's a very simple problem statement so it's almost a a sort of a very simple supply and demand we know what we have we know what we think is worth developing but we'd like to know how do we how do we damn well sell that because that's been very difficult for us and and and in there you can now go and you know sort of figure out well what is the and the branding you know what is the ecore and the payments and the board risk management stuff in the philippines and so on and so forth and then the trending makes more sense but for me that's a very simple way to think about this rightly or wrongly
+
+
+Speaker 1:
+
+
+yeah sorry go ahead
+
+
+Speaker 2:
+
+
+think that is a great framing and simplicity wins in in this kind of thing because we must remove waste from our thinking and talking
+
+
+Speaker 1:
+
+
+yeah this
+
+
+Speaker 2:
+
+
+is very much a part of what we do duncan this exact problem statement and we're gonna incorporate it in here the way that i would frame that is what is it that people are trying to get done and which of our solutions enables them if you were to take a very mature point of view and our perspective around customer centricity not i have these products how many of them do you want but what is it that you are trying to get done as a business as a bank what does your strategic roadmap look like where are you expanding to and as you said you're a service provider into a bank you're not going direct to market so the key question becomes and we will layer this thinking in it's it's what we it's the jobs to be done philosophy the key thing is who's got what jobs to be done that we already service alright let's go get win market share who's got jobs to be done that we don't service those jobs but we're servicing them so we've got an entry point alright let's go and get more share of wallet and that's two sort of postures in terms of how one might look at the market are you trying for market share or are you trying for share of wallet they're very different propositions are you trying to look in the short term or are you trying to look at customer lifetime value which i know would be a conversation worth having and incentivizing people similarly so that you've got things like we're not selling software or professional services we're selling outcomes can we actually define what those outcomes are and how we hold them in support of them so i'm not gonna go too much further but the principle is and and you'll see this coming through in in in is we're we're we're really trying to get to the number of the job that you get done and the framing of that not these are the products cyberarn has but what are the jobs you get done and part of our analysis will will unpack that just wanted to sort of land this so i'll i'll stop there
+
+
+Speaker 1:
+
+
+so absolutely and certainly getting us the information in terms of the products and what you have in your road map and also just what you're not gonna touch that would be super useful something else you said that i just wanna reiterate that is also useful to look at is in terms of demand and opportunity we can look at what are trends that banks are already getting on board with so that you can target them in the right way and helping you see those opportunities is not something that would have come through in the original questions that we've presented here so that's what this is really about is just like expanding that so that we're not quite so that we're not missing key opportunities and we're seeing our blind spots but okay so i just wanted to get you talking a little bit about the we might not get through all of this and let's give this about five minutes and then we can talk about the the npo stuff in the last ten minutes but yeah just to kinda get you talking about i know that you've already spoken a little bit about compliance and a lot of what you've been spank speaking about in general will probably tie into enhancing all of these but anything that you would want to contribute or context or perspectives around competitive landscape and pricing and that is also to add that if we are taking more of a jobs to be done approach sometimes your competitors are not that obvious so we will also try to look into like who are your competitors that you're not considering at all who would ordinarily not have been on the radar
+
+
+Speaker 0:
+
+
+okay yeah thank you yeah i mean i think from what we understand i mean this is obviously subject to review as part of this process but you know where we currently position that we understand from a software perspective we probably pretty like competitively priced so i think you know at the moment there's no real pushback from a client perspective when it comes to software pricing okay and i'll get into reasons for that just now i think we we are struggling a little bit is the cost of our professional services fees i think before we used to significantly discount those fees until we ran some analysis and worked out that we were losing about thirty million rand a year sort of net loss in our project division right so what that means is that rate cards came in minimums we're putting in terms of blended hourly rates on projects you know scope was well defined projects are better being better managed etcetera but what that's done is they've pushed the overall cost of implementation up and that is starting to effectively you know have a bit of a negative impact on the actual ability to win new software sales because of the higher cost of implementation okay and we we're looking at ways in which we can address that and there's quite a few options there and then in addition to that we have service level agreements where we you know which is separate to the first two that i mentioned and those are probably getting to be a little bit on the high side now as well i mean it's the expectation from our banking clients is that you know over time those would reduce right because everybody thinks you can just wave the magic ai one but now you don't need to support software anymore because ai is gonna do it all for you they're not probably not not too wrong in expectation it's just that the the timeline is a little bit unrealistic perhaps and i think there's lots that we can do to reduce costs over time in that space so yeah lots of different things happening across the business i mean just to duncan's point it was you know when he says we've mostly been selling services so what we've done as a business is we've we've effectively stopped all consulting completely in its entirety right so we don't do anything okay i must just say let's just put the one exception to that but it's very small and that's the disarmament stuff but but you know generally as a like ninety nine percent rule we don't do any professional services work we don't do any implementation of any software unless it's either our software or we're reselling software and then there's a annuity base that we can build right so i think that's that's very important to understand and i think as i said it's just the the cost implementation where duncan was saying that we're mostly selling professional services work and not software it's actually all got to do with upgrading of our legacy solutions the business has been in operation for thirty three years and we have about two hundred and forty one current solutions a hundred and fifty are basically have either been upgraded or in the process of being upgraded and we've got about a hundred million units still to go okay so so we're expecting this upgrade program to run for another twenty four months from now so from the end of september till the end of september twenty seven and but certainly we have a big push to get that done now that does a number of different things for us as a business it gets everybody onto new architecture i mean some of the stuff is literally twenty years old but the guys are still running in these packs okay so we have to move them onto web based architecture there's options when it comes to deployments whether it's on premise or private cloud or public cloud all of other good things what it also does is gives us an opportunity to sell the newest stuff that's been built on the latest version of our platform k so that you don't have to have two or three instances running to basically service the same client because they've got all the solutions running on all the infrastructure and all the architecture now you're trying to sell now the cost of hosting the cost of support in servicing etcetera goes up and up and up right then the cost of support on our side goes down because we don't have to support multiple versions across this client base of over a hundred times so that is for me like a key strategic objective it's in our objectives for us jack it has been for two years we really done well to deliver to the extent that we have in two years but we've got another two years to go to close it all out okay what that should in theory do is open up sales opportunities as and when clients get upgraded you know it's also budgetary cycles on the bank side so we understand that you know in a perfect world these guys would make their business cases and the reason why you implement tech is to save money anyway and they should be doing it but just like us they can't do it all in one year and they get a certain cap or you know restrictions on budgetary allocation every year and so they take that budget and they spend it and that's all they can do in one year you know so a lot of the time because of the cost and the they are expensive to upgrades because of the cost of upgrading most of that budget budget is is utilized for professional services so what i'm expecting is that in future years you know well our task is to go and convince our clients to keep the budget you know as a minimum at the same level but if not try and get them to increase the bids for all the stuff that we've been building out over the last two to three years plus the new stuff that we're busy building now which will become available during the course of the next twelve to eighteen months so i think you know there's lots of opportunity there which which is very important i think from a pricing point of view it will get better and better from a professional services fees as well as support perspective because of the reasons that i mentioned which will then even make us more competitive i think we could be losing out and we well i'm pretty sure we are actually but it's remains to be proven and that we don't we haven't necessarily priced well for solutions that have been in the market for a very long time but maybe that's our competitive edge at the moment too mean just to reiterate maybe just elaborate on that so if you're a client and you bought software from us fifteen years ago okay you would have paid a once off capex fee and you pay eighteen percent per annum on that imagine trying to replace that with a new system now what it would cost you and in addition to that certainly over the last five years or so we haven't been very good at pushing price increases through with our clients at all so we've had zero percent increases on that amc the annual maintenance you know with many many times with about ninety percent of our times so the cost of replacement is a there's risk for clients b there's there's gonna be they have to procure the new software which they don't have to do with c they have to pay for professional services fees okay they're paying us to upgrade the system and then d there's risk because they just don't understand whether you know the project's gonna go well whether the support levels are gonna be the same as ours and that's a key differentiator for us our support levels are pretty pretty good compared to market as well so you know i think it's it's a difficult one to try and sort of to to look at but i think the pricing one in terms of are we priced competitively to be i think overall yes the answer is yes whether we're leaving money on the table probably but i don't think we can do too much about it right now as i said i think i'd rather focus on you know getting the upgrades done and then selling new software then i think over time you know there's a whole lot of complexity around transactional billing or billing for volumes or whatever it is you know but that can all sort of unfold slowly over the medium term alison you had a question about short to medium term i mean at the moment the focus in this business is very short term it's going to be like that for the next eighteen months the existing shareholders want to probably go to market for sale in about eighteen months' time from now so it's very short term thinking so there's a very limited i suppose view on what we can build out for medium to longer term however in saying that you know these guys and i've spoken to the board and shareholders about it there's gotta be some recognition that if you wanna exit at a piece of multiple you need to have some stuff in the pipeline that's gonna give the new the new acquirer the growth that they need to substantiate the investment at a sizable multiple price on like an ebitda so
+
+
+Speaker 2:
+
+
+well ryan has that been explicitly worked out in terms of key performance indicators targets that you're trying to hit i mean the ratio between the now versus building a pipeline for the i mean does that actually what that what you just shared with us has it been translated
+
+
+Speaker 0:
+
+
+into no i mean it hasn't been finalized but i mean it's been sensitized it's all in the strategy documents as to what we're doing what we're not doing but you know like there's just like this echeck play we almost have to do the instant payments thing we have to do i'll talk to this the branch network solution stuff now so those are two sort of players that have have the support but again in terms of anything else that we wanna do we might do analysis and we might understand how much it's gonna cost how long it's gonna take what the expected returns could be and even even though you haven't started you know at least you've got some stuff in terms of you you've thought about some of the other things that you could potentially be doing but we haven't had the right factors or shareholders to do it right so the whole point about the sale process would be to go and seek out in the market probably a more strategic buyer who's willing to invest behind some of our growth ambitions i think the existing shareholders it's been a very rocky road since the investment about four point five years ago and so i think they're at a point where they've been funding the business to an extent unfortunately things haven't worked out as expected and they're just saying look they you we must do the best of what we can with what we've got and try and get as much value out over the next sort of eighteen months to two years and then yeah then the new journey begins again in terms of assessing who the new buyer is and what that then looks like remains to be seen
+
+
+Speaker 2:
+
+
+although in order for them to exit they have to identify that new buyer so
+
+
+Speaker 0:
+
+
+yeah
+
+
+Speaker 2:
+
+
+the pieces that need in place to identify the buyer into the future
+
+
+Speaker 0:
+
+
+will be present this is talking from a shareholder perspective i mean they they really don't care you know they'll take the highest but you know they don't care if it's financial or strategic they'll look at all the options and try and try and
+
+
+Speaker 2:
+
+
+you know but i'm saying from the buyer side the second buyer in order to exit they're going have to find a buyer whose interest has peaked sufficiently around the future growth rather than the yes
+
+
+Speaker 0:
+
+
+i mean that's what we're trying to position right but as i said look in fairness to the shareholders i mean has been a lot of investments into new products and it's about selling and commercializing that now so i think it's a nice balance at the moment given where we're at and given the business cycle so i'm pretty comfortable i mean those targets have been loosely defined in terms of revenue and in terms of ebitda not only for next year and for the and it's for the following year as well so we know what those targets are they have obviously been agreed that's all subject to formal approval which we're seeking soon but it's pretty much i think there's a very clear understanding of you know what's expected from all of us which is good which is good
+
+
+Speaker 2:
+
+
+good good can i just ask thanks for that ryan that makes sense can i ask a question if you could just scroll up justin
+
+
+Speaker 1:
+
+
+sure just before i carry on a general time check that we have about six minutes left so we can always defer other topics for a follow-up session i found this enormously valuable because just getting you talking is unbelievably useful just helping to to direct this but go ahead alison what what do
+
+
+Speaker 2:
+
+
+wanna yeah just i'll say quickly you can think of us trying to create basically a knowledge graph and we're sort of filling in the blanks of what is this world so the more you talk even in unstructured way the more the world maps out of us and i wanted to say how you should price i mean is the number what's the price is the one consideration but what is the pricing strategy
+
+
+Speaker 0:
+
+
+the primary strategy is to try and do away with capex and imc and need more software as a service model but
+
+
+Speaker 1:
+
+
+so what
+
+
+Speaker 2:
+
+
+yes i hear you one hundred percent and what i mean from the market's point of view is do your solutions get more of the job done than anyone else's because if that's true you can go for a market leading pricing strategy but if your solutions don't get the job done as well or as much as other solutions you might have to win on cost competitiveness and those
+
+
+Speaker 0:
+
+
+mean to be honest ones i think it's the latter and that's what we as far as i said i think from a software perspective we're pretty competitively you know we've we've been through an increased cycle with clients and there's a second increased cycle coming now so we've had something quite yeah very tough negotiations with finances to say that because you know the the price the pricing was long overdue for a proper increase given the reasons that i said so but it's again you know these guys they like to enjoy zero percent zero percent zero percent for four five years and then when you go to them and say look we've just done a review of this and our business isn't sustainable because we haven't been increasing prices now we have to put you up by fifteen percent then it doesn't get well received so that's i think it's it's come out to quite a fair result yeah duncan yes i think yeah i think it's an understanding that this is an hour and a half duncan rather than an
+
+
+Speaker 1:
+
+
+hour yeah
+
+
+Speaker 4:
+
+
+i just wanted to to touch on that ryan would you say there's a difference to allison's question depending on which product because certainly the legacy one's for sure and then we kind of tried our hand and you know it's it's a reasonable offering in terms of our digital onboarding but i think that that's very tight you know in terms of it's very cutthroat competition is vast there are amazing players out there but they're also expensive and then we look at you know things like the open source fraud risk management which is a very new approach that we've taken there are traditional things out there that banks use but it's massively expensive and very inefficient so it depends which product i would say and i don't know ryan you've got some
+
+
+Speaker 0:
+
+
+i mean i'm thinking deal yeah on the newer i mean the digital onboarding stuff is on your product very very effectively i mean they we price as a subscription base you know on transactions so and i think that's necessary to even compete effectively yes shayna
+
+
+Speaker 3:
+
+
+so i also i think some of the pricing stuff that we are seeing in the market is we have very niche players in certain markets that case they're a local entity that are gonna do a corporate to bank solution at a fraction of the cost we are and then we kinda get into a features benefits sort of standoff and then we've got the the big oem top players where some customers are happy to pay for that because it's nobody's gonna get fired for being on the gartner quadrant etcetera and i think we often battle to how do we differentiate that on a cost basis when we when we're not wanting to get into features and functions space
+
+
+Speaker 0:
+
+
+okay
+
+
+Speaker 3:
+
+
+that's my honest opinion around that
+
+
+Speaker 0:
+
+
+okay just
+
+
+Speaker 1:
+
+
+a quick question about this in terms of researching the competitive landscape in more depth the competitive positioning is quite relevant so you're saying now that you have multiple players but how do you position your differentiator your advantage relative to them
+
+
+Speaker 3:
+
+
+yes sometimes we do battle with that particularly where it's a a very region specific player
+
+
+Speaker 1:
+
+
+okay
+
+
+Speaker 3:
+
+
+you know you're competing against a five man organization and you shouldn't go into a larger we've got the support etcetera etcetera but the the competitive positioning yourself competitively in each of in each of the different regions is often i think where we because it's not always a one size fits all approach there
+
+
+Speaker 0:
+
+
+okay
+
+
+Speaker 2:
+
+
+where where do you have the potential for knowing that you're not the most competitive product in terms of features but basically saying you're prepared to get into almost like a loss leader with say digital onboarding in order to get to a bigger customer lifetime value in a particular customer so in other words account planning not just product selling yeah how does that occur or not occur
+
+
+Speaker 3:
+
+
+so look i think from the account planning side there is there should be that white space analysis i haven't been involved with that for a while allison but there were account plans that spoke you know who are the players in that market in that in that segment i'll give you an example of that in south africa we know for instance misaktamat in the frm space is the base in most of the big banks also i know that they're hellishly expensive that people are frustrated because there's a lack of resources and there's a huge number of false positives are we gonna get into those big four banks with our open source f r m solution i don't think we're do that easily because that's not also something you rip and replace
+
+
+Speaker 2:
+
+
+yeah i think i hear you i'm interested in the notion that you could also have pricing strategies which are based on future states in other words you price per outcome not consumption model and not old school per annum licensing but if it's fraud risk management you price per outcome and is that a market differentiating opportunity
+
+
+Speaker 0:
+
+
+that's a good question i think that's something we can look at i mean i think the summary and maybe just in terms of time gus is that we're definitely open to looking at pricing across the board in terms of the way we price how we price and looking legacy i think just a point on this you know this was something that struck me in terms of this point that we had here so we have a i'm calling it branch network solutions but we have this capability for banks to interact digitally with their branch network right and there's a number of different things that they do there there's some tailor functionality that we provide in a web application there's an imaging and workflow with scanning capabilities in other words decentralizing all the hard copies and paper being sent to central office you actually just get it scanned in a branch and it goes through and i'm just trying to think and then so the tele functionality is like accepting deposits and bill payments and all of other things as well so like that's a classic example for me of where you know over time and this this is all like literally this is all in version seven so every single solution there's fifty nine solutions on conversion seven which is like fifteen years old yeah there's fifty nine of those solutions okay across thirty three clients and we're building ten million rand annually for them now it i mean i haven't actually got to the point of analyzing this in any detail but we will do it but i'm just thinking that that's madness right for for the value that we supply there
+
+
+Speaker 2:
+
+
+so is that the point that was listed about the value versus price
+
+
+Speaker 0:
+
+
+correct so i mean we'll we'll get an updated version of the of the you know the the business case and what we wanna do strategically but what i'm trying to actually ascertain there is like i don't because you know traditionally what we would do is cyber and we would go and upgrade all of those solutions get these guys to pay an upgrade fee and then they carry on paying us ten million rand a year and i'm like no i i wanna i wanna basically terminate the old version and give notice because it can afford to be ten million rand a year and just basically say if you wanna stick with us you reprocure the software here's the pricing hopefully it's a subscription based similar to our c two b model which is not subscription based and you subscribe to use the service annually in advance and you choose depending on the number of modules you choose i think there's four modules in total then you you can activate each one as you as you want to and as you see fit and it's seamless for us to activate on our side and you start using it immediately so i wanna know if that team can become effective you know and that's with one of the use cases that we put forward because because of the legacy and because of how it's being positioned because it you know for whatever reason this is being completely and actually untouched for a very very long period and i don't wanna go through just the normal upgrade cycle because if i just look at those fifty nine solutions i mean ten million across thirty three times is insane right for a full branch net network setup in terms of what we're offering at at i don't even have the number of branches but it's expensive so again it just shows something that can be you know the value that could be potentially unlocked but it's a safe check of you know that effectively
+
+
+Speaker 2:
+
+
+and if we go to some of these better additional questions you know this also ties in obviously it's if the banks are prepared to pay for global am why what is the characteristic or attributes of those banks and how do we find the attributes of people who aren't banked do we find that kind of sweet spot in our analysis you know and then here's another one you could have a pricing strategy but you have something that is actually responsive to points in time so how do you go to a customer and say we'll take away these risks
+
+
+Speaker 0:
+
+
+yes now look mean these guys understand the risks i mean i think as you said it's about the solution and then it's the problem solving aspect right so i think where saaben is very good is that you know we don't always run the best projects but generally you know we we've got good enough people to fix things if they do go wrong but certainly from a payments perspective i mean i can't touch with but hardly anything ever goes wrong and this is like you know this is like big big big processing payment stuff for a hundred odd clients like we are processing millions of transactions monthly you know and there's certain cutoff times daily that you have to have it in otherwise it doesn't clear there's big ramifications for banks consumers and ourselves if things don't work so i can tell you i mean you know we have more than like ninety nine point nine percent uptime type of thing which is insane given the complexity and given you know i suppose how many solutions you know we have and how many clients where it's you know a number of staff etcetera so i think that's that's a big advantage you know that's a big differentiator for us it's like that whole trust thing and it's it's about for me leveraging off that trust and the relationships that we do have to you know to to try and sell solutions in other spaces
+
+
+Speaker 2:
+
+
+are you capturing case studies well as a business correct are you capturing or generating case studies well as a business
+
+
+Speaker 0:
+
+
+we do i mean probably not as best as we we could do i think there's a bit of work that could be done there you know we we we do as part of it you know tender process in rfps that we receive we always require to give client references and testimonials and the likes so we do have a few that you know i don't think like i haven't seen a churner but there's nothing on our website right that just says cio of this bank says this about us or whatever it is
+
+
+Speaker 3:
+
+
+we did have client testimonial with you on the on the website we've got a couple that have allowed us to do that from a pure case study perspective no we haven't put those up but we do have a couple of those very businessy not detailed not roi driven but we do banks
+
+
+Speaker 0:
+
+
+i mean generally the banks plans to do that generally see a very clear from that they don't really you know guys press releases and you know they they don't really get involved to that they're all gonna try to take care of it so but yeah i'm happy to do a a reference for a tender that we've been informed but yeah i think i think you know that's a a bit keeping for us to look at in this branch network solution space
+
+
+Speaker 2:
+
+
+i think ai could help a lot with generating deep case studies very quickly i also think that just you mentioned and i don't know to what extent this is really a threat but sort of the six person team as a competitor in the philippines where do you have not a technology arbitrage but financial one where can you offer financial terms that a six person company couldn't what can you do financially that they can't what in terms of payment cycles in terms of even risk undertakings around insurance and liability you know it shouldn't it should never be the case that six people can build software and therefore they're competing with you you've got to be much more than software and i think that that just as a thought experiment it would be interesting to understand what do we have that they don't that we can go and take them out and that they're not even a competitor we've got to get their buzzing noise down and yeah and then you know this notion of notion of total cost of ownership we should come up with a total cost of risk what's that chi
+
+
+Speaker 3:
+
+
+sorry love that
+
+
+Speaker 2:
+
+
+you see you see what i'm saying know ownership is one it's the commercial aspect what's the what's what's what is the risk because you talk about trust and relationships being a sort of sales posture and i'm saying well then in some sense i would love us to be able to codify and what does that mean and then and then back it up with in order to build trust you need to what demonstrate the following you need to have shown and if we could get even directionally correct on that then it's no longer just a personality issue we could institutionalize what's needed so that the business builds trust and relationships one of the ways to do that just as a quick example is to find out using ai there who i think i may have said something else but who have been customers of yours at banks that have moved on to other banks and you haven't followed them and said hey we can do the same for you here except we're better now so that kind of relationship selling is i'd like to take the word sort of trust in relationship or whatever it was and really have it and i'm not saying in this exercise but perhaps have a deep dive of what does that mean how will you know you got there how will you know you someone trusts you what would be the signs how would their behavior differ from people who don't trust you and we can do a behavioral analysis to say if somebody trusts us then we go in with this strategy if we're yet to build trust and then we get to a kind of a regional breakdown or territorial breakdown which isn't by country and their economic growth rate it's also based on who you know there and what your networking strength looks like as an alternative way to think about where to go i would go where my network is strong just some thoughts also talking for the transcript for
+
+
+Speaker 0:
+
+
+thanks
+
+
+Speaker 1:
+
+
+yeah yeah i'm
+
+
+Speaker 2:
+
+
+these these thoughts
+
+
+Speaker 1:
+
+
+just given that we do work with the transcript i'm just going to reflect back what duncan has said in the comments so just going a couple minutes back duncan said you know also specific to banks there is usually a different appetite across tier one tier two and three where they have different cost sensitivities and different risk appetites with regards to regulatory and compliance issues so that's something we need sensitivity for in our research and then just responding to what you were saying now he says it's partly our flexibility and willingness to respond to specific scenarios for clients that are differentiated as opposed to the large players however this has led to us having a legacy of so much bespoke solutions that we ran into trouble with keeping a clean product set in turn impacting our cost structures and eventually our multiple
+
+
+Speaker 2:
+
+
+well said get you
+
+
+Speaker 1:
+
+
+yeah so i know i'm reading it but i no
+
+
+Speaker 2:
+
+
+no i'm saying to duncan
+
+
+Speaker 0:
+
+
+i'm all in right
+
+
+Speaker 2:
+
+
+i guess thanks thanks for being the messenger but thanks duncan that was him
+
+
+Speaker 1:
+
+
+yeah so i think let me just quickly have a look so there's there's quite a lot to unpack around each of these i think we might need to book a second session just to get through the rest of them and also just to give us an opportunity to do some interim work to say okay how are these things interconnected because one of the questions that i had just connecting question set one and question set two around market understanding and competitive landscape it felt like the competitive landscape questions were much much narrower than the broader market understanding set of questions so for the one we would want to understand what are all of your products and solutions and what do you have in your pipeline and i think what i don't really understand just for my own notification is you know you this the question is focused predominantly on smart teller and payments upgrades
+
+
+Speaker 0:
+
+
+so
+
+
+Speaker 1:
+
+
+i think just for myself i need a little bit more clarity on you know you you're saying you have fifty nine solutions across thirty three customers but yeah do we do we wanna just narrow the view
+
+
+Speaker 0:
+
+
+yeah just for clarity i mean i think that smartteller that you referred to there was that solid name so i think we must just i'll work with duncan in marketing but we must just come up with a term i mean effectively at a at a bank you know you've got interaction with big corporate clients and that we call c two b corporate to bank and we can send you i mean we must send through all of that information please duncan as well
+
+
+Speaker 4:
+
+
+i did i did actually share that justin but not all of it but just to just so you could you know get the idea of what the product is
+
+
+Speaker 0:
+
+
+i mean as an example that product's built now right then on the new version of our platform it's the latest and greatest i mean we're gonna launch a big campaign now in october to do a full like big big launch for us to try and effectively you know convince people to take it and there's a lot of good stuff in there and just again in terms of solution you know it's effectively just digitizing interactions between banks and their big corporate clients for a number of different things so rather than them phone calls and emails and paper being pushed around everywhere it just allows for you know interaction and tracking and reporting on all the engagements that a big bank has for this big corporate class which is which is good i mean the the the smartteller i mean just for our purposes i'm just calling it branch network solutions because it's not just telen it's it's also it's very similar so you're you're just allowing a bank to engage with its its branch network digitally right and we effectively solving for a whole lot of inefficiencies time materials and risk in terms of things going missing i've been able to report accurately on certain things etcetera etcetera so again you know solution is is far better than the way that they're doing it right now in terms of spreadsheets emails phone calls you know querying documents backwards and forwards etcetera so i i wouldn't say in terms of in terms of payments upgrades i don't think we need to work out how to process for that at all so we can just take off the upgrades i mean i'll just take the upgrades as a given there's a program that's been running we're halfway through it we're gonna we're gonna get through it in the next two years and if clients don't don't agree well you know there will be effectively a termination or there will be a penalty imposed effectively we're gonna increase the sla fee significantly because of the cost to of us for us to support legacy systems and then going forward there will be a software life cycle policy which is already being defined and it's already being distributed to our clients we just haven't pulled the trigger on it yet where they have to stay current within market three year or three version cycle so we'll what you'll see is a lot more you know the size of the upgrade will be a lot less but they'll just be a lot more frequent which is how it should
+
+
+Speaker 6:
+
+
+be so
+
+
+Speaker 0:
+
+
+yeah rather than waiting fifteen years and then you've got to pay two million bucks to get an upgrade cool
+
+
+Speaker 1:
+
+
+right so i'm just checking the time so this time it's more accurate we've basically gotten a lot of context around these two and then we'll probably do more of a deep dive into regulatory and compliance then we can set up another session where we now that we've got all this context we have processed it increased our understanding of your world and then come back with even more incisive questions i think let's spend a a few minutes now looking at what johannes has been doing around the npo stuff but more than anything i just want to focus on some of the conditional questions so that we know how to build out the research more effectively for you because the conclusions can vary wildly depending on those conditions so janus suggestion maybe yep
+
+
+Speaker 4:
+
+
+yep if we for the next session if you can share whatever print you have i think it's a you know definitely for me it's helpful just to scan through it instead of trying to use the time in the meeting to try and see and read you know the the the first kind of you know draft view so so maybe that's just a way to speed up the next workshop one number yeah okay
+
+
+Speaker 1:
+
+
+yep absolutely yeah
+
+
+Speaker 2:
+
+
+k
+
+
+Speaker 6:
+
+
+so my turn now i've got a lot of questions for you guys alright so i'm gonna start off by just giving you guys a brief overview of the research process i've organized most of the information into different folders and documents so you can imagine it as a poorly presented mind map i had four main questions but i think i'm gonna condense them into two groups so for this research attempt it was a little bit more focused on trying to refine the actual criteria used to evaluate different regions so we've been setting up this new well not a new framework but a framework based off of the requirements of foundations like the gates foundation i'll just have a quick view of that while i sort of it for this specific attempt it was just kenya south africa mauritius just to try and get the criteria down and basically the output of the results of this attempt were leaning towards south africa with a very small margin in front of kenya the two main things in at least in this rubric that pulled south africa forward was cygren's existing presence and infrastructure inside of south africa as well as some tax benefits that you get with things like skills levy and bee just yeah skills levy and bee which will probably be refined in the future depending on how the criteria change changes but yeah so let me dive into the main research questions or the main things that need clarity so the first is with regards to
+
+
+Speaker 2:
+
+
+so can i just pause for a second johannes i'm sorry johannes i just want to point out the kind of dimensionality of the problem from our perspective so our research is now based on these factors what is the donor's strategy and not just gates but other donors like gates what is their strategy and how do you make sure you align to that what are the legal frameworks what's the jurisdiction analysis in terms of governance and tax etcetera but there's a very interesting another point which comes out of our research is what about ngo competitor scans so where could you set up that is not sort of overly mushroomed with ngos all trying to fight over the same grants and i think that's quite a nice angle is to understand not just the donor market but what does the supply market look like not just demand
+
+
+Speaker 6:
+
+
+yeah exactly so when it comes to the when reviewing the transcripts and the current the current state of how you guys approach the actual sources of funding there's sort of a mix mismatch or confusion that i have around the exclusivity of the gates foundation so in the most early transcripts there was mention of creating a ngo that's purely with the focus of funding the money from the gay foundation and putting it into the south african initiatives and the and those projects but in the same breath there's also reference to contact or getting involved with the mascot foundation you guys also mentioned the asian development banquet from the discussions i see that's not on the agenda anymore
+
+
+Speaker 2:
+
+
+i think that's an easy one to rectify there the initial i'm sorry didn't get a chance to speak to you correct me if i'm wrong cyber and team but it's about the gates foundation in the short term with an intention to then identify other grant opportunities so there's nothing about wanting only to work with the gates foundation no no gates foundation's exclusive partner it it will be a wider range
+
+
+Speaker 0:
+
+
+we wouldn't want it limited because i think we're gonna go to all this effort to set it up then i think we want to get as much funding as possible as long as you can obviously prove that it's for a good cause and purpose that they're willing to support right so i mean yeah there's the linux foundation i think which gates foundation works really closely with but there's obviously a development bank and then there's mastercard foundation which came up i think in the last chance but just to clarify as well at the moment the biggest opportunity for the donations in in terms of geography is actually the philippines so it's not south africa so we we need funds to effectively and we this is where some of the complications come in and some of the complexity it's it is rather complex but you know obviously we've got quite a complex corporate structure and you know we have certain businesses that do certain things within the corporate structure and then you've got the the philippines where you know we we've only got effectively business development people and local directors on the ground there and we're servicing that market sort of remotely from within you know the other businesses at the moment we do have a registered entity in the philippines southern philippines the idea is to obviously you know and we budgeted actually for this next coming financial year to to employ some more permanent people you know in the philippines which is good but the you know i think one of the challenges is that the money needs to flow to the country where the benefit's being realized so you know that's what we it's sort of a weird one for me i'm sort of trying to get my head around it but you know you you you the money could come in and you're then gonna pay it to effectively cyber in philippines cyber in philippines will receive the money but then we'll cross charge it to the the people that actually do the work within the cyber group right but the benefit will be to the citizens of the philippines because the rural banks that we're targeting will get a forward risk management system which will ultimately end up protecting consumer when it comes to fraud especially in relation to instant payments so that's the way it will flow now we we had some provisional meetings with some attorneys and a few you know a few other conversations and our understanding at the moment is that if the benefit's gonna be in the philippines then the money needs to go there effectively so they were saying well you need to engage with an npo there that's a nonprofit i think for the short term we've made an interim solution with the united nations which is good news although that comes at a head fee administration fee and it creates risk for us because there's a hundred thousand dollar limits and they then have to create three sort of separate offers effectively and then they're open as well so other people can bid for them so it's fun it's it's it's not ideal at all but if it's a way to get it through for right now then we'll take it right because that will sort of just ignite our philippines play quite nicely you know from a whole lot of different angles which is great so we we sort of just carrying on with that but that's more this is more i suppose it's not too urgent as a result but i think you know it's just good for us to properly have a look and understand that if we're expecting to continue to get funding from multiple donors which we are given the kind of work that we're doing and it could be for africa it could be for philippines it could be for other regions in southeast asia i don't know it could be in south america eventually you know is it worth our while setting up our own nonprofit structure and you know as we said the question is well where do we set it up and what you know and that's really what we wanna try and solve for that
+
+
+Speaker 2:
+
+
+that makes that makes good sense ron thanks for that
+
+
+Speaker 6:
+
+
+great so i just wanna make sure the gates foundation those funds are directed at africa i'm doing financial inclusion work in africa and that's not no not k
+
+
+Speaker 0:
+
+
+so it's a big focus on africa so yes generally speaking but they do look at other emerging markets too where there's you know obviously opportunity to do good that's obviously the purpose of the funds in the first place and as i said as a result southeast asia's target for a lot of these donors in terms of being able to provide funding to assist i mean the big themes are financial inclusion as a massive theme in emerging markets whether it's south america africa or southeast asia those are the big themes and then instant payments is part of it but you know you get access to financial services through digital means because that's the only practical way to do it so it's it's you know allowing access and then and let's say education around financial services to the whole idea is to try and i suppose democratize this as much as possible make your entry points as low as possible in terms of you know being able to access stuff on very cheap smartphones obviously there's data access and data coverage and the cost of data that comes into it which is other players as well and and then there's an education piece right where you can you can go through and it can obviously be ai driven and very targeted given your you know who you are as a person what you do what your income is what geographic you know geographical area you live in etcetera etcetera so i think for me that's that's really where the focus is for the next five to ten years certainly in africa and southeast asia that i know of and i think as as a result there's lots of opportunity for cyber so but but yeah okay it's i i think primarily focused on africa just to just to clarify but they are willing to supply some funding for for the implementation of tizana because i think tizana is a little bit different as well i mean they actually paid us to build out tizana right they paid us about twenty million twenty odd million rand to build out the platform it's you know they own the ip it's open if nobody owns it it's open source so we don't own ip so we can't commercialize it which is fair enough but they want they wanna see the solution implemented at banks and that's you know central governments in other words like clearinghouse solution automatic clearinghouse level which is you know the the main government switches they wanna see this platform that they pay for they wanna see it implemented they wanna actually see it working so that's i think maybe why they've taken a bit of an exception with regards to the philippines in this case there anything more to add there shona is that right i mean
+
+
+Speaker 3:
+
+
+yeah that is i mean i think for the gates foundation their big thing as ryan said is financial inclusion so wherever financial inclusion is a problem they want to promote that hence the open source solutions of tizana which is a fraud risk monitoring solution and mojaloop which is an instant payment switch they wanna make sure that that is developmentally in nature so learnings are shared with other countries that are you know in the same sort of situation and at the end of the day it's got to be beneficial to the end user so the consumer protecting the consumer at the end of the day those are their big drivers
+
+
+Speaker 0:
+
+
+yeah
+
+
+Speaker 6:
+
+
+okay so you mentioned that some of the some of the what is it the products that you would sell through the ngo with data coverage and cheap or cheap smartphones but budget friendly smartphones why didn't say it like that that sort of goes into the second big quest so it's sort of a chicken and egg situation it's about the different services that you would provide to the ngo as well as which jurisdictions because you mentioned earlier in the meeting that different jurisdictions have different products that you know depending on market demand and one part of it is if we figure out which services or maybe that's the research question itself but if there can be a focus on which services would work best in the context of the ngo it could clue into which jurisdictions would be most optimal and that could really help figure out exactly what the architecture should should look like so do you have any take on that
+
+
+Speaker 0:
+
+
+yeah shannon's gonna hand it back
+
+
+Speaker 3:
+
+
+so just a quick question around that janis have you guys possibly done any of the research which says this is where the grants are flowing to
+
+
+Speaker 6:
+
+
+that's the next step which i think should should be the competitor analysis
+
+
+Speaker 2:
+
+
+so if you if you go into the donor strategy folder just let us know to be honest
+
+
+Speaker 6:
+
+
+yeah
+
+
+Speaker 2:
+
+
+so there's yeah i mean maybe just talk through these please
+
+
+Speaker 6:
+
+
+so yeah
+
+
+Speaker 3:
+
+
+because there's so there's the world bank there's you know the asian development bank there's the gates fund there's a number of these
+
+
+Speaker 2:
+
+
+donors yes yes so there's a multi donor strategy analysis too
+
+
+Speaker 6:
+
+
+yeah so initially the bit of confusion that i had was with the focus around the gates foundation and in that as the other side is the multi donor framework so the multi donor framework most goes into the different types of donors as an extension of this would look into actual other ngos and where their funds go to sure
+
+
+Speaker 2:
+
+
+and and i think that at this point in the research we're saying african development bank and mastercard because that's what we got from you initially but it could be much wider and i think one of the services we could provide is a monitoring service that looks for opportunities automated scanning of that and one could even get it to automate the responses but you know basically the question is if we're providing this kind of financial inclusion benefits what are the donors
+
+
+Speaker 0:
+
+
+yeah i know it would be good to it would be good to obviously have that on
+
+
+Speaker 2:
+
+
+oh sorry asian development bank
+
+
+Speaker 3:
+
+
+there is also an african development bank though sorry
+
+
+Speaker 0:
+
+
+yeah but again you know this is the kind of thing we would look at i mean if we are gonna set up as nonprofits then we know it's all about that nonprofit you know establishing relationships with all these players putting forward you know why they would need funding and what purpose does it ultimately serve and then you know obviously going to lobby for funding on an ongoing basis to support you know all other things that we wanna do the sovereign would be part of this i mean you know it's obviously nice to be paid for it but ultimately strategically for us it's about you know getting a presence and a recognition in at clients and at sort of i suppose senior government levels and you know even at the the government owned entities like the central banks and then leveraging those relationships you know from a competitive standpoint
+
+
+Speaker 2:
+
+
+okay
+
+
+Speaker 0:
+
+
+well thanks we we are out of time mhmm and i need to jump here but
+
+
+Speaker 2:
+
+
+that's fine i think we'll we'll look to set up a follow-up to discuss the rest okay great chi and we'll we'll take it from there but this is already allowing us to take the next version into being
+
+
+Speaker 0:
+
+
+yep no fantastic thanks gus thanks for
+
+
+Speaker 1:
+
+
+thanks everybody
+
+
+Speaker 2:
+
+
+thanks mohit appreciate the discussion thanks everyone
+
+
+Speaker 0:
+
+
+thank you thanks
+
+
+Speaker 2:
+
+
+everyone bye
