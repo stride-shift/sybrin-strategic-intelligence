@@ -118,10 +118,11 @@ const ResearchChat = () => {
                       : msg
                   ));
                 });
-              } else if (event.type === 'response.done' && event.response) {
+              } else if (event.type === 'response.completed') {
                 // Save response ID for conversation continuity
-                responseId = event.response.id;
-                console.log('🟢 CAPTURED RESPONSE ID:', responseId);
+                // The response ID is in event.response.id
+                responseId = event.response?.id || event.id;
+                console.log('🟢 CAPTURED RESPONSE ID:', responseId, 'Full event:', event);
                 setDebugInfo(prev => ({ ...prev, lastCapturedId: responseId }));
               }
             } catch (e) {
