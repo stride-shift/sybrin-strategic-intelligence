@@ -62,7 +62,7 @@ const JTBDIntelligenceDashboard = () => {
       id: 'job1',
       category: 'Regulatory',
       number: 1,
-      title: 'Meet BSP AFASA real-time fraud mandate by 2025 without breaking IT budget',
+      title: 'Philippine Banks\' Job: Meet BSP AFASA real-time fraud mandate by 2025 without breaking IT budget',
       statement: 'Achieve full BSP AFASA compliance for real-time fraud detection when IT budgets are constrained and core systems are legacy/EOL.',
       evidence: 'Philippines: "AFASA/real-time fraud detection compliance by 2025; urgent need for affordable fraud management" (thrift/rural banks segment)',
       circumstances: [
@@ -78,7 +78,7 @@ const JTBDIntelligenceDashboard = () => {
       id: 'job2',
       category: 'Regulatory',
       number: 2,
-      title: 'Navigate check decommissioning without losing revenue or customers',
+      title: 'Kenyan/Zambian Banks\' Job: Navigate check decommissioning without losing revenue or customers',
       statement: 'Replace check-based revenue streams and customer workflows when regulators mandate check decommissioning with short timelines.',
       evidence: 'Kenya: "Active regulatory drivers (instant payments, check decommissioning)", Zambia: "E-check opportunity as checks decommission"',
       circumstances: [
@@ -94,7 +94,7 @@ const JTBDIntelligenceDashboard = () => {
       id: 'job3',
       category: 'Scaling',
       number: 3,
-      title: 'Reach 98% self-service transactions without losing the 20% of customers who can\'t/won\'t go digital',
+      title: 'Kenyan Banks\' Job: Reach 98% self-service transactions without losing the 20% who can\'t/won\'t go digital',
       statement: 'Push digital adoption from 86-94% to 98%+ while retaining elderly, rural, and digitally illiterate customers who prefer branches/agents.',
       evidence: 'Kenya: Equity Bank targeting 98% from 86%, Co-operative Bank 92%, Absa Kenya 94%',
       circumstances: [
@@ -110,7 +110,7 @@ const JTBDIntelligenceDashboard = () => {
       id: 'job4',
       category: 'Scaling',
       number: 4,
-      title: 'Manage 6M+ digital users with same operational capacity as 1M users',
+      title: 'Large Banks\' Job: Manage 6M+ digital users with same operational capacity as 1M users',
       statement: 'Scale digital user base 5-10x without proportional increase in fraud losses, customer service staff, or operational costs.',
       evidence: 'Tanzania: NMB Bank 6M+ digital users drives need for advanced fraud management, AI/ML risk management',
       circumstances: [
@@ -126,7 +126,7 @@ const JTBDIntelligenceDashboard = () => {
       id: 'job5',
       category: 'Rural',
       number: 5,
-      title: 'Serve 90% rural clients profitably when connectivity is poor and field officers travel 100km on bikes',
+      title: 'MFIs\' Job: Serve 90% rural clients profitably when connectivity is poor and field officers travel 100km on bikes',
       statement: 'Originate loans, verify identity, and collect repayments in rural areas when staff travel by bike, mobile networks are unreliable, and customers lack formal IDs.',
       evidence: 'Zambia: Agora Microfinance (90%+ rural clients, poor connectivity, bike-based field officers)',
       circumstances: [
@@ -142,7 +142,7 @@ const JTBDIntelligenceDashboard = () => {
       id: 'job6',
       category: 'Rural',
       number: 6,
-      title: 'Manage 329 Micro Banking Offices with same oversight as 54 branches',
+      title: 'Rural Banks\' Job: Manage 329 Micro Banking Offices with same oversight as 54 branches',
       statement: 'Supervise and support 329 distributed micro-offices with tiny transaction volumes when branch management systems assume 20-50 large branches.',
       evidence: 'Philippines: CARD Bank - 900K+ clients, 54 branches, 329 Micro Banking Offices',
       circumstances: [
@@ -158,7 +158,7 @@ const JTBDIntelligenceDashboard = () => {
       id: 'job7',
       category: 'Payments',
       number: 7,
-      title: 'Connect to TIPS without replacing our core banking system',
+      title: 'Legacy Banks\' Job: Connect to TIPS without replacing our core banking system',
       statement: 'Meet central bank mandate to connect to instant payment system when core lacks modern APIs and integration will cost 12+ months and $500k+.',
       evidence: 'Tanzania: TIPS - 45+ institutions connected; 490M+ transactions in 2024',
       circumstances: [
@@ -174,7 +174,7 @@ const JTBDIntelligenceDashboard = () => {
       id: 'job8',
       category: 'Payments',
       number: 8,
-      title: 'Process InstaPay/PESONet at scale without building expensive real-time infrastructure',
+      title: 'Philippine Banks\' Job: Process InstaPay/PESONet at scale without building expensive real-time infrastructure',
       statement: 'Offer 24/7 instant payments when we lack real-time core systems and 24/7 operations staff.',
       evidence: 'Philippines: Intense competition from digital banks (GCash, Maya) with 5-minute onboarding and 24/7 services',
       circumstances: [
@@ -190,7 +190,7 @@ const JTBDIntelligenceDashboard = () => {
       id: 'job9',
       category: 'Agents',
       number: 9,
-      title: 'Digitize 32,000 agents without losing productivity or creating fraud exposure',
+      title: 'Banks with Agent Networks\' Job: Digitize 32,000 agents without losing productivity or creating fraud exposure',
       statement: 'Equip 32,000 agents with digital tools that increase productivity and compliance without creating new fraud risks or requiring expensive devices.',
       evidence: 'Zambia: Zanaco 32k+ agents, Kenya: Faulu 600+ agents need efficient digital onboarding and KYC/AML',
       circumstances: [
