@@ -899,7 +899,7 @@ const JTBDIntelligenceDashboard = () => {
                   <div className="px-3 py-1 rounded border bg-gray-100 text-gray-600 border-gray-300 text-sm font-medium">P3</div>
                   <div>
                     <div className="font-semibold text-gray-900">Defer (Post-Exit Innovation)</div>
-                    <div className="text-gray-600 text-sm">Low feasibility (<50%) OR long development OR regulatory blockers + Post-exit opportunity</div>
+                    <div className="text-gray-600 text-sm">Low feasibility (&lt;50%) OR long development OR regulatory blockers + Post-exit opportunity</div>
                   </div>
                 </div>
               </div>
