@@ -87,23 +87,18 @@ const ResearchChat = () => {
 
               const event = JSON.parse(jsonData);
 
-              // Handle Supabase streaming format
-              if (event.output && Array.isArray(event.output)) {
-                for (const item of event.output) {
-                  if (item.type === 'text' && item.text) {
-                    streamedContent += item.text;
-                    setMessages(prev => prev.map(msg =>
-                      msg.id === assistantMessageId
-                        ? { ...msg, content: streamedContent }
-                        : msg
-                    ));
-                  }
-                }
-              }
-
-              // Save response ID if present
-              if (event.response_id) {
-                responseId = event.response_id;
+              // Handle OpenAI Responses API streaming format
+              if (event.type === 'response.output_text.delta' && event.delta) {
+                // Append text delta to streaming content
+                streamedContent += event.delta;
+                setMessages(prev => prev.map(msg =>
+                  msg.id === assistantMessageId
+                    ? { ...msg, content: streamedContent }
+                    : msg
+                ));
+              } else if (event.type === 'response.done' && event.response) {
+                // Save response ID for conversation continuity
+                responseId = event.response.id;
               }
             } catch (e) {
               // Ignore malformed JSON
