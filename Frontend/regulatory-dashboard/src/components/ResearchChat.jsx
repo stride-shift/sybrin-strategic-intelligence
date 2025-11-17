@@ -80,11 +80,6 @@ const ResearchChat = () => {
         for (const line of lines) {
           if (!line.trim() || line.startsWith(':')) continue;
 
-          if (line.startsWith('event:')) {
-            // Event type line - we'll process the data on the next line
-            continue;
-          }
-
           if (line.startsWith('data:')) {
             try {
               const jsonData = line.slice(5).trim(); // Remove 'data:' prefix
@@ -92,20 +87,23 @@ const ResearchChat = () => {
 
               const event = JSON.parse(jsonData);
 
-              // Handle different event types
-              if (event.type === 'response.output_text.delta') {
-                // Append text delta to streaming content
-                if (event.delta) {
-                  streamedContent += event.delta;
-                  setMessages(prev => prev.map(msg =>
-                    msg.id === assistantMessageId
-                      ? { ...msg, content: streamedContent }
-                      : msg
-                  ));
+              // Handle Supabase streaming format
+              if (event.output && Array.isArray(event.output)) {
+                for (const item of event.output) {
+                  if (item.type === 'text' && item.text) {
+                    streamedContent += item.text;
+                    setMessages(prev => prev.map(msg =>
+                      msg.id === assistantMessageId
+                        ? { ...msg, content: streamedContent }
+                        : msg
+                    ));
+                  }
                 }
-              } else if (event.type === 'response.done') {
-                // Save response ID for conversation continuity
-                responseId = event.response?.id;
+              }
+
+              // Save response ID if present
+              if (event.response_id) {
+                responseId = event.response_id;
               }
             } catch (e) {
               // Ignore malformed JSON

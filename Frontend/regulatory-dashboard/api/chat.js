@@ -1,13 +1,13 @@
 /**
  * Vercel Edge Function for Sybrin Research Assistant Chat
- * Streams responses from OpenAI GPT-5.1 with File Search
+ * Proxies to Supabase Edge Function with streaming support
  */
 
 export const config = {
   runtime: 'edge',
 };
 
-const VECTOR_STORE_ID = 'vs_69175031dd44819181977702547d85e0';
+const SUPABASE_EDGE_FUNCTION_URL = 'https://dhknuansbbqojyzbkvui.supabase.co/functions/v1/query-research';
 
 export default async function handler(req) {
   // CORS headers
@@ -40,33 +40,24 @@ export default async function handler(req) {
       });
     }
 
-    const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
-
-    // Call OpenAI Responses API with streaming
-    const response = await fetch('https://api.openai.com/v1/responses', {
+    // Call Supabase Edge Function with streaming enabled
+    const response = await fetch(SUPABASE_EDGE_FUNCTION_URL, {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${OPENAI_API_KEY}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'gpt-5.1',
-        input: question,
-        tools: [{
-          type: 'file_search',
-          vector_store_ids: [VECTOR_STORE_ID]
-        }],
-        previous_response_id: previous_response_id || undefined,
-        store: true,
+        question: question,
         stream: true, // Enable streaming
+        previous_response_id: previous_response_id || undefined,
       }),
     });
 
     if (!response.ok) {
       const errorData = await response.text();
-      console.error('OpenAI API error:', errorData);
+      console.error('Supabase Edge Function error:', errorData);
       return new Response(JSON.stringify({
-        error: 'OpenAI API request failed',
+        error: 'Research query failed',
         details: errorData
       }), {
         status: response.status,
@@ -74,7 +65,7 @@ export default async function handler(req) {
       });
     }
 
-    // Stream the response back to the client
+    // Proxy the streaming response from Supabase
     return new Response(response.body, {
       headers: {
         ...headers,
