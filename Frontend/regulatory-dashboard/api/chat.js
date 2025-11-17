@@ -1,45 +1,32 @@
 /**
- * Vercel Edge Function for Sybrin Research Assistant Chat
+ * Vercel Serverless Function for Sybrin Research Assistant Chat
  * Uses OpenAI GPT-5.1 with File Search (Responses API)
  */
 
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const VECTOR_STORE_ID = 'vs_69175031dd44819181977702547d85e0';
 
-export const config = {
-  runtime: 'edge',
-};
-
-export default async function handler(req) {
+export default async function handler(req, res) {
+  const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
   // CORS headers
-  const headers = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type',
-    'Content-Type': 'application/json',
-  };
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
   // Handle OPTIONS preflight
   if (req.method === 'OPTIONS') {
-    return new Response(null, { status: 200, headers });
+    return res.status(200).end();
   }
 
   // Only allow POST
   if (req.method !== 'POST') {
-    return new Response(
-      JSON.stringify({ error: 'Method not allowed' }),
-      { status: 405, headers }
-    );
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    const { question, previous_response_id } = await req.json();
+    const { question, previous_response_id } = req.body;
 
     if (!question || question.trim() === '') {
-      return new Response(
-        JSON.stringify({ error: 'Question is required' }),
-        { status: 400, headers }
-      );
+      return res.status(400).json({ error: 'Question is required' });
     }
 
     // Call OpenAI Responses API
@@ -64,10 +51,10 @@ export default async function handler(req) {
     if (!response.ok) {
       const errorData = await response.text();
       console.error('OpenAI API error:', errorData);
-      return new Response(
-        JSON.stringify({ error: 'OpenAI API request failed', details: errorData }),
-        { status: response.status, headers }
-      );
+      return res.status(response.status).json({
+        error: 'OpenAI API request failed',
+        details: errorData
+      });
     }
 
     const data = await response.json();
@@ -94,21 +81,18 @@ export default async function handler(req) {
       }
     }
 
-    return new Response(
-      JSON.stringify({
-        answer: responseText,
-        citations: citations,
-        response_id: data.id,
-        status: data.status,
-      }),
-      { status: 200, headers }
-    );
+    return res.status(200).json({
+      answer: responseText,
+      citations: citations,
+      response_id: data.id,
+      status: data.status,
+    });
 
   } catch (error) {
     console.error('Chat API error:', error);
-    return new Response(
-      JSON.stringify({ error: 'Internal server error', details: error.message }),
-      { status: 500, headers }
-    );
+    return res.status(500).json({
+      error: 'Internal server error',
+      details: error.message
+    });
   }
 }
