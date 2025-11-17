@@ -16,7 +16,14 @@ import {
   TrendingUp,
   Database,
   Layers,
-  Building2
+  Building2,
+  DollarSign,
+  FileText,
+  Award,
+  Heart,
+  Clock,
+  Lightbulb,
+  MessageSquare
 } from 'lucide-react'
 
 const Layout = ({ children }) => {
@@ -44,6 +51,18 @@ const Layout = ({ children }) => {
           name: 'Research Methodology',
           icon: Microscope,
           description: 'Our systematic approach'
+        },
+        {
+          path: '/strategic-intelligence',
+          name: 'Strategic Intelligence',
+          icon: Lightbulb,
+          description: 'Market entry & expansion insights'
+        },
+        {
+          path: '/research-chat',
+          name: 'Research Assistant',
+          icon: MessageSquare,
+          description: 'AI-powered research Q&A (GPT-5.1)'
         }
       ]
     },
@@ -53,16 +72,22 @@ const Layout = ({ children }) => {
       icon: Database,
       items: [
         {
-          path: '/customers',
+          path: '/sy2-customer-intelligence',
           name: 'Customers',
           icon: Users,
-          description: 'Existing & potential customers'
+          description: 'Enhanced customer database with insights'
         },
         {
-          path: '/regulatory-tailwinds',
+          path: '/sy2-regulatory-intelligence',
           name: 'Regulatory Tailwinds',
           icon: Globe,
-          description: 'Compliance initiatives across markets'
+          description: 'Comprehensive regulatory tracking'
+        },
+        {
+          path: '/sy2-competitive-intelligence',
+          name: 'Competitive Analysis',
+          icon: BarChart3,
+          description: 'Enhanced competitor analysis with views'
         },
         {
           path: '/products-jobs',
@@ -75,6 +100,30 @@ const Layout = ({ children }) => {
           name: 'Customer Jobs',
           icon: Target,
           description: 'Customer segments JTBD analysis'
+        },
+        {
+          path: '/budget-institutions',
+          name: 'Budget Institutions',
+          icon: Building2,
+          description: 'IT budgets & financial health'
+        },
+        {
+          path: '/solution-pricing',
+          name: 'Solution Pricing',
+          icon: DollarSign,
+          description: 'Willingness-to-pay intelligence'
+        },
+        {
+          path: '/procurement-frameworks',
+          name: 'Procurement Frameworks',
+          icon: FileText,
+          description: 'Payment terms & approval processes'
+        },
+        {
+          path: '/cultural-intelligence',
+          name: 'Cultural Intelligence',
+          icon: Globe,
+          description: 'Cultural insights & market entry strategies'
         }
       ]
     },
@@ -84,16 +133,52 @@ const Layout = ({ children }) => {
       icon: Layers,
       items: [
         {
-          path: '/competitive-analysis',
-          name: 'Competitive Analysis',
-          icon: BarChart3,
-          description: 'Competitor positioning'
-        },
-        {
           path: '/market-intelligence',
           name: 'Market Intelligence',
           icon: TrendingUp,
           description: 'TAM/SAM/SOM & Market Entry Analysis'
+        },
+        {
+          path: '/top-targets',
+          name: 'Top Targets',
+          icon: Target,
+          description: 'Highest-value prospects by budget tier'
+        },
+        {
+          path: '/market-readiness',
+          name: 'Market Readiness',
+          icon: Globe,
+          description: 'GTM prioritization & market temperature'
+        },
+        {
+          path: '/competitive-sweet-spots',
+          name: 'Competitive Sweet Spots',
+          icon: BarChart3,
+          description: 'Low competition + high fit opportunities'
+        },
+        {
+          path: '/sybrin-fit-solutions',
+          name: 'Sybrin Fit Solutions',
+          icon: Award,
+          description: 'Solutions where Sybrin has HIGH fit'
+        },
+        {
+          path: '/underserved-segments',
+          name: 'Underserved Segments',
+          icon: Heart,
+          description: 'Strategic GTM intelligence for underserved segments'
+        },
+        {
+          path: '/cash-flow-planning',
+          name: 'Cash Flow Planning',
+          icon: Clock,
+          description: 'Payment terms for financial modeling'
+        },
+        {
+          path: '/pricing-expansion',
+          name: 'Pricing & Expansion',
+          icon: TrendingUp,
+          description: 'Unified market entry & pricing intelligence'
         }
       ]
     },

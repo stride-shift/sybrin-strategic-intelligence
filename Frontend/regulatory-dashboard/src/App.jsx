@@ -23,6 +23,7 @@ import CulturalIntelligenceDashboard from './components/CulturalIntelligenceDash
 import PricingExpansionDashboard from './components/PricingExpansionDashboard'
 import StrategicIntelligenceFAQ from './components/StrategicIntelligenceFAQ'
 import StrategicIntelligenceFAQ2 from './components/StrategicIntelligenceFAQ2'
+import ResearchChat from './components/ResearchChat'
 import './App.css'
 
 function App() {
@@ -86,6 +87,7 @@ function App() {
           {/* Strategic Intelligence */}
           <Route path="/strategic-faq" element={<StrategicIntelligenceFAQ />} />
           <Route path="/strategic-intelligence" element={<StrategicIntelligenceFAQ2 />} />
+          <Route path="/research-chat" element={<ResearchChat />} />
 
           {/* Redirect old routes to new Sy2 versions */}
           <Route path="/customers" element={<Navigate to="/sy2-customer-intelligence" replace />} />
