@@ -3,6 +3,8 @@ import { Send, Bot, User, FileText, Loader2, Sparkles } from 'lucide-react';
 import { Streamdown } from 'streamdown';
 
 const ResearchChat = () => {
+  console.log('ResearchChat component rendering');
+
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -17,11 +19,19 @@ const ResearchChat = () => {
 
   // Focus input on mount
   useEffect(() => {
+    console.log('Component mounted, focusing input');
     inputRef.current?.focus();
   }, []);
 
   const sendMessage = async () => {
-    if (!inputValue.trim() || isLoading) return;
+    console.log('=== sendMessage called ===');
+    console.log('inputValue:', inputValue);
+    console.log('isLoading:', isLoading);
+
+    if (!inputValue.trim() || isLoading) {
+      console.log('Returning early - empty input or already loading');
+      return;
+    }
 
     const userMessage = {
       id: Date.now(),
@@ -30,6 +40,7 @@ const ResearchChat = () => {
       timestamp: new Date().toISOString(),
     };
 
+    console.log('Setting user message:', userMessage);
     setMessages(prev => [...prev, userMessage]);
     setInputValue('');
     setIsLoading(true);
@@ -44,9 +55,11 @@ const ResearchChat = () => {
       timestamp: new Date().toISOString(),
       isStreaming: true,
     };
+    console.log('Setting assistant placeholder:', assistantMessage);
     setMessages(prev => [...prev, assistantMessage]);
 
     try {
+      console.log('Fetching from /api/chat...');
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -56,7 +69,11 @@ const ResearchChat = () => {
         }),
       });
 
+      console.log('Response received:', response.status, response.ok);
+
       if (!response.ok) {
+        const errorText = await response.text();
+        console.error('Response not OK:', errorText);
         throw new Error('Failed to get response');
       }
 
@@ -131,19 +148,23 @@ const ResearchChat = () => {
       }
 
     } catch (error) {
-      console.error('Error sending message:', error);
+      console.error('!!! ERROR in sendMessage !!!');
+      console.error('Error details:', error);
+      console.error('Error stack:', error.stack);
+
       // Replace streaming message with error
       setMessages(prev => prev.map(msg =>
         msg.id === assistantMessageId
           ? {
               ...msg,
               type: 'error',
-              content: 'Sorry, I encountered an error. Please try again.',
+              content: `Sorry, I encountered an error: ${error.message}. Please check the console.`,
               isStreaming: false,
             }
           : msg
       ));
     } finally {
+      console.log('sendMessage finally block, setting isLoading to false');
       setIsLoading(false);
     }
   };
