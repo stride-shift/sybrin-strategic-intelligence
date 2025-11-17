@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, Bot, User, FileText, Loader2, Sparkles } from 'lucide-react';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
+import { Streamdown } from 'streamdown';
 
 const ResearchChat = () => {
   const [messages, setMessages] = useState([]);
@@ -35,6 +34,18 @@ const ResearchChat = () => {
     setInputValue('');
     setIsLoading(true);
 
+    // Create placeholder for streaming message
+    const assistantMessageId = Date.now() + 1;
+    const assistantMessage = {
+      id: assistantMessageId,
+      type: 'assistant',
+      content: '',
+      citations: [],
+      timestamp: new Date().toISOString(),
+      isStreaming: true,
+    };
+    setMessages(prev => [...prev, assistantMessage]);
+
     try {
       const response = await fetch('/api/chat', {
         method: 'POST',
@@ -49,28 +60,85 @@ const ResearchChat = () => {
         throw new Error('Failed to get response');
       }
 
-      const data = await response.json();
+      const reader = response.body?.getReader();
+      const decoder = new TextDecoder();
+      let buffer = '';
+      let streamedContent = '';
+      let responseId = null;
 
-      const assistantMessage = {
-        id: Date.now() + 1,
-        type: 'assistant',
-        content: data.answer,
-        citations: data.citations || [],
-        timestamp: new Date().toISOString(),
-      };
+      while (true) {
+        const { value, done } = await reader.read();
+        if (done) break;
 
-      setMessages(prev => [...prev, assistantMessage]);
-      setPreviousResponseId(data.response_id);
+        const chunk = decoder.decode(value, { stream: true });
+        buffer += chunk;
+
+        // Process complete lines (Server-Sent Events format)
+        const lines = buffer.split('\n');
+        buffer = lines.pop() || ''; // Keep incomplete line in buffer
+
+        for (const line of lines) {
+          if (!line.trim() || line.startsWith(':')) continue;
+
+          if (line.startsWith('event:')) {
+            // Event type line - we'll process the data on the next line
+            continue;
+          }
+
+          if (line.startsWith('data:')) {
+            try {
+              const jsonData = line.slice(5).trim(); // Remove 'data:' prefix
+              if (jsonData === '[DONE]') continue;
+
+              const event = JSON.parse(jsonData);
+
+              // Handle different event types
+              if (event.type === 'response.output_text.delta') {
+                // Append text delta to streaming content
+                if (event.delta) {
+                  streamedContent += event.delta;
+                  setMessages(prev => prev.map(msg =>
+                    msg.id === assistantMessageId
+                      ? { ...msg, content: streamedContent }
+                      : msg
+                  ));
+                }
+              } else if (event.type === 'response.done') {
+                // Save response ID for conversation continuity
+                responseId = event.response?.id;
+              }
+            } catch (e) {
+              // Ignore malformed JSON
+              console.warn('Failed to parse SSE data:', line, e);
+            }
+          }
+        }
+      }
+
+      // Mark streaming as complete
+      setMessages(prev => prev.map(msg =>
+        msg.id === assistantMessageId
+          ? { ...msg, isStreaming: false }
+          : msg
+      ));
+
+      if (responseId) {
+        setPreviousResponseId(responseId);
+      }
 
     } catch (error) {
       console.error('Error sending message:', error);
-      const errorMessage = {
-        id: Date.now() + 1,
-        type: 'error',
-        content: 'Sorry, I encountered an error. Please try again.',
-        timestamp: new Date().toISOString(),
-      };
-      setMessages(prev => [...prev, errorMessage]);
+      // Replace streaming message with error
+      setMessages(prev => prev.map(msg =>
+        msg.id === assistantMessageId
+          ? {
+              ...msg,
+              type: 'error',
+              content: 'Sorry, I encountered an error. Please try again.',
+              isStreaming: false,
+            }
+          : msg
+      ));
     } finally {
       setIsLoading(false);
     }
@@ -180,24 +248,22 @@ const ResearchChat = () => {
                     >
                       {message.type === 'assistant' ? (
                         <div className="prose prose-sm max-w-none">
-                          <ReactMarkdown
-                            remarkPlugins={[remarkGfm]}
-                            components={{
-                              p: ({node, ...props}) => <p className="mb-3 text-gray-700 leading-relaxed" {...props} />,
-                              ul: ({node, ...props}) => <ul className="list-disc ml-6 mb-3 space-y-1" {...props} />,
-                              ol: ({node, ...props}) => <ol className="list-decimal ml-6 mb-3 space-y-1" {...props} />,
-                              li: ({node, ...props}) => <li className="text-gray-700" {...props} />,
-                              strong: ({node, ...props}) => <strong className="font-semibold text-gray-900" {...props} />,
-                              h1: ({node, ...props}) => <h1 className="text-xl font-bold mt-6 mb-3 text-gray-900" {...props} />,
-                              h2: ({node, ...props}) => <h2 className="text-lg font-semibold mt-5 mb-2 text-gray-900" {...props} />,
-                              h3: ({node, ...props}) => <h3 className="text-base font-semibold mt-4 mb-2 text-gray-800" {...props} />,
-                            }}
-                          >
-                            {message.content}
-                          </ReactMarkdown>
+                          <div className="text-gray-700">
+                            <Streamdown>
+                              {message.content}
+                            </Streamdown>
+                          </div>
+
+                          {/* Streaming indicator */}
+                          {message.isStreaming && (
+                            <div className="flex items-center gap-2 mt-3 text-gray-500">
+                              <Loader2 className="w-3 h-3 animate-spin" />
+                              <span className="text-xs">Generating response...</span>
+                            </div>
+                          )}
 
                           {/* Citations */}
-                          {message.citations && message.citations.length > 0 && (
+                          {!message.isStreaming && message.citations && message.citations.length > 0 && (
                             <div className="mt-4 pt-4 border-t border-gray-200">
                               <div className="flex items-center gap-2 mb-2">
                                 <FileText className="w-4 h-4 text-gray-600" />

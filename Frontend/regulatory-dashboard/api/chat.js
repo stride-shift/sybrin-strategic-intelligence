@@ -1,68 +1,97 @@
 /**
- * Vercel Serverless Function for Sybrin Research Assistant Chat
- * Proxies to Supabase Edge Function with GPT-5.1 Vector Store
+ * Vercel Edge Function for Sybrin Research Assistant Chat
+ * Streams responses from OpenAI GPT-5.1 with File Search
  */
 
-const SUPABASE_EDGE_FUNCTION_URL = 'https://dhknuansbbqojyzbkvui.supabase.co/functions/v1/query-research';
+export const config = {
+  runtime: 'edge',
+};
 
-export default async function handler(req, res) {
+const VECTOR_STORE_ID = 'vs_69175031dd44819181977702547d85e0';
+
+export default async function handler(req) {
   // CORS headers
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  const headers = {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type',
+  };
 
   // Handle OPTIONS preflight
   if (req.method === 'OPTIONS') {
-    return res.status(200).end();
+    return new Response(null, { status: 200, headers });
   }
 
   // Only allow POST
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    return new Response(JSON.stringify({ error: 'Method not allowed' }), {
+      status: 405,
+      headers: { ...headers, 'Content-Type': 'application/json' },
+    });
   }
 
   try {
-    const { question, previous_response_id } = req.body;
+    const { question, previous_response_id } = await req.json();
 
     if (!question || question.trim() === '') {
-      return res.status(400).json({ error: 'Question is required' });
+      return new Response(JSON.stringify({ error: 'Question is required' }), {
+        status: 400,
+        headers: { ...headers, 'Content-Type': 'application/json' },
+      });
     }
 
-    // Call Supabase Edge Function
-    const response = await fetch(SUPABASE_EDGE_FUNCTION_URL, {
+    const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+
+    // Call OpenAI Responses API with streaming
+    const response = await fetch('https://api.openai.com/v1/responses', {
       method: 'POST',
       headers: {
+        'Authorization': `Bearer ${OPENAI_API_KEY}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        question: question,
+        model: 'gpt-5.1',
+        input: question,
+        tools: [{
+          type: 'file_search',
+          vector_store_ids: [VECTOR_STORE_ID]
+        }],
         previous_response_id: previous_response_id || undefined,
+        store: true,
+        stream: true, // Enable streaming
       }),
     });
 
     if (!response.ok) {
       const errorData = await response.text();
-      console.error('Supabase Edge Function error:', errorData);
-      return res.status(response.status).json({
-        error: 'Research query failed',
+      console.error('OpenAI API error:', errorData);
+      return new Response(JSON.stringify({
+        error: 'OpenAI API request failed',
         details: errorData
+      }), {
+        status: response.status,
+        headers: { ...headers, 'Content-Type': 'application/json' },
       });
     }
 
-    const data = await response.json();
-
-    return res.status(200).json({
-      answer: data.answer || '',
-      citations: data.citations || [],
-      response_id: data.response_id,
-      status: data.status,
+    // Stream the response back to the client
+    return new Response(response.body, {
+      headers: {
+        ...headers,
+        'Content-Type': 'text/event-stream',
+        'Cache-Control': 'no-cache',
+        'Connection': 'keep-alive',
+      },
     });
 
   } catch (error) {
     console.error('Chat API error:', error);
-    return res.status(500).json({
+    return new Response(JSON.stringify({
       error: 'Internal server error',
       details: error.message
+    }), {
+      status: 500,
+      headers: { ...headers, 'Content-Type': 'application/json' },
     });
   }
 }
