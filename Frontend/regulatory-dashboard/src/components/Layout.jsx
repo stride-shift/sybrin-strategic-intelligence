@@ -23,7 +23,8 @@ import {
   Heart,
   Clock,
   Lightbulb,
-  MessageSquare
+  MessageSquare,
+  Zap
 } from 'lucide-react'
 
 const Layout = ({ children }) => {
@@ -57,6 +58,12 @@ const Layout = ({ children }) => {
           name: 'Strategic Intelligence',
           icon: Lightbulb,
           description: 'Market entry & expansion insights'
+        },
+        {
+          path: '/jtbd-intelligence',
+          name: 'JTBD Intelligence',
+          icon: Zap,
+          description: 'Jobs-to-be-Done strategic analysis'
         },
         {
           path: '/research-chat',
