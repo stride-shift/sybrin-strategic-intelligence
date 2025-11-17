@@ -1,14 +1,26 @@
 import React, { useState } from 'react';
 import {
-  ChevronDown, ChevronRight, Target, Layers, TrendingUp,
-  AlertCircle, CheckCircle, Clock, DollarSign, Users, Building,
-  Zap, Shield, Globe, Workflow, Archive, ThumbsUp
+  AlertCircle,
+  Zap,
+  Workflow,
+  Archive,
+  CheckCircle,
+  ChevronDown,
+  ChevronRight,
+  Target,
+  Users,
+  Heart,
+  Shield,
+  TrendingUp,
+  Layers,
+  Lightbulb,
+  Info
 } from 'lucide-react';
 
 const JTBDIntelligenceDashboard = () => {
   const [activeTab, setActiveTab] = useState('jobs');
   const [expandedSections, setExpandedSections] = useState({});
-  const [selectedFilter, setSelectedFilter] = useState('all');
+  const [expandedJobs, setExpandedJobs] = useState({});
 
   const toggleSection = (sectionId) => {
     setExpandedSections(prev => ({
@@ -17,526 +29,1049 @@ const JTBDIntelligenceDashboard = () => {
     }));
   };
 
-  // Job categories with color coding
-  const jobCategories = [
-    { id: 'regulatory', name: 'Regulatory Compliance', icon: Shield, color: 'red', count: 2 },
-    { id: 'scaling', name: 'Scaling Digital Ops', icon: TrendingUp, color: 'blue', count: 2 },
-    { id: 'rural', name: 'Rural/Inclusion', icon: Users, color: 'green', count: 2 },
-    { id: 'payments', name: 'Payment Integration', icon: DollarSign, color: 'purple', count: 2 },
-    { id: 'agents', name: 'Agent Networks', icon: Building, color: 'orange', count: 1 }
+  const toggleJob = (jobId) => {
+    setExpandedJobs(prev => ({
+      ...prev,
+      [jobId]: !prev[jobId]
+    }));
+  };
+
+  const tabs = [
+    { id: 'jobs', name: 'Customer Jobs Analysis', icon: Users },
+    { id: 'repurposing', name: 'Capability Repurposing', icon: Layers },
+    { id: 'higher', name: 'Higher-Level Jobs', icon: TrendingUp }
   ];
 
-  // 5 Core platforms
-  const platforms = [
+  const priorityColors = {
+    'P0': 'bg-red-100 text-red-800 border-red-300',
+    'P1': 'bg-orange-100 text-orange-800 border-orange-300',
+    'P2': 'bg-yellow-100 text-yellow-800 border-yellow-300',
+    'P3': 'bg-gray-100 text-gray-600 border-gray-300'
+  };
+
+  const priorityLabels = {
+    'P0': 'Do Now',
+    'P1': 'Do Soon',
+    'P2': 'Evaluate',
+    'P3': 'Defer'
+  };
+
+  // Jobs Data
+  const functionalJobs = [
+    {
+      id: 'job1',
+      category: 'Regulatory',
+      number: 1,
+      title: 'Meet BSP AFASA real-time fraud mandate by 2025 without breaking IT budget',
+      statement: 'Achieve full BSP AFASA compliance for real-time fraud detection when IT budgets are constrained and core systems are legacy/EOL.',
+      evidence: 'Philippines: "AFASA/real-time fraud detection compliance by 2025; urgent need for affordable fraud management" (thrift/rural banks segment)',
+      circumstances: [
+        '2025 compliance deadline approaching',
+        'Thrift/rural banks with PHP 50-200M budgets',
+        'Legacy cores can\'t support real-time monitoring',
+        'No in-house fraud expertise'
+      ],
+      customers: 'PSBank, CARD Bank, AllBank, rural banks segment (Philippines)',
+      underserved: 'Most enterprise fraud platforms (FICO, SAS) price out thrift/rural banks. Compliance is binary (pass/fail) but solutions are priced on continuous value scale.'
+    },
+    {
+      id: 'job2',
+      category: 'Regulatory',
+      number: 2,
+      title: 'Navigate check decommissioning without losing revenue or customers',
+      statement: 'Replace check-based revenue streams and customer workflows when regulators mandate check decommissioning with short timelines.',
+      evidence: 'Kenya: "Active regulatory drivers (instant payments, check decommissioning)", Zambia: "E-check opportunity as checks decommission"',
+      circumstances: [
+        'Central bank announces check phase-out (12-24 month timeline)',
+        'Corporate customers still want paper-based controls',
+        'Float income from check clearing disappears',
+        'Staff trained on check processing, not digital payments'
+      ],
+      customers: 'Kenya banks, Zambia opportunity',
+      underserved: 'Most instant payment solutions don\'t replicate check workflow benefits (audit trail, stop-payment, reconciliation). Revenue replacement strategies are ad-hoc.'
+    },
+    {
+      id: 'job3',
+      category: 'Scaling',
+      number: 3,
+      title: 'Reach 98% self-service transactions without losing the 20% of customers who can\'t/won\'t go digital',
+      statement: 'Push digital adoption from 86-94% to 98%+ while retaining elderly, rural, and digitally illiterate customers who prefer branches/agents.',
+      evidence: 'Kenya: Equity Bank targeting 98% from 86%, Co-operative Bank 92%, Absa Kenya 94%',
+      circumstances: [
+        'Cost-to-serve via branch is 10x digital',
+        'Board pressures for cost reduction',
+        'Competitors at 95%+ digital',
+        '2-15% of customer base (often high-value) can\'t/won\'t adopt'
+      ],
+      customers: 'Equity Bank (86%→98% target), Co-operative Bank (92%), Absa Kenya (94%)',
+      underserved: 'Solutions focus on making digital easier (UX) or forcing migration (fees), not on understanding WHY customers resist.'
+    },
+    {
+      id: 'job4',
+      category: 'Scaling',
+      number: 4,
+      title: 'Manage 6M+ digital users with same operational capacity as 1M users',
+      statement: 'Scale digital user base 5-10x without proportional increase in fraud losses, customer service staff, or operational costs.',
+      evidence: 'Tanzania: NMB Bank 6M+ digital users drives need for advanced fraud management, AI/ML risk management',
+      circumstances: [
+        'Digital acquisition costs are low (vs. branch)',
+        'But fraud rates, chargebacks, support queries scale with volume',
+        'Legacy manual review processes can\'t keep up',
+        'Board expects margin expansion, not just revenue growth'
+      ],
+      customers: 'NMB Bank Tanzania (6M+ digital users)',
+      underserved: 'AI/ML fraud models exist but require expensive data science teams to maintain.'
+    },
+    {
+      id: 'job5',
+      category: 'Rural',
+      number: 5,
+      title: 'Serve 90% rural clients profitably when connectivity is poor and field officers travel 100km on bikes',
+      statement: 'Originate loans, verify identity, and collect repayments in rural areas when staff travel by bike, mobile networks are unreliable, and customers lack formal IDs.',
+      evidence: 'Zambia: Agora Microfinance (90%+ rural clients, poor connectivity, bike-based field officers)',
+      circumstances: [
+        'Target market is unbanked rural poor (financial inclusion mandate)',
+        'Field officers on motorcycles/bikes visiting villages',
+        '2G coverage or no coverage',
+        'Customers have no national ID, proof of address, or formal employment'
+      ],
+      customers: 'Agora Microfinance Zambia, Zambia MFI segment',
+      underserved: 'Most digital onboarding requires online connectivity. Biometric devices don\'t work offline or are too expensive for MFI budgets.'
+    },
+    {
+      id: 'job6',
+      category: 'Rural',
+      number: 6,
+      title: 'Manage 329 Micro Banking Offices with same oversight as 54 branches',
+      statement: 'Supervise and support 329 distributed micro-offices with tiny transaction volumes when branch management systems assume 20-50 large branches.',
+      evidence: 'Philippines: CARD Bank - 900K+ clients, 54 branches, 329 Micro Banking Offices',
+      circumstances: [
+        'Average MBO has <3 staff, <500 customers',
+        'MBOs in remote barrios with poor connectivity',
+        'Centralized compliance/risk systems can\'t see MBO-level detail',
+        'Local staff lack banking expertise (often community volunteers)'
+      ],
+      customers: 'CARD Bank Philippines (329 MBOs)',
+      underserved: 'Branch management systems don\'t scale to 300+ micro-sites. Agent banking platforms assume higher transaction volumes.'
+    },
+    {
+      id: 'job7',
+      category: 'Payments',
+      number: 7,
+      title: 'Connect to TIPS without replacing our core banking system',
+      statement: 'Meet central bank mandate to connect to instant payment system when core lacks modern APIs and integration will cost 12+ months and $500k+.',
+      evidence: 'Tanzania: TIPS - 45+ institutions connected; 490M+ transactions in 2024',
+      circumstances: [
+        'Central bank mandates TIPS/instant payment connection',
+        'Legacy core lacks ISO 20022 support',
+        'Core vendor quotes $500k-1M and 18-month timeline',
+        'Can\'t afford/risk full core replacement'
+      ],
+      customers: 'Tanzania banks (CRDB, NMB, NBC...)',
+      underserved: 'Payment gateways exist but most require deep core integration anyway.'
+    },
+    {
+      id: 'job8',
+      category: 'Payments',
+      number: 8,
+      title: 'Process InstaPay/PESONet at scale without building expensive real-time infrastructure',
+      statement: 'Offer 24/7 instant payments when we lack real-time core systems and 24/7 operations staff.',
+      evidence: 'Philippines: Intense competition from digital banks (GCash, Maya) with 5-minute onboarding and 24/7 services',
+      circumstances: [
+        'Customers expect instant transfers (GCash/Maya set standard)',
+        'Our core runs batch processing overnight',
+        'Weekend/holiday operations require expensive staffing',
+        'Can\'t compete on speed with digital banks'
+      ],
+      customers: 'Philippines thrift/rural banks',
+      underserved: 'Most processors still require significant core integration.'
+    },
+    {
+      id: 'job9',
+      category: 'Agents',
+      number: 9,
+      title: 'Digitize 32,000 agents without losing productivity or creating fraud exposure',
+      statement: 'Equip 32,000 agents with digital tools that increase productivity and compliance without creating new fraud risks or requiring expensive devices.',
+      evidence: 'Zambia: Zanaco 32k+ agents, Kenya: Faulu 600+ agents need efficient digital onboarding and KYC/AML',
+      circumstances: [
+        'Agents are independent (not bank employees)',
+        'Agents in rural areas with poor connectivity',
+        'Agent devices must be affordable (<$100/agent = $3.2M budget for 32k)',
+        'Agent fraud is major risk (fake deposits, identity theft)'
+      ],
+      customers: 'Zanaco Zambia (32k agents), Faulu Kenya (600+ agents)',
+      underserved: 'Agent banking platforms assume smartphones. Fraud detection focuses on customer-side, not agent-side fraud.'
+    }
+  ];
+
+  const emotionalJobs = [
+    {
+      id: 'e1',
+      level: 'Executive',
+      title: 'Sleep at night knowing we won\'t fail the regulatory exam',
+      statement: 'Eliminate the 2am anxiety about "what if we fail the BSP exam and I\'m personally liable?"',
+      context: 'Philippines AFASA 2025 deadline with penalties for non-compliance. Rural banks with limited IT budgets facing same rules as Tier 1 banks.',
+      whyUnstated: 'Executives don\'t admit fear in research interviews. "Regulatory compliance" sounds professional; "I\'m scared of being fired" doesn\'t.'
+    },
+    {
+      id: 'e2',
+      level: 'Executive',
+      title: 'Avoid being the CEO who killed the bank with a bad technology decision',
+      statement: 'Make technology investments that won\'t become the case study in "failed digital transformations."',
+      context: 'Multiple mentions of "Legacy or EOL core banking systems", multi-million $ core bets. Investrust Bank Zambia closure (2024) = cautionary tale.',
+      whyUnstated: 'Career-ending fear is too vulnerable to admit. Framed as "ROI analysis" or "vendor evaluation" instead.'
+    },
+    {
+      id: 'e3',
+      level: 'Executive',
+      title: 'Feel like an innovator (not a dinosaur) when board members are 30 years younger',
+      statement: 'Prove to younger board members that I understand digital banking despite being 55+ years old.',
+      context: 'KCB, Equity Bank described as "digital leadership". Competition from digital-only banks. Generational shift in financial services.',
+      whyUnstated: 'Ageism concerns are taboo. Imposter syndrome doesn\'t get documented in market research.'
+    },
+    {
+      id: 'e4',
+      level: 'Middle Management',
+      title: 'Feel confident I won\'t be scapegoated when this project inevitably has problems',
+      statement: 'Protect my reputation and employment when the digital transformation project hits inevitable roadblocks.',
+      context: 'Tanzania post-core migration projects. Multiple mentions of "integration," "migration," "system harmonization".',
+      whyUnstated: 'CIOs can\'t admit they expect projects to fail. "Risk management" sounds better than "cover my ass".'
+    },
+    {
+      id: 'e5',
+      level: 'Middle Management',
+      title: 'Feel competent when vendors assume I understand technology I don\'t',
+      statement: 'Appear knowledgeable in vendor meetings when I don\'t actually understand APIs, cloud architecture, or machine learning.',
+      context: 'Tanzania community banks: "Limited IT budgets and small teams". Smaller banks have shortage of skilled IT staff.',
+      whyUnstated: 'Professional competence is core to identity. Admitting ignorance = career risk.'
+    },
+    {
+      id: 'e6',
+      level: 'Frontline Staff',
+      title: 'Avoid feeling stupid when learning new systems that younger colleagues master instantly',
+      statement: 'Learn new digital tools without feeling humiliated by my age or education level.',
+      context: 'Massive digital transformation. Equity Bank 98% digital target = radical workflow changes. 32k Zanaco agents being "digitized".',
+      whyUnstated: 'Frontline staff rarely interviewed in market research. Vulnerability about learning difficulties is shameful.'
+    },
+    {
+      id: 'e7',
+      level: 'Frontline Staff',
+      title: 'Feel proud of my work (not exploitative) when charging poor customers fees',
+      statement: 'Reconcile "we serve the poor" mission with "we charge 30% interest" reality without feeling like a predator.',
+      context: 'Agora MFI Zambia: 90% rural poor clients. CARD Bank: poverty eradication mission. MFIs with financial inclusion mandates vs. profit pressures.',
+      whyUnstated: 'Moral discomfort isn\'t professional. Loan officers won\'t admit to guilt in interviews.'
+    },
+    {
+      id: 'e8',
+      level: 'Frontline Staff',
+      title: 'Feel safe when traveling alone to remote villages with cash/devices',
+      statement: 'Do my job in dangerous environments without constant fear of robbery, assault, or device theft.',
+      context: 'Agora MFI Zambia: bike-based field officers. Rural connectivity issues. Agent networks in high-crime areas.',
+      whyUnstated: 'Personal safety concerns sound weak. Employers may dismiss as "part of the job".'
+    }
+  ];
+
+  const socialJobs = [
+    {
+      id: 's1',
+      level: 'Executive',
+      title: 'Be seen as bold innovator by peers (not cautious bureaucrat)',
+      statement: 'When industry peers mention our bank, I want them to say "cutting-edge" not "safe and boring."',
+      context: 'NMB Tanzania: "Euromoney Best Digital Bank 2025". CRDB, Equity Bank, KCB all compete on "digital leadership" positioning.',
+      whyUnstated: 'Vanity/ego are socially unacceptable motivations. Disguised as "brand positioning" or "competitive differentiation".'
+    },
+    {
+      id: 's2',
+      level: 'Executive',
+      title: 'Maintain status/respect when my branches are closing and staff are being laid off',
+      statement: 'Execute digital transformation without being seen as the heartless executive who destroyed people\'s livelihoods.',
+      context: 'Equity Bank: 86% → 98% digital target = massive branch reduction implied. Cost-to-income ratio improvements via digitalization.',
+      whyUnstated: 'Compassion fatigue is real but can\'t be admitted. "Shareholder value" sounds better than "I feel guilty about layoffs".'
+    },
+    {
+      id: 's3',
+      level: 'Middle Management',
+      title: 'Maintain authority over my team when they know technology better than I do',
+      statement: 'Retain respect and control as a manager when my team members have skills I\'ll never master.',
+      context: 'Generational technology skill gaps. Young technical staff vs. older management. Digital transformation requires skills management doesn\'t have.',
+      whyUnstated: 'Authority struggles are politically sensitive. Framed as "leadership" vs. "technical gaps".'
+    },
+    {
+      id: 's4',
+      level: 'Board Members',
+      title: 'Be perceived as responsible fiduciary (not asleep at the wheel) if bank fails',
+      statement: 'Protect my reputation and legal standing if this bank becomes the next failure case study.',
+      context: 'Investrust Bank Zambia closure (2024). Multiple mentions of regulatory penalties, failed projects. Board liability is real in banking.',
+      whyUnstated: 'Board members won\'t admit they\'re primarily self-interested. Fiduciary duty sounds better than "CYA".'
+    }
+  ];
+
+  // Capability Repurposing Data
+  const corePlatforms = [
     {
       id: 'detect',
       name: 'Sybrin Detect',
-      icon: AlertCircle,
-      color: 'red',
       tagline: 'Universal Real-Time Anomaly Detection',
-      modules: ['Fraud Detection', 'AFASA Compliance (P0)', 'Agent Fraud (P1)', 'MBO Oversight', 'Operational Risk', 'Customer Service Prediction']
+      color: 'red',
+      icon: AlertCircle,
+      originalUse: 'Fraud detection',
+      coreCapability: 'Real-time pattern detection and alerting',
+      repurposedApplications: [
+        { name: 'Fraud Detection', status: 'deployed', priority: 'P0' },
+        { name: 'AFASA/FATF Regulatory Compliance Monitoring', status: 'deploying', priority: 'P0' },
+        { name: 'Agent Fraud & Performance Analytics', status: 'piloting', priority: 'P1' },
+        { name: 'MBO Oversight & Anomaly Detection', status: 'development', priority: 'P1' },
+        { name: 'Operational Risk Detection', status: 'roadmap', priority: 'P3' },
+        { name: 'Customer Service Prediction', status: 'roadmap', priority: 'P3' }
+      ],
+      feasibility: '95%',
+      effort: '1-2 months (rule sets + reporting templates)'
     },
     {
       id: 'connect',
       name: 'Sybrin Connect',
-      icon: Zap,
-      color: 'blue',
       tagline: 'Legacy-to-Modern Integration Platform',
-      modules: ['Instant Payment Integration', 'Batch-Core Facade (P0)', 'Cross-Border Payments', 'Open Banking APIs', 'Fintech Partnerships']
+      color: 'blue',
+      icon: Zap,
+      originalUse: 'Connect cores to instant payment schemes',
+      coreCapability: 'Core-agnostic transaction processing, state management, protocol translation',
+      repurposedApplications: [
+        { name: 'Instant Payment Integration (TIPS, iPSO, InstaPay)', status: 'deployed', priority: 'P0' },
+        { name: 'Batch-Core Real-Time Facade', status: 'productizing', priority: 'P0' },
+        { name: 'Cross-Border Payments (TCIB, SWIFT)', status: 'deployed', priority: 'P0' },
+        { name: 'Open Banking APIs', status: 'roadmap', priority: 'P3' },
+        { name: 'Fintech Partnership Integration', status: 'roadmap', priority: 'P3' }
+      ],
+      feasibility: '90%',
+      effort: '1 month (document + implementation accelerator)'
     },
     {
       id: 'flow',
       name: 'Sybrin Flow',
-      icon: Workflow,
-      color: 'purple',
       tagline: 'No-Code Workflow Automation',
-      modules: ['Digital Onboarding', 'Loan Origination (P0)', 'Compliance Workflows (P0)', 'Service Exceptions', 'Agent Onboarding']
+      color: 'purple',
+      icon: Workflow,
+      originalUse: 'Digital onboarding workflows',
+      coreCapability: 'Visual workflow designer, conditional logic, integrations',
+      repurposedApplications: [
+        { name: 'Digital Onboarding', status: 'deployed', priority: 'P0' },
+        { name: 'Loan Origination', status: 'development', priority: 'P0' },
+        { name: 'Compliance Workflows', status: 'development', priority: 'P0' },
+        { name: 'Customer Service Exception Handling', status: 'evaluate', priority: 'P2' },
+        { name: 'Agent Onboarding', status: 'bundled', priority: 'P1' },
+        { name: 'Any Operational Process', status: 'platform', priority: 'P0' }
+      ],
+      feasibility: '85%',
+      effort: '2 months (templates + business user UX)'
     },
     {
       id: 'offline',
       name: 'Sybrin Offline',
-      icon: Archive,
-      color: 'green',
       tagline: 'Sync-When-Connected Architecture',
-      modules: ['Digital KYC', 'MFI Rural Lending (P1)', 'MBO Operations (P1)', 'Field Officer Safety', 'Agent Tools']
+      color: 'green',
+      icon: Archive,
+      originalUse: 'Digital KYC with offline capability',
+      coreCapability: 'Offline-first mobile capture, sync when connected',
+      repurposedApplications: [
+        { name: 'Digital KYC', status: 'deployed', priority: 'P0' },
+        { name: 'MFI Rural Lending Suite', status: 'development', priority: 'P1' },
+        { name: 'MBO Transaction Processing', status: 'development', priority: 'P1' },
+        { name: 'Field Officer Safety & Monitoring', status: 'evaluate', priority: 'P2' },
+        { name: 'Agent Tools (Feature Phone Mode)', status: 'evaluate', priority: 'P2' }
+      ],
+      feasibility: '70%',
+      effort: '2-3 months (MFI workflow templates)'
     },
     {
       id: 'approve',
       name: 'Sybrin Approve',
-      icon: CheckCircle,
-      color: 'orange',
       tagline: 'Transaction Governance Engine',
-      modules: ['Check Clearing', 'Mandate Management', 'Controlled Instant Payments', 'Loan Disbursements', 'Treasury Workflows']
+      color: 'orange',
+      icon: CheckCircle,
+      originalUse: 'Check clearing with multi-party approval',
+      coreCapability: 'Multi-party approval, audit trails, reconciliation, dispute handling',
+      repurposedApplications: [
+        { name: 'Check Clearing', status: 'deployed', priority: 'P0' },
+        { name: 'Debit Order / Mandate Management', status: 'deployed', priority: 'P0' },
+        { name: 'Controlled Instant Payments', status: 'evaluate', priority: 'P2' },
+        { name: 'Loan Disbursement Controls', status: 'bundled', priority: 'P1' },
+        { name: 'Corporate Treasury Workflows', status: 'roadmap', priority: 'P3' }
+      ],
+      feasibility: '60%',
+      effort: '4-6 months (apply check workflow to instant payments)'
     }
   ];
 
-  const priorityBadge = (priority) => {
-    const styles = {
-      'P0': 'bg-red-100 text-red-800 border-red-300',
-      'P1': 'bg-orange-100 text-orange-800 border-orange-300',
-      'P2': 'bg-yellow-100 text-yellow-800 border-yellow-300',
-      'P3': 'bg-gray-100 text-gray-800 border-gray-300'
-    };
-    const labels = {
-      'P0': 'Do Now • Exit-Critical',
-      'P1': 'Do Soon • Exit-Valuable',
-      'P2': 'Evaluate • Strategic',
-      'P3': 'Defer • Post-Exit'
-    };
-    return (
-      <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border ${styles[priority]}`}>
-        {labels[priority]}
-      </span>
-    );
-  };
+  // Higher-Level Jobs Data
+  const jobFamilies = [
+    {
+      id: 'regulatory',
+      name: 'Regulatory Adaptation Jobs',
+      icon: Shield,
+      operationalJobs: ['Job 1: Meet AFASA mandate', 'Job 2: Navigate check decommissioning'],
+      fundamentalJob: 'Navigate regulatory change without disruption to operations or economics',
+      metaJob: 'Turn regulatory mandates into competitive advantage',
+      whiteSpace: [
+        'Regulatory future-proofing - monitor 50+ regulators, alert 12-24 months before mandates',
+        'Compliance-as-differentiation - marketing services that turn compliance into competitive advantage'
+      ]
+    },
+    {
+      id: 'scaling',
+      name: 'Profitable Scaling Jobs',
+      icon: TrendingUp,
+      operationalJobs: ['Job 3: Reach 98% self-service', 'Job 4: Manage 6M+ digital users'],
+      fundamentalJob: 'Achieve operational leverage as we scale',
+      metaJob: 'Grow profitably despite diminishing returns',
+      whiteSpace: [
+        'Profitability-based customer routing - high-cost segments auto-routed to premium tiers',
+        'Customer co-production platforms - power users help novice users (reduces cost-to-serve)'
+      ]
+    },
+    {
+      id: 'rural',
+      name: 'Difficult Segment Profitability Jobs',
+      icon: Heart,
+      operationalJobs: ['Job 5: Serve 90% rural clients', 'Job 6: Manage 329 MBOs', 'Job 9: Digitize 32k agents'],
+      fundamentalJob: 'Serve unprofitable segments profitably through operational innovation',
+      metaJob: 'Make financial inclusion economically sustainable (not just mission-driven)',
+      whiteSpace: [
+        'Shared rural infrastructure - 5-10 MFIs share 329 MBOs, field officers (cost drops 80%)',
+        'Agent capacity marketplace - 32k agents do KYC for multiple banks during idle time'
+      ]
+    },
+    {
+      id: 'legacy',
+      name: 'Legacy Infrastructure Competition Jobs',
+      icon: Layers,
+      operationalJobs: ['Job 7: Connect to TIPS without core replacement', 'Job 8: Process InstaPay at scale'],
+      fundamentalJob: 'Participate in digital infrastructure without transformation',
+      metaJob: 'Turn legacy constraints into competitive advantages',
+      whiteSpace: [
+        'Legacy bank as platform - rent license, compliance, balance sheet to fintechs',
+        'Trust arbitrage - position legacy systems as "battle-tested security" vs "unproven cloud"'
+      ]
+    }
+  ];
 
-  const AbstractionBadge = ({ level }) => {
-    const styles = {
-      'Operational': 'bg-blue-50 text-blue-700 border-blue-200',
-      'Fundamental': 'bg-purple-50 text-purple-700 border-purple-200',
-      'Meta': 'bg-indigo-50 text-indigo-700 border-indigo-200'
-    };
-    return (
-      <span className={`inline-flex items-center px-2 py-1 rounded text-xs font-medium border ${styles[level]}`}>
-        {level}
-      </span>
-    );
-  };
+  const metaJobs = [
+    {
+      id: 'meta1',
+      title: 'Compete successfully despite incumbent constraints',
+      reframe: 'Turn incumbent disadvantages into competitive advantages',
+      examples: [
+        'Instead of "work around legacy core" → "leverage legacy core as trust signal, compliance moat"',
+        'Instead of "reduce branch costs" → "turn branches into fintech distribution, premium hubs"',
+        'Instead of "comply with regulation" → "use regulation to drive competitor exit"'
+      ],
+      tam: '$1-10B (ecosystem play)'
+    },
+    {
+      id: 'meta2',
+      title: 'Grow and compete when we\'re asset-heavy and competitors are asset-light',
+      reframe: 'Monetize existing infrastructure to compete with asset-light players',
+      examples: [
+        'Rent agent network to GCash (they get last-mile distribution, we get fees + data)',
+        'Rent banking license to fintechs (they get regulatory cover, we get revenue share)',
+        'Multi-tenant our legacy core to Tier 3 banks (infrastructure-as-a-service)'
+      ],
+      tam: '$1-10B (platform play)'
+    },
+    {
+      id: 'meta3',
+      title: 'Satisfy stakeholders with conflicting demands',
+      reframe: 'Simultaneously satisfy contradictory stakeholder demands',
+      examples: [
+        'Board wants profitability vs. regulator wants inclusion',
+        'Regulator wants compliance vs. shareholders want ROI',
+        'Customers want digital vs. elderly need branches',
+        'Real-time stakeholder demand balancing with AI optimization'
+      ],
+      tam: '$100M-$1B (multi-stakeholder optimization platform)'
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-8 shadow-lg">
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-3 mb-3">
-            <Target className="w-10 h-10" />
-            <div>
-              <h1 className="text-3xl font-bold">Jobs-To-Be-Done Strategic Intelligence</h1>
-              <p className="text-indigo-100 mt-1">9 Functional Jobs • 5 Core Platforms • 3 Abstraction Levels</p>
-            </div>
+            <Target className="w-8 h-8" />
+            <h1 className="text-3xl font-bold">Jobs-To-Be-Done Intelligence</h1>
           </div>
-          <div className="flex gap-2 text-sm mt-4">
-            <span className="bg-white/20 px-3 py-1 rounded">140+ Named Institutions</span>
-            <span className="bg-white/20 px-3 py-1 rounded">248 Research Documents</span>
-            <span className="bg-white/20 px-3 py-1 rounded">4 Top Markets: Kenya, Zambia, Tanzania, Philippines</span>
+          <p className="text-blue-100 text-lg">
+            Strategic analysis of customer jobs across 9 functional dimensions, emotional/social contexts, and multiple abstraction levels
+          </p>
+          <div className="mt-4 flex flex-wrap gap-4 text-sm">
+            <div className="flex items-center gap-2">
+              <Users className="w-4 h-4" />
+              <span>140+ Named Institutions</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Shield className="w-4 h-4" />
+              <span>248 Research Documents</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Lightbulb className="w-4 h-4" />
+              <span>4 Markets: Kenya, Zambia, Tanzania, Philippines</span>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Tab Navigation */}
-      <div className="bg-white border-b border-gray-200 sticky top-0 z-10 shadow-sm">
+      <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex gap-6">
-            <button
-              onClick={() => setActiveTab('jobs')}
-              className={`py-4 px-2 border-b-2 font-medium text-sm transition-colors ${
-                activeTab === 'jobs'
-                  ? 'border-indigo-600 text-indigo-600'
-                  : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'
-              }`}
-            >
-              <div className="flex items-center gap-2">
-                <Target className="w-5 h-5" />
-                <span>Jobs Analysis</span>
-              </div>
-            </button>
-            <button
-              onClick={() => setActiveTab('capabilities')}
-              className={`py-4 px-2 border-b-2 font-medium text-sm transition-colors ${
-                activeTab === 'capabilities'
-                  ? 'border-indigo-600 text-indigo-600'
-                  : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'
-              }`}
-            >
-              <div className="flex items-center gap-2">
-                <Layers className="w-5 h-5" />
-                <span>Capability Repurposing</span>
-              </div>
-            </button>
-            <button
-              onClick={() => setActiveTab('abstraction')}
-              className={`py-4 px-2 border-b-2 font-medium text-sm transition-colors ${
-                activeTab === 'abstraction'
-                  ? 'border-indigo-600 text-indigo-600'
-                  : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'
-              }`}
-            >
-              <div className="flex items-center gap-2">
-                <TrendingUp className="w-5 h-5" />
-                <span>Higher-Level Jobs</span>
-              </div>
-            </button>
+          <div className="flex space-x-8">
+            {tabs.map((tab) => {
+              const Icon = tab.icon;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`flex items-center gap-2 px-4 py-4 border-b-2 font-medium transition-colors ${
+                    activeTab === tab.id
+                      ? 'border-blue-600 text-blue-600'
+                      : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                  }`}
+                >
+                  <Icon className="w-5 h-5" />
+                  {tab.name}
+                </button>
+              );
+            })}
           </div>
         </div>
       </div>
 
       {/* Content */}
       <div className="max-w-7xl mx-auto px-6 py-8">
-        {/* TAB 1: Jobs Analysis */}
+        {/* Jobs Analysis Tab */}
         {activeTab === 'jobs' && (
-          <div className="space-y-6">
+          <div className="space-y-8">
             {/* Executive Summary */}
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Executive Summary</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="flex items-start gap-3">
+                <Info className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-3">Top 5 Most Urgent Jobs</h3>
-                  <ol className="text-sm space-y-2 text-gray-700">
-                    <li>1. <strong>Comply with new real-time fraud mandates</strong> (Philippines AFASA, Kenya check decommissioning)</li>
-                    <li>2. <strong>Scale digital channels without operational meltdown</strong> (Equity Bank 98% target, NMB 6M users)</li>
-                    <li>3. <strong>Serve rural/unbanked profitably</strong> (CARD Bank 329 MBOs, Agora 90% rural)</li>
-                    <li>4. <strong>Integrate with instant payment systems</strong> (TIPS Tanzania, iPSO Kenya, InstaPay Philippines)</li>
-                    <li>5. <strong>Digitize agent networks at scale</strong> (Zanaco 32k agents, Faulu 600+ agents)</li>
-                  </ol>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-3">Key Finding</h3>
-                  <p className="text-sm text-gray-700 mb-3">
-                    Research extensively documents <strong>functional challenges</strong> but rarely mentions emotional/social jobs:
+                  <h3 className="text-lg font-bold text-blue-900 mb-3">Understanding Customer Jobs</h3>
+                  <p className="text-blue-800 mb-4">
+                    This analysis identifies the <strong>jobs customers are trying to do</strong> when they "hire" financial services solutions.
+                    These are NOT Sybrin's jobs - these are the jobs of banks, MFIs, and financial institutions across Kenya, Zambia, Tanzania, and the Philippines.
                   </p>
-                  <ul className="text-sm space-y-1 text-gray-700">
-                    <li>• How decision-makers want to feel</li>
-                    <li>• Social/reputational concerns</li>
-                    <li>• Fear of obsolescence or competitive displacement</li>
-                  </ul>
-                  <p className="text-sm text-blue-700 font-medium mt-3">
-                    White space opportunity: Solutions addressing unstated emotional/social jobs
-                  </p>
+                  <div className="grid md:grid-cols-3 gap-4 text-sm">
+                    <div className="bg-white rounded p-3">
+                      <div className="font-semibold text-blue-900 mb-1">9 Functional Jobs</div>
+                      <div className="text-blue-700">Operational jobs derived from actual documented customer challenges across 140+ institutions</div>
+                    </div>
+                    <div className="bg-white rounded p-3">
+                      <div className="font-semibold text-blue-900 mb-1">8 Emotional Jobs</div>
+                      <div className="text-blue-700">Unstated emotional needs from executives, managers, and frontline staff</div>
+                    </div>
+                    <div className="bg-white rounded p-3">
+                      <div className="font-semibold text-blue-900 mb-1">4 Social Jobs</div>
+                      <div className="text-blue-700">How decision-makers want to be perceived by peers, boards, and industry</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Job Categories */}
-            <div className="space-y-4">
-              {jobCategories.map((category) => {
-                const Icon = category.icon;
-                const isExpanded = expandedSections[`job-${category.id}`];
-                return (
-                  <div key={category.id} className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+            {/* Functional Jobs */}
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Functional Jobs (Data-Grounded)</h2>
+              <p className="text-gray-600 mb-6">
+                Jobs derived from documented challenges at 140+ named financial institutions. Evidence-based, not assumptions.
+              </p>
+
+              <div className="space-y-4">
+                {functionalJobs.map((job) => (
+                  <div key={job.id} className="bg-white border border-gray-200 rounded-lg overflow-hidden">
                     <button
-                      onClick={() => toggleSection(`job-${category.id}`)}
+                      onClick={() => toggleJob(job.id)}
                       className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
                     >
-                      <div className="flex items-center gap-4">
-                        <div className={`p-2 bg-${category.color}-100 rounded-lg`}>
-                          <Icon className={`w-6 h-6 text-${category.color}-600`} />
+                      <div className="flex items-center gap-4 flex-1 text-left">
+                        <div className={`px-3 py-1 rounded text-sm font-medium ${
+                          job.category === 'Regulatory' ? 'bg-red-100 text-red-700' :
+                          job.category === 'Scaling' ? 'bg-blue-100 text-blue-700' :
+                          job.category === 'Rural' ? 'bg-green-100 text-green-700' :
+                          job.category === 'Payments' ? 'bg-purple-100 text-purple-700' :
+                          'bg-orange-100 text-orange-700'
+                        }`}>
+                          {job.category}
                         </div>
-                        <div className="text-left">
-                          <h3 className="font-semibold text-gray-900">{category.name}</h3>
-                          <p className="text-sm text-gray-600">{category.count} functional jobs identified</p>
+                        <div className="flex-1">
+                          <div className="font-semibold text-gray-900">Job {job.number}: {job.title}</div>
+                          <div className="text-sm text-gray-600 mt-1">{job.customers}</div>
                         </div>
                       </div>
-                      {isExpanded ? <ChevronDown className="w-5 h-5 text-gray-400" /> : <ChevronRight className="w-5 h-5 text-gray-400" />}
+                      {expandedJobs[job.id] ? (
+                        <ChevronDown className="w-5 h-5 text-gray-400" />
+                      ) : (
+                        <ChevronRight className="w-5 h-5 text-gray-400" />
+                      )}
                     </button>
 
-                    {isExpanded && (
-                      <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                        <p className="text-sm text-gray-600 italic">
-                          Detailed job breakdowns will load from the markdown file...
-                        </p>
+                    {expandedJobs[job.id] && (
+                      <div className="px-6 py-4 bg-gray-50 border-t border-gray-200 space-y-4">
+                        <div>
+                          <div className="text-sm font-semibold text-gray-700 mb-1">Job Statement</div>
+                          <div className="text-gray-900">{job.statement}</div>
+                        </div>
+
+                        <div>
+                          <div className="text-sm font-semibold text-gray-700 mb-1">Evidence</div>
+                          <div className="text-gray-700 italic text-sm">"{job.evidence}"</div>
+                        </div>
+
+                        <div>
+                          <div className="text-sm font-semibold text-gray-700 mb-2">Circumstances</div>
+                          <ul className="list-disc list-inside space-y-1">
+                            {job.circumstances.map((circ, idx) => (
+                              <li key={idx} className="text-gray-700 text-sm">{circ}</li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div className="bg-yellow-50 border border-yellow-200 rounded p-3">
+                          <div className="text-sm font-semibold text-yellow-900 mb-1">Underserved Need</div>
+                          <div className="text-yellow-800 text-sm">{job.underserved}</div>
+                        </div>
                       </div>
                     )}
                   </div>
-                );
-              })}
+                ))}
+              </div>
             </div>
 
-            {/* Emotional & Social Jobs */}
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">Emotional & Social Jobs (Inferred)</h2>
-              <p className="text-sm text-gray-700 mb-4">
-                Research never directly captures emotional/social jobs, but we can infer from context:
+            {/* Emotional Jobs */}
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Emotional Jobs (Inferred from Context)</h2>
+              <p className="text-gray-600 mb-6">
+                Research documents functional jobs extensively but <strong>never directly captures emotional jobs</strong>.
+                However, we can infer these from documented situations and universal human motivations.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="bg-white rounded-lg p-4 border border-purple-200">
-                  <h4 className="font-semibold text-purple-900 mb-2">Executive Level</h4>
-                  <ul className="text-sm space-y-1 text-gray-700">
-                    <li>• Sleep at night (regulatory anxiety)</li>
-                    <li>• Avoid career-ending tech decisions</li>
-                    <li>• Feel like innovator (not dinosaur)</li>
-                  </ul>
+
+              <div className="space-y-4">
+                {emotionalJobs.map((job) => (
+                  <div key={job.id} className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                    <button
+                      onClick={() => toggleJob(job.id)}
+                      className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                    >
+                      <div className="flex items-center gap-4 flex-1 text-left">
+                        <div className="px-3 py-1 rounded text-sm font-medium bg-pink-100 text-pink-700">
+                          {job.level}
+                        </div>
+                        <div className="flex-1">
+                          <div className="font-semibold text-gray-900">{job.title}</div>
+                          <div className="text-sm text-gray-600 mt-1 italic">{job.statement}</div>
+                        </div>
+                      </div>
+                      {expandedJobs[job.id] ? (
+                        <ChevronDown className="w-5 h-5 text-gray-400" />
+                      ) : (
+                        <ChevronRight className="w-5 h-5 text-gray-400" />
+                      )}
+                    </button>
+
+                    {expandedJobs[job.id] && (
+                      <div className="px-6 py-4 bg-gray-50 border-t border-gray-200 space-y-3">
+                        <div>
+                          <div className="text-sm font-semibold text-gray-700 mb-1">Context Inference</div>
+                          <div className="text-gray-700 text-sm">{job.context}</div>
+                        </div>
+
+                        <div className="bg-pink-50 border border-pink-200 rounded p-3">
+                          <div className="text-sm font-semibold text-pink-900 mb-1">Why Unstated in Research</div>
+                          <div className="text-pink-800 text-sm">{job.whyUnstated}</div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Social Jobs */}
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Social Jobs (Reputation & Perception)</h2>
+              <p className="text-gray-600 mb-6">
+                How decision-makers want to be perceived by peers, boards, staff, and the industry.
+                These social jobs drive hiring/firing decisions but are <strong>disguised in professional language</strong>.
+              </p>
+
+              <div className="space-y-4">
+                {socialJobs.map((job) => (
+                  <div key={job.id} className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                    <button
+                      onClick={() => toggleJob(job.id)}
+                      className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                    >
+                      <div className="flex items-center gap-4 flex-1 text-left">
+                        <div className="px-3 py-1 rounded text-sm font-medium bg-indigo-100 text-indigo-700">
+                          {job.level}
+                        </div>
+                        <div className="flex-1">
+                          <div className="font-semibold text-gray-900">{job.title}</div>
+                          <div className="text-sm text-gray-600 mt-1 italic">{job.statement}</div>
+                        </div>
+                      </div>
+                      {expandedJobs[job.id] ? (
+                        <ChevronDown className="w-5 h-5 text-gray-400" />
+                      ) : (
+                        <ChevronRight className="w-5 h-5 text-gray-400" />
+                      )}
+                    </button>
+
+                    {expandedJobs[job.id] && (
+                      <div className="px-6 py-4 bg-gray-50 border-t border-gray-200 space-y-3">
+                        <div>
+                          <div className="text-sm font-semibold text-gray-700 mb-1">Context Inference</div>
+                          <div className="text-gray-700 text-sm">{job.context}</div>
+                        </div>
+
+                        <div className="bg-indigo-50 border border-indigo-200 rounded p-3">
+                          <div className="text-sm font-semibold text-indigo-900 mb-1">Why Unstated in Research</div>
+                          <div className="text-indigo-800 text-sm">{job.whyUnstated}</div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Capability Repurposing Tab */}
+        {activeTab === 'repurposing' && (
+          <div className="space-y-8">
+            {/* Context Box */}
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <div className="flex items-start gap-3">
+                <Info className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-lg font-bold text-purple-900 mb-3">What is Capability Repurposing?</h3>
+                  <p className="text-purple-800 mb-4">
+                    Instead of building 20 new products to address 100 customer jobs, Sybrin can <strong>systematically repurpose 5 core capabilities</strong> to solve 20 jobs each through configuration and positioning (not new development).
+                  </p>
+                  <div className="bg-white rounded p-4 mb-4">
+                    <div className="text-sm font-semibold text-purple-900 mb-2">Example: E-checks aren't just for replacing paper checks</div>
+                    <div className="text-purple-800 text-sm">
+                      The underlying capability is "digital workflow with paper-like controls (audit trails, approval workflows, dispute resolution)."
+                      This same capability can be repurposed for: loan disbursements, payroll, treasury operations, instant payments with governance, and more.
+                    </div>
+                  </div>
+                  <div className="grid md:grid-cols-3 gap-4 text-sm">
+                    <div className="bg-white rounded p-3">
+                      <div className="font-semibold text-purple-900 mb-1">80% Addressable</div>
+                      <div className="text-purple-700">80% of identified jobs can be addressed by repurposing existing capabilities with minimal development</div>
+                    </div>
+                    <div className="bg-white rounded p-3">
+                      <div className="font-semibold text-purple-900 mb-1">5 Core Platforms</div>
+                      <div className="text-purple-700">Detect, Connect, Flow, Offline, Approve - each solving 5-10 jobs through repurposing</div>
+                    </div>
+                    <div className="bg-white rounded p-3">
+                      <div className="font-semibold text-purple-900 mb-1">Exit Story</div>
+                      <div className="text-purple-700">Platform capabilities that solve emerging jobs faster than competitors (not just point products)</div>
+                    </div>
+                  </div>
                 </div>
-                <div className="bg-white rounded-lg p-4 border border-purple-200">
-                  <h4 className="font-semibold text-purple-900 mb-2">Middle Management</h4>
-                  <ul className="text-sm space-y-1 text-gray-700">
-                    <li>• Avoid being scapegoated</li>
-                    <li>• Feel competent with new tech</li>
-                    <li>• Maintain authority over technical team</li>
-                  </ul>
+              </div>
+            </div>
+
+            {/* 5 Core Platforms */}
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">5 Core Capability Platforms</h2>
+
+              <div className="space-y-6">
+                {corePlatforms.map((platform) => {
+                  const Icon = platform.icon;
+                  return (
+                    <div key={platform.id} className="bg-white border-2 border-gray-200 rounded-lg overflow-hidden">
+                      <button
+                        onClick={() => toggleSection(platform.id)}
+                        className="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                      >
+                        <div className="flex items-center gap-4">
+                          <div className={`p-3 rounded-lg bg-${platform.color}-100`}>
+                            <Icon className={`w-6 h-6 text-${platform.color}-600`} />
+                          </div>
+                          <div className="text-left">
+                            <div className="text-xl font-bold text-gray-900">{platform.name}</div>
+                            <div className="text-sm text-gray-600">{platform.tagline}</div>
+                          </div>
+                        </div>
+                        {expandedSections[platform.id] ? (
+                          <ChevronDown className="w-5 h-5 text-gray-400" />
+                        ) : (
+                          <ChevronRight className="w-5 h-5 text-gray-400" />
+                        )}
+                      </button>
+
+                      {expandedSections[platform.id] && (
+                        <div className="px-6 py-5 bg-gray-50 border-t-2 border-gray-200">
+                          <div className="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                              <div className="text-sm font-semibold text-gray-700 mb-2">Original Use</div>
+                              <div className="text-gray-900 mb-4">{platform.originalUse}</div>
+
+                              <div className="text-sm font-semibold text-gray-700 mb-2">Core Capability</div>
+                              <div className="text-gray-700 text-sm">{platform.coreCapability}</div>
+                            </div>
+
+                            <div className="space-y-3">
+                              <div className="bg-white border border-gray-200 rounded p-3">
+                                <div className="text-xs font-semibold text-gray-600 mb-1">FEASIBILITY</div>
+                                <div className="text-2xl font-bold text-green-600">{platform.feasibility}</div>
+                              </div>
+                              <div className="bg-white border border-gray-200 rounded p-3">
+                                <div className="text-xs font-semibold text-gray-600 mb-1">EFFORT TO REPURPOSE</div>
+                                <div className="text-sm text-gray-900">{platform.effort}</div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div>
+                            <div className="text-sm font-semibold text-gray-700 mb-3">Repurposed Applications</div>
+                            <div className="space-y-2">
+                              {platform.repurposedApplications.map((app, idx) => (
+                                <div key={idx} className="flex items-center justify-between bg-white border border-gray-200 rounded p-3">
+                                  <div className="flex items-center gap-3">
+                                    <div className={`px-2 py-1 rounded text-xs font-medium border ${priorityColors[app.priority]}`}>
+                                      {app.priority}: {priorityLabels[app.priority]}
+                                    </div>
+                                    <div className="text-sm font-medium text-gray-900">{app.name}</div>
+                                  </div>
+                                  <div className={`px-2 py-1 rounded text-xs font-medium ${
+                                    app.status === 'deployed' ? 'bg-green-100 text-green-700' :
+                                    app.status === 'deploying' ? 'bg-blue-100 text-blue-700' :
+                                    app.status === 'piloting' ? 'bg-yellow-100 text-yellow-700' :
+                                    app.status === 'development' ? 'bg-orange-100 text-orange-700' :
+                                    app.status === 'bundled' ? 'bg-purple-100 text-purple-700' :
+                                    app.status === 'platform' ? 'bg-indigo-100 text-indigo-700' :
+                                    app.status === 'productizing' ? 'bg-teal-100 text-teal-700' :
+                                    'bg-gray-100 text-gray-600'
+                                  }`}>
+                                    {app.status}
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Prioritization Framework */}
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 className="text-lg font-bold text-gray-900 mb-4">Prioritization Framework (18-Month Exit)</h3>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <div className="px-3 py-1 rounded border bg-red-100 text-red-800 border-red-300 text-sm font-medium">P0</div>
+                  <div>
+                    <div className="font-semibold text-gray-900">Do Now (Exit-Critical, Q1-Q2 2026)</div>
+                    <div className="text-gray-600 text-sm">High feasibility (>80%) + Clear first customer + Revenue in 12 months + Strengthens exit narrative</div>
+                  </div>
                 </div>
-                <div className="bg-white rounded-lg p-4 border border-purple-200">
-                  <h4 className="font-semibold text-purple-900 mb-2">Frontline Staff</h4>
-                  <ul className="text-sm space-y-1 text-gray-700">
-                    <li>• Avoid feeling stupid learning new systems</li>
-                    <li>• Feel proud (not exploitative) serving poor</li>
-                    <li>• Feel safe traveling to remote villages</li>
-                  </ul>
+                <div className="flex items-start gap-3">
+                  <div className="px-3 py-1 rounded border bg-orange-100 text-orange-800 border-orange-300 text-sm font-medium">P1</div>
+                  <div>
+                    <div className="font-semibold text-gray-900">Do Soon (Exit-Valuable, Q2-Q3 2026)</div>
+                    <div className="text-gray-600 text-sm">Medium feasibility (60-80%) + Identified first customer + Revenue in 18 months + Key differentiation</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="px-3 py-1 rounded border bg-yellow-100 text-yellow-800 border-yellow-300 text-sm font-medium">P2</div>
+                  <div>
+                    <div className="font-semibold text-gray-900">Evaluate (Strategic Value, Q3-Q4 2026)</div>
+                    <div className="text-gray-600 text-sm">Medium feasibility + Strategic but no immediate customer + May generate revenue post-exit</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="px-3 py-1 rounded border bg-gray-100 text-gray-600 border-gray-300 text-sm font-medium">P3</div>
+                  <div>
+                    <div className="font-semibold text-gray-900">Defer (Post-Exit Innovation)</div>
+                    <div className="text-gray-600 text-sm">Low feasibility (<50%) OR long development OR regulatory blockers + Post-exit opportunity</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         )}
 
-        {/* TAB 2: Capability Repurposing */}
-        {activeTab === 'capabilities' && (
-          <div className="space-y-6">
-            {/* Executive Summary */}
+        {/* Higher-Level Jobs Tab */}
+        {activeTab === 'higher' && (
+          <div className="space-y-8">
+            {/* Context Box */}
             <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Systematic Repurposing is Strategic Leverage</h2>
-              <p className="text-gray-700 mb-4">
-                <strong>Key insight</strong>: Sybrin doesn't need to build 20 new products to address 100 customer jobs.
-                Sybrin needs to systematically repurpose 5 core capabilities to solve 20 jobs each.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="flex items-start gap-3">
+                <Info className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-3">Repurposing Advantages</h3>
-                  <ul className="text-sm space-y-2 text-gray-700">
-                    <li><strong>Speed</strong>: 1-3 months vs. 12-18 months for new product</li>
-                    <li><strong>Cost</strong>: Configuration vs. development</li>
-                    <li><strong>Risk</strong>: Proven technology vs. unproven new product</li>
-                    <li><strong>Sales</strong>: Easier to sell "different use of proven product"</li>
-                    <li><strong>Exit story</strong>: "Platform capabilities" &gt; "point products"</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-3">18-Month Exit Focus</h3>
-                  <ul className="text-sm space-y-2 text-gray-700">
-                    <li>✅ <strong>Tier 1</strong>: Zero new development (just positioning)</li>
-                    <li>✅ <strong>Tier 2</strong>: Minor development, high revenue</li>
-                    <li>⏸ <strong>Tier 3</strong>: Moderate development - defer to post-exit</li>
-                  </ul>
-                  <p className="text-sm text-green-700 font-medium mt-3">
-                    Total incremental revenue potential: $2-4M over 18 months
+                  <h3 className="text-lg font-bold text-green-900 mb-3">Job Abstraction Levels</h3>
+                  <p className="text-green-800 mb-4">
+                    Jobs exist at different levels of abstraction. <strong>Higher abstraction reveals larger opportunities</strong> but takes longer to execute.
+                    The same customer evidence reveals different white space depending on how you frame the job.
                   </p>
+                  <div className="grid md:grid-cols-3 gap-4 text-sm">
+                    <div className="bg-white rounded p-3">
+                      <div className="font-semibold text-green-900 mb-1">Operational Level</div>
+                      <div className="text-green-700 mb-2">Example: "Manage 6M+ digital users with same capacity as 1M users"</div>
+                      <div className="text-xs text-green-600">White Space: AI fraud platform, chatbots ($10-50M TAM)</div>
+                    </div>
+                    <div className="bg-white rounded p-3">
+                      <div className="font-semibold text-green-900 mb-1">Fundamental Level</div>
+                      <div className="text-green-700 mb-2">Example: "Achieve operational leverage as we scale"</div>
+                      <div className="text-xs text-green-600">White Space: Customer profitability routing ($100M-$1B TAM)</div>
+                    </div>
+                    <div className="bg-white rounded p-3">
+                      <div className="font-semibold text-green-900 mb-1">Meta Level</div>
+                      <div className="text-green-700 mb-2">Example: "Turn incumbent constraints into competitive advantages"</div>
+                      <div className="text-xs text-green-600">White Space: Trust infrastructure for fintechs ($1-10B TAM)</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* 5 Core Platforms */}
-            <div className="space-y-4">
-              {platforms.map((platform) => {
-                const Icon = platform.icon;
-                const isExpanded = expandedSections[`platform-${platform.id}`];
-                return (
-                  <div key={platform.id} className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+            {/* Job Families */}
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">4 Job Families (Fundamental Level)</h2>
+              <p className="text-gray-600 mb-6">
+                Grouping the 9 operational jobs reveals 4 fundamental patterns that customers are really trying to solve.
+              </p>
+
+              <div className="space-y-4">
+                {jobFamilies.map((family) => {
+                  const Icon = family.icon;
+                  return (
+                    <div key={family.id} className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+                      <button
+                        onClick={() => toggleSection(family.id)}
+                        className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                      >
+                        <div className="flex items-center gap-4">
+                          <div className="p-2 rounded-lg bg-blue-100">
+                            <Icon className="w-5 h-5 text-blue-600" />
+                          </div>
+                          <div className="text-left">
+                            <div className="font-bold text-gray-900">{family.name}</div>
+                            <div className="text-sm text-gray-600 mt-1">Meta Job: {family.metaJob}</div>
+                          </div>
+                        </div>
+                        {expandedSections[family.id] ? (
+                          <ChevronDown className="w-5 h-5 text-gray-400" />
+                        ) : (
+                          <ChevronRight className="w-5 h-5 text-gray-400" />
+                        )}
+                      </button>
+
+                      {expandedSections[family.id] && (
+                        <div className="px-6 py-5 bg-gray-50 border-t border-gray-200 space-y-4">
+                          <div>
+                            <div className="text-sm font-semibold text-gray-700 mb-2">Operational Jobs in This Family</div>
+                            <ul className="list-disc list-inside space-y-1">
+                              {family.operationalJobs.map((job, idx) => (
+                                <li key={idx} className="text-gray-700 text-sm">{job}</li>
+                              ))}
+                            </ul>
+                          </div>
+
+                          <div>
+                            <div className="text-sm font-semibold text-gray-700 mb-1">Fundamental Job (Abstracted)</div>
+                            <div className="text-gray-900 font-medium">{family.fundamentalJob}</div>
+                          </div>
+
+                          <div className="bg-green-50 border border-green-200 rounded p-3">
+                            <div className="text-sm font-semibold text-green-900 mb-2">White Space Revealed</div>
+                            <ul className="list-disc list-inside space-y-1">
+                              {family.whiteSpace.map((ws, idx) => (
+                                <li key={idx} className="text-green-800 text-sm">{ws}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Meta Jobs */}
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">3 Meta-Level Jobs (Highest Abstraction)</h2>
+              <p className="text-gray-600 mb-6">
+                Cross-cutting patterns that appear across ALL job families. These reveal the <strong>largest strategic opportunities</strong> but require ecosystem orchestration.
+              </p>
+
+              <div className="space-y-4">
+                {metaJobs.map((job) => (
+                  <div key={job.id} className="bg-white border-2 border-blue-200 rounded-lg overflow-hidden">
                     <button
-                      onClick={() => toggleSection(`platform-${platform.id}`)}
-                      className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                      onClick={() => toggleSection(job.id)}
+                      className="w-full px-6 py-4 flex items-center justify-between hover:bg-blue-50 transition-colors"
                     >
-                      <div className="flex items-center gap-4">
-                        <div className={`p-2 bg-${platform.color}-100 rounded-lg`}>
-                          <Icon className={`w-6 h-6 text-${platform.color}-600`} />
-                        </div>
-                        <div className="text-left">
-                          <h3 className="font-semibold text-gray-900 text-lg">{platform.name}</h3>
-                          <p className="text-sm text-gray-600">{platform.tagline}</p>
-                        </div>
+                      <div className="flex-1 text-left">
+                        <div className="text-lg font-bold text-gray-900">{job.title}</div>
+                        <div className="text-sm text-blue-600 mt-1 font-medium">Reframed: {job.reframe}</div>
+                        <div className="text-xs text-gray-500 mt-2">TAM: {job.tam}</div>
                       </div>
-                      {isExpanded ? <ChevronDown className="w-5 h-5 text-gray-400" /> : <ChevronRight className="w-5 h-5 text-gray-400" />}
+                      {expandedSections[job.id] ? (
+                        <ChevronDown className="w-5 h-5 text-gray-400" />
+                      ) : (
+                        <ChevronRight className="w-5 h-5 text-gray-400" />
+                      )}
                     </button>
 
-                    {isExpanded && (
-                      <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                        <h4 className="font-semibold text-gray-900 mb-3">Modules / SKUs:</h4>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                          {platform.modules.map((module, idx) => (
-                            <div key={idx} className="flex items-center gap-2 text-sm text-gray-700">
-                              <div className="w-1.5 h-1.5 rounded-full bg-gray-400"></div>
-                              {module}
+                    {expandedSections[job.id] && (
+                      <div className="px-6 py-5 bg-blue-50 border-t-2 border-blue-200">
+                        <div className="text-sm font-semibold text-gray-700 mb-3">Solution Space Shift</div>
+                        <div className="space-y-2">
+                          {job.examples.map((example, idx) => (
+                            <div key={idx} className="bg-white border border-blue-200 rounded p-3 text-sm text-gray-700">
+                              {example}
                             </div>
                           ))}
                         </div>
                       </div>
                     )}
                   </div>
-                );
-              })}
-            </div>
-
-            {/* Prioritization Matrix */}
-            <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">Prioritization Framework</h2>
-              <div className="space-y-4">
-                <div className="border-l-4 border-red-500 pl-4">
-                  {priorityBadge('P0')}
-                  <p className="text-sm text-gray-700 mt-2">
-                    High feasibility (&gt;80%) + Clear first customer + Revenue in 12 months + Strengthens exit narrative
-                  </p>
-                  <p className="text-xs text-gray-600 mt-1">Examples: Tazama→AFASA, Payments Hub→Batch Facade, Journey Builder→Sybrin Flow</p>
-                </div>
-                <div className="border-l-4 border-orange-500 pl-4">
-                  {priorityBadge('P1')}
-                  <p className="text-sm text-gray-700 mt-2">
-                    Medium feasibility (60-80%) + Identified first customer + Revenue in 18 months + Key differentiation
-                  </p>
-                  <p className="text-xs text-gray-600 mt-1">Examples: Agent Fraud Detection, MFI Lending Suite, MBO Network Management</p>
-                </div>
-                <div className="border-l-4 border-yellow-500 pl-4">
-                  {priorityBadge('P2')}
-                  <p className="text-sm text-gray-700 mt-2">
-                    Medium feasibility + Strategic but no immediate customer + May generate revenue post-exit
-                  </p>
-                  <p className="text-xs text-gray-600 mt-1">Examples: Assisted Digital Hub, Field Officer Safety, Controlled Instant Payments</p>
-                </div>
-                <div className="border-l-4 border-gray-400 pl-4">
-                  {priorityBadge('P3')}
-                  <p className="text-sm text-gray-700 mt-2">
-                    Low feasibility (&lt;50%) OR long development OR regulatory blockers + Post-exit opportunity
-                  </p>
-                  <p className="text-xs text-gray-600 mt-1">Examples: Universal Regulatory Platform, Customer Journey Monitoring, Social Identity Verification</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* TAB 3: Higher-Level Jobs */}
-        {activeTab === 'abstraction' && (
-          <div className="space-y-6">
-            {/* Abstraction Framework */}
-            <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Job Abstraction Framework</h2>
-              <p className="text-gray-700 mb-4">
-                Jobs exist at different levels of abstraction. Higher abstraction = broader solution space = more white space opportunities.
-              </p>
-              <div className="overflow-x-auto">
-                <table className="w-full text-sm">
-                  <thead className="bg-white">
-                    <tr>
-                      <th className="px-4 py-2 text-left font-semibold">Level</th>
-                      <th className="px-4 py-2 text-left font-semibold">Example</th>
-                      <th className="px-4 py-2 text-left font-semibold">Characteristics</th>
-                      <th className="px-4 py-2 text-left font-semibold">TAM</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-gray-200">
-                    <tr className="bg-white">
-                      <td className="px-4 py-3"><AbstractionBadge level="Operational" /></td>
-                      <td className="px-4 py-3 text-gray-700">"Meet BSP AFASA real-time fraud mandate by 2025"</td>
-                      <td className="px-4 py-3 text-gray-600">Geography-specific, time-bound, solution-hinting</td>
-                      <td className="px-4 py-3 text-gray-600">$10-50M per product</td>
-                    </tr>
-                    <tr className="bg-white">
-                      <td className="px-4 py-3"><AbstractionBadge level="Fundamental" /></td>
-                      <td className="px-4 py-3 text-gray-700">"Navigate regulatory change without disruption"</td>
-                      <td className="px-4 py-3 text-gray-600">Generalizable across contexts, outcome-focused</td>
-                      <td className="px-4 py-3 text-gray-600">$100M-$1B per platform</td>
-                    </tr>
-                    <tr className="bg-white">
-                      <td className="px-4 py-3"><AbstractionBadge level="Meta" /></td>
-                      <td className="px-4 py-3 text-gray-700">"Turn incumbent constraints into competitive advantages"</td>
-                      <td className="px-4 py-3 text-gray-600">Universal, transformational, cross-industry</td>
-                      <td className="px-4 py-3 text-gray-600">$1B-$10B+ per ecosystem</td>
-                    </tr>
-                  </tbody>
-                </table>
+                ))}
               </div>
             </div>
 
-            {/* Meta-Level Jobs */}
-            <div className="space-y-4">
-              <h2 className="text-xl font-bold text-gray-900">3 Meta-Level Fundamental Jobs</h2>
-
-              <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6">
-                <div className="flex items-start gap-3 mb-4">
-                  <div className="p-2 bg-indigo-100 rounded-lg">
-                    <ThumbsUp className="w-6 h-6 text-indigo-600" />
+            {/* Strategic Timeline */}
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg p-6">
+              <h3 className="text-xl font-bold mb-4">Strategic Roadmap by Abstraction Level</h3>
+              <div className="grid md:grid-cols-3 gap-4">
+                <div className="bg-white bg-opacity-20 backdrop-blur rounded-lg p-4">
+                  <div className="font-bold mb-2">Now (18-Month Exit)</div>
+                  <div className="text-sm">
+                    Operational-level solutions: Tizama for AFASA, Payment switches, Agent digitization
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-lg text-gray-900">Meta Job 1: Compete successfully despite incumbent constraints</h3>
-                    <p className="text-sm text-gray-600 mt-1">
-                      Instead of "work around legacy," → "leverage legacy as trust signal, compliance moat, or partnership asset"
-                    </p>
-                  </div>
+                  <div className="text-xs mt-2 opacity-80">Fastest to revenue, easiest for acquirers to understand</div>
                 </div>
-                <div className="bg-indigo-50 rounded-lg p-4 mt-4">
-                  <h4 className="font-semibold text-sm text-gray-900 mb-2">White Space Revealed:</h4>
-                  <ul className="text-sm space-y-1 text-gray-700">
-                    <li>• <strong>Legacy bank as trust infrastructure</strong> - Position as "trust layer" for fintech ecosystem</li>
-                    <li>• <strong>Regulatory future-proofing</strong> - Monitor 50+ regulators, alert 12-24 months before mandates</li>
-                    <li>• <strong>Compliance-as-differentiation</strong> - Marketing services that turn compliance into advantage</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6">
-                <div className="flex items-start gap-3 mb-4">
-                  <div className="p-2 bg-purple-100 rounded-lg">
-                    <Building className="w-6 h-6 text-purple-600" />
+                <div className="bg-white bg-opacity-20 backdrop-blur rounded-lg p-4">
+                  <div className="font-bold mb-2">Next (Post-Exit Growth)</div>
+                  <div className="text-sm">
+                    Fundamental-level: Legacy bank as trust infrastructure, MFI infrastructure marketplace
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-lg text-gray-900">Meta Job 2: Grow when we're asset-heavy and competitors are asset-light</h3>
-                    <p className="text-sm text-gray-600 mt-1">
-                      Monetize existing infrastructure (branches, agents, licenses) to compete with asset-light fintechs
-                    </p>
-                  </div>
+                  <div className="text-xs mt-2 opacity-80">Defensible moats, higher margins, network effects</div>
                 </div>
-                <div className="bg-purple-50 rounded-lg p-4 mt-4">
-                  <h4 className="font-semibold text-sm text-gray-900 mb-2">White Space Revealed:</h4>
-                  <ul className="text-sm space-y-1 text-gray-700">
-                    <li>• <strong>MFI Infrastructure Marketplace</strong> - CARD Bank's 329 MBOs become shared infrastructure for 10 MFIs</li>
-                    <li>• <strong>Asset-Light/Asset-Heavy Exchange</strong> - Banks rent infrastructure to fintechs; fintechs rent UX/dev to banks</li>
-                    <li>• <strong>Multi-tenant branch infrastructure</strong> - Branches serve both bank AND fintech customers</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-lg border border-gray-200 shadow-sm p-6">
-                <div className="flex items-start gap-3 mb-4">
-                  <div className="p-2 bg-green-100 rounded-lg">
-                    <Users className="w-6 h-6 text-green-600" />
+                <div className="bg-white bg-opacity-20 backdrop-blur rounded-lg p-4">
+                  <div className="font-bold mb-2">Future (Long-Term)</div>
+                  <div className="text-sm">
+                    Meta-level: Asset-light/asset-heavy exchange, multi-stakeholder optimization platform
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-lg text-gray-900">Meta Job 3: Satisfy stakeholders with conflicting demands</h3>
-                    <p className="text-sm text-gray-600 mt-1">
-                      Board wants profitability, regulators want inclusion, customers want convenience, staff want jobs
-                    </p>
-                  </div>
-                </div>
-                <div className="bg-green-50 rounded-lg p-4 mt-4">
-                  <h4 className="font-semibold text-sm text-gray-900 mb-2">White Space Revealed:</h4>
-                  <ul className="text-sm space-y-1 text-gray-700">
-                    <li>• <strong>Multi-Stakeholder Optimization Platform</strong> - AI balances contradictory demands in real-time</li>
-                    <li>• <strong>Stakeholder dashboard intelligence</strong> - Show each stakeholder their demands are being met</li>
-                    <li>• <strong>Trade-off automation</strong> - Continuously optimize multi-objective functions</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Strategic Roadmap */}
-            <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-lg p-6">
-              <h2 className="text-xl font-bold mb-4">Strategic Roadmap by Abstraction Level</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div>
-                  <div className="flex items-center gap-2 mb-3">
-                    <Clock className="w-5 h-5 text-blue-400" />
-                    <h3 className="font-semibold">Now (18-Month Exit)</h3>
-                  </div>
-                  <AbstractionBadge level="Operational" />
-                  <p className="text-sm text-gray-300 mt-2">
-                    Focus on operational-level solutions (Tizana AFASA, payment switches, agent digitization). Fastest to revenue, easiest to explain to acquirers.
-                  </p>
-                </div>
-                <div>
-                  <div className="flex items-center gap-2 mb-3">
-                    <TrendingUp className="w-5 h-5 text-purple-400" />
-                    <h3 className="font-semibold">Next (Post-Exit Growth)</h3>
-                  </div>
-                  <AbstractionBadge level="Fundamental" />
-                  <p className="text-sm text-gray-300 mt-2">
-                    Invest in fundamental-level white space (Legacy bank as trust infrastructure, MFI marketplace). Creates defensible moats, higher margins, network effects.
-                  </p>
-                </div>
-                <div>
-                  <div className="flex items-center gap-2 mb-3">
-                    <Globe className="w-5 h-5 text-green-400" />
-                    <h3 className="font-semibold">Future (Long-Term)</h3>
-                  </div>
-                  <AbstractionBadge level="Meta" />
-                  <p className="text-sm text-gray-300 mt-2">
-                    Explore meta-level white space (Asset exchange platform, Multi-stakeholder optimization). Category-creating, highly defensible, massive TAM.
-                  </p>
+                  <div className="text-xs mt-2 opacity-80">Category-creating, highly defensible, massive TAM</div>
                 </div>
               </div>
             </div>
