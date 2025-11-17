@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { flushSync } from 'react-dom';
 import { Send, Bot, User, FileText, Loader2, Sparkles } from 'lucide-react';
 import { Streamdown } from 'streamdown';
 
@@ -113,15 +114,17 @@ const ResearchChat = () => {
                 streamedContent += event.delta;
                 console.log('Total content so far:', streamedContent);
 
-                // Update message with new content
-                setMessages(prev => {
-                  const updated = prev.map(msg =>
-                    msg.id === assistantMessageId
-                      ? { ...msg, content: streamedContent }
-                      : msg
-                  );
-                  console.log('Updated messages:', updated);
-                  return updated;
+                // Force immediate React update for real-time streaming
+                flushSync(() => {
+                  setMessages(prev => {
+                    const updated = prev.map(msg =>
+                      msg.id === assistantMessageId
+                        ? { ...msg, content: streamedContent }
+                        : msg
+                    );
+                    console.log('Updated messages:', updated);
+                    return updated;
+                  });
                 });
               } else if (event.type === 'response.done' && event.response) {
                 // Save response ID for conversation continuity
