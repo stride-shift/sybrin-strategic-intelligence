@@ -91,18 +91,25 @@ const ResearchChat = () => {
 
               // Handle OpenAI Responses API streaming format
               if (event.type === 'response.output_text.delta' && event.delta) {
-                console.log('Delta:', event.delta);
+                console.log('Delta received:', event.delta);
                 // Append text delta to streaming content
                 streamedContent += event.delta;
-                setMessages(prev => prev.map(msg =>
-                  msg.id === assistantMessageId
-                    ? { ...msg, content: streamedContent }
-                    : msg
-                ));
+                console.log('Total content so far:', streamedContent);
+
+                // Update message with new content
+                setMessages(prev => {
+                  const updated = prev.map(msg =>
+                    msg.id === assistantMessageId
+                      ? { ...msg, content: streamedContent }
+                      : msg
+                  );
+                  console.log('Updated messages:', updated);
+                  return updated;
+                });
               } else if (event.type === 'response.done' && event.response) {
                 // Save response ID for conversation continuity
                 responseId = event.response.id;
-                console.log('Response complete:', responseId);
+                console.log('Response complete, ID:', responseId);
               }
             } catch (e) {
               // Ignore malformed JSON
