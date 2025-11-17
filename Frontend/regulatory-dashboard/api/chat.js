@@ -3,12 +3,12 @@
  * Uses OpenAI GPT-5.1 with File Search (Responses API)
  */
 
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const VECTOR_STORE_ID = 'vs_69175031dd44819181977702547d85e0';
+
 export const config = {
   runtime: 'edge',
 };
-
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
-const VECTOR_STORE_ID = 'vs_69175031dd44819181977702547d85e0';
 
 export default async function handler(req) {
   // CORS headers
