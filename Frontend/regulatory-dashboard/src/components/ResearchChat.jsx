@@ -4,12 +4,11 @@ import { Send, Bot, User, FileText, Loader2, Sparkles } from 'lucide-react';
 import { Streamdown } from 'streamdown';
 
 const ResearchChat = () => {
-  console.log('ResearchChat component rendering');
-
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [previousResponseId, setPreviousResponseId] = useState(null);
+  const [debugInfo, setDebugInfo] = useState(''); // For debugging visible on screen
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
 
@@ -20,19 +19,15 @@ const ResearchChat = () => {
 
   // Focus input on mount
   useEffect(() => {
-    console.log('Component mounted, focusing input');
     inputRef.current?.focus();
   }, []);
 
   const sendMessage = async () => {
-    console.log('=== sendMessage called ===');
-    console.log('inputValue:', inputValue);
-    console.log('isLoading:', isLoading);
-
     if (!inputValue.trim() || isLoading) {
-      console.log('Returning early - empty input or already loading');
       return;
     }
+
+    setDebugInfo('Starting...'); // Visible debug
 
     const userMessage = {
       id: Date.now(),
@@ -41,7 +36,6 @@ const ResearchChat = () => {
       timestamp: new Date().toISOString(),
     };
 
-    console.log('Setting user message:', userMessage);
     setMessages(prev => [...prev, userMessage]);
     setInputValue('');
     setIsLoading(true);
@@ -56,11 +50,10 @@ const ResearchChat = () => {
       timestamp: new Date().toISOString(),
       isStreaming: true,
     };
-    console.log('Setting assistant placeholder:', assistantMessage);
     setMessages(prev => [...prev, assistantMessage]);
 
     try {
-      console.log('Fetching from /api/chat...');
+      setDebugInfo('Fetching from API...');
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -70,13 +63,13 @@ const ResearchChat = () => {
         }),
       });
 
-      console.log('Response received:', response.status, response.ok);
-
       if (!response.ok) {
         const errorText = await response.text();
-        console.error('Response not OK:', errorText);
+        setDebugInfo(`Error: ${response.status} - ${errorText}`);
         throw new Error('Failed to get response');
       }
+
+      setDebugInfo('Starting stream read...');
 
       const reader = response.body?.getReader();
       const decoder = new TextDecoder();
@@ -84,12 +77,17 @@ const ResearchChat = () => {
       let streamedContent = '';
       let responseId = null;
 
+      let chunkCount = 0;
       while (true) {
         const { value, done } = await reader.read();
-        if (done) break;
+        if (done) {
+          setDebugInfo(`Done! Received ${chunkCount} chunks`);
+          break;
+        }
 
+        chunkCount++;
         const chunk = decoder.decode(value, { stream: true });
-        console.log('Received chunk:', chunk.substring(0, 100));
+        setDebugInfo(`Chunk ${chunkCount}: ${chunk.substring(0, 50)}...`);
         buffer += chunk;
 
         // Process complete lines (Server-Sent Events format)
@@ -105,35 +103,26 @@ const ResearchChat = () => {
               if (jsonData === '[DONE]') continue;
 
               const event = JSON.parse(jsonData);
-              console.log('Received event:', event.type, event);
 
               // Handle OpenAI Responses API streaming format
               if (event.type === 'response.output_text.delta' && event.delta) {
-                console.log('Delta received:', event.delta);
                 // Append text delta to streaming content
                 streamedContent += event.delta;
-                console.log('Total content so far:', streamedContent);
 
                 // Force immediate React update for real-time streaming
                 flushSync(() => {
-                  setMessages(prev => {
-                    const updated = prev.map(msg =>
-                      msg.id === assistantMessageId
-                        ? { ...msg, content: streamedContent }
-                        : msg
-                    );
-                    console.log('Updated messages:', updated);
-                    return updated;
-                  });
+                  setMessages(prev => prev.map(msg =>
+                    msg.id === assistantMessageId
+                      ? { ...msg, content: streamedContent }
+                      : msg
+                  ));
                 });
               } else if (event.type === 'response.done' && event.response) {
                 // Save response ID for conversation continuity
                 responseId = event.response.id;
-                console.log('Response complete, ID:', responseId);
               }
             } catch (e) {
-              // Ignore malformed JSON
-              console.warn('Failed to parse SSE data:', line, e);
+              // Ignore malformed JSON - likely incomplete SSE event
             }
           }
         }
@@ -151,9 +140,7 @@ const ResearchChat = () => {
       }
 
     } catch (error) {
-      console.error('!!! ERROR in sendMessage !!!');
-      console.error('Error details:', error);
-      console.error('Error stack:', error.stack);
+      setDebugInfo(`Error: ${error.message}`);
 
       // Replace streaming message with error
       setMessages(prev => prev.map(msg =>
@@ -161,13 +148,12 @@ const ResearchChat = () => {
           ? {
               ...msg,
               type: 'error',
-              content: `Sorry, I encountered an error: ${error.message}. Please check the console.`,
+              content: `Sorry, I encountered an error: ${error.message}`,
               isStreaming: false,
             }
           : msg
       ));
     } finally {
-      console.log('sendMessage finally block, setting isLoading to false');
       setIsLoading(false);
     }
   };
@@ -199,6 +185,13 @@ const ResearchChat = () => {
 
   return (
     <div className="flex flex-col h-screen bg-gray-50">
+      {/* Debug Panel */}
+      {debugInfo && (
+        <div className="bg-yellow-100 border-b border-yellow-300 px-4 py-2 text-xs font-mono">
+          <strong>Debug:</strong> {debugInfo}
+        </div>
+      )}
+
       {/* Header */}
       <div className="bg-white border-b border-gray-200 px-6 py-4 shadow-sm">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
