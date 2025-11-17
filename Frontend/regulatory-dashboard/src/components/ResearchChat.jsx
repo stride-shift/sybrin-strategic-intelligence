@@ -8,7 +8,6 @@ const ResearchChat = () => {
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [previousResponseId, setPreviousResponseId] = useState(null);
-  const [debugInfo, setDebugInfo] = useState({ lastCapturedId: null, sentId: null, events: [] });
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
 
@@ -49,13 +48,6 @@ const ResearchChat = () => {
       isStreaming: true,
     };
     setMessages(prev => [...prev, assistantMessage]);
-
-    // Debug: Log what we're sending
-    console.log('🔵 SENDING REQUEST:', {
-      question: userMessage.content,
-      previous_response_id: previousResponseId
-    });
-    setDebugInfo(prev => ({ ...prev, sentId: previousResponseId, events: [] }));
 
     try {
       const response = await fetch('/api/chat', {
@@ -98,13 +90,6 @@ const ResearchChat = () => {
 
               const event = JSON.parse(jsonData);
 
-              // Debug: Log all events
-              console.log('📩 EVENT RECEIVED:', event.type, event);
-              setDebugInfo(prev => ({
-                ...prev,
-                events: [...prev.events, { type: event.type, time: new Date().toISOString() }].slice(-10)
-              }));
-
               // Handle OpenAI Responses API streaming format
               if (event.type === 'response.output_text.delta' && event.delta) {
                 // Append text delta to streaming content
@@ -120,10 +105,7 @@ const ResearchChat = () => {
                 });
               } else if (event.type === 'response.completed') {
                 // Save response ID for conversation continuity
-                // The response ID is in event.response.id
                 responseId = event.response?.id || event.id;
-                console.log('🟢 CAPTURED RESPONSE ID:', responseId, 'Full event:', event);
-                setDebugInfo(prev => ({ ...prev, lastCapturedId: responseId }));
               }
             } catch (e) {
               // Ignore malformed JSON - likely incomplete SSE event
@@ -140,10 +122,7 @@ const ResearchChat = () => {
       ));
 
       if (responseId) {
-        console.log('💾 SAVING TO STATE - previousResponseId:', responseId);
         setPreviousResponseId(responseId);
-      } else {
-        console.warn('⚠️ NO RESPONSE ID CAPTURED - Threading will not work!');
       }
 
     } catch (error) {
@@ -171,10 +150,8 @@ const ResearchChat = () => {
   };
 
   const startNewConversation = () => {
-    console.log('🔄 STARTING NEW CONVERSATION - Clearing all state');
     setMessages([]);
     setPreviousResponseId(null);
-    setDebugInfo({ lastCapturedId: null, sentId: null, events: [] });
     inputRef.current?.focus();
   };
 
@@ -339,47 +316,6 @@ const ResearchChat = () => {
           )}
         </div>
       </div>
-
-      {/* Debug Panel */}
-      {messages.length > 0 && (
-        <div className="bg-yellow-50 border-t border-yellow-200 px-6 py-3">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-xs font-mono space-y-1">
-              <div className="font-bold text-yellow-900 mb-2">🔍 THREADING DEBUG INFO:</div>
-              <div className="grid grid-cols-2 gap-2">
-                <div>
-                  <span className="text-yellow-700">Current State ID:</span>{' '}
-                  <span className="font-semibold text-yellow-900">
-                    {previousResponseId || 'null'}
-                  </span>
-                </div>
-                <div>
-                  <span className="text-yellow-700">Last Captured:</span>{' '}
-                  <span className="font-semibold text-yellow-900">
-                    {debugInfo.lastCapturedId || 'null'}
-                  </span>
-                </div>
-                <div>
-                  <span className="text-yellow-700">Sent in Last Request:</span>{' '}
-                  <span className="font-semibold text-yellow-900">
-                    {debugInfo.sentId || 'null'}
-                  </span>
-                </div>
-                <div>
-                  <span className="text-yellow-700">Recent Events:</span>{' '}
-                  <span className="font-semibold text-yellow-900">
-                    {debugInfo.events.map(e => e.type).join(', ') || 'none'}
-                  </span>
-                </div>
-              </div>
-              <div className="mt-2 text-yellow-600 text-[10px]">
-                💡 If "Sent in Last Request" stays null after first message, threading is broken on frontend.
-                If "Last Captured" is null, backend isn't returning response.id.
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Input Area */}
       <div className="bg-white border-t border-gray-200 px-6 py-4 shadow-lg">
