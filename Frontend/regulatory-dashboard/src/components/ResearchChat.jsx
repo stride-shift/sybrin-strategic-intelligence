@@ -71,6 +71,7 @@ const ResearchChat = () => {
         if (done) break;
 
         const chunk = decoder.decode(value, { stream: true });
+        console.log('Received chunk:', chunk.substring(0, 100));
         buffer += chunk;
 
         // Process complete lines (Server-Sent Events format)
@@ -86,9 +87,11 @@ const ResearchChat = () => {
               if (jsonData === '[DONE]') continue;
 
               const event = JSON.parse(jsonData);
+              console.log('Received event:', event.type, event);
 
               // Handle OpenAI Responses API streaming format
               if (event.type === 'response.output_text.delta' && event.delta) {
+                console.log('Delta:', event.delta);
                 // Append text delta to streaming content
                 streamedContent += event.delta;
                 setMessages(prev => prev.map(msg =>
@@ -99,6 +102,7 @@ const ResearchChat = () => {
               } else if (event.type === 'response.done' && event.response) {
                 // Save response ID for conversation continuity
                 responseId = event.response.id;
+                console.log('Response complete:', responseId);
               }
             } catch (e) {
               // Ignore malformed JSON
