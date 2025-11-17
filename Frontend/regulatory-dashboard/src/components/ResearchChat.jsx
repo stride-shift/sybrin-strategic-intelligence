@@ -8,7 +8,6 @@ const ResearchChat = () => {
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [previousResponseId, setPreviousResponseId] = useState(null);
-  const [debugInfo, setDebugInfo] = useState(''); // For debugging visible on screen
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
 
@@ -26,8 +25,6 @@ const ResearchChat = () => {
     if (!inputValue.trim() || isLoading) {
       return;
     }
-
-    setDebugInfo('Starting...'); // Visible debug
 
     const userMessage = {
       id: Date.now(),
@@ -53,7 +50,6 @@ const ResearchChat = () => {
     setMessages(prev => [...prev, assistantMessage]);
 
     try {
-      setDebugInfo('Fetching from API...');
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -64,12 +60,8 @@ const ResearchChat = () => {
       });
 
       if (!response.ok) {
-        const errorText = await response.text();
-        setDebugInfo(`Error: ${response.status} - ${errorText}`);
         throw new Error('Failed to get response');
       }
-
-      setDebugInfo('Starting stream read...');
 
       const reader = response.body?.getReader();
       const decoder = new TextDecoder();
@@ -77,17 +69,11 @@ const ResearchChat = () => {
       let streamedContent = '';
       let responseId = null;
 
-      let chunkCount = 0;
       while (true) {
         const { value, done } = await reader.read();
-        if (done) {
-          setDebugInfo(`Done! Received ${chunkCount} chunks`);
-          break;
-        }
+        if (done) break;
 
-        chunkCount++;
         const chunk = decoder.decode(value, { stream: true });
-        setDebugInfo(`Chunk ${chunkCount}: ${chunk.substring(0, 50)}...`);
         buffer += chunk;
 
         // Process complete lines (Server-Sent Events format)
@@ -140,15 +126,13 @@ const ResearchChat = () => {
       }
 
     } catch (error) {
-      setDebugInfo(`Error: ${error.message}`);
-
       // Replace streaming message with error
       setMessages(prev => prev.map(msg =>
         msg.id === assistantMessageId
           ? {
               ...msg,
               type: 'error',
-              content: `Sorry, I encountered an error: ${error.message}`,
+              content: 'Sorry, I encountered an error. Please try again.',
               isStreaming: false,
             }
           : msg
@@ -185,13 +169,6 @@ const ResearchChat = () => {
 
   return (
     <div className="flex flex-col h-screen bg-gray-50">
-      {/* Debug Panel */}
-      {debugInfo && (
-        <div className="bg-yellow-100 border-b border-yellow-300 px-4 py-2 text-xs font-mono">
-          <strong>Debug:</strong> {debugInfo}
-        </div>
-      )}
-
       {/* Header */}
       <div className="bg-white border-b border-gray-200 px-6 py-4 shadow-sm">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
