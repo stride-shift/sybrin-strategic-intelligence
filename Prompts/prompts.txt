@@ -1,0 +1,5 @@
+# Outcomes prompt
+
+Consider sybrin_text_only.txt, sybrin_strategic_insights_summary.md, and Problem
+Statements.txt, and please formulate what outcomes Sybrin probably wants to achieve. You
+don't have to be PC. Be honest, even if it's not flattering.   

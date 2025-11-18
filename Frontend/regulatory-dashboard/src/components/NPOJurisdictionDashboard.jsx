@@ -407,10 +407,10 @@ const NPOJurisdictionDashboard = () => {
         )}
 
         {viewMode === 'table' && (
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead className="bg-gray-50 border-b border-gray-200">
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 max-h-[650px] flex flex-col">
+            <div className="overflow-x-auto overflow-y-auto flex-1">
+              <table className="w-full relative">
+                <thead className="bg-gray-50 border-b border-gray-200 sticky top-0 z-20 shadow-sm">
                   <tr>
                     <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">
                       Jurisdiction
