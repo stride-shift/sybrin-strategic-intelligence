@@ -31,9 +31,11 @@ import {
 const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = useState(true)
   const [expandedSections, setExpandedSections] = useState({
+    'problem-statements': true,  // Keep problem statement answers visible
     foundational: false,
     analytical: false,
-    npo: false
+    npo: false,
+    research: false
   })
   const location = useLocation()
 
@@ -46,7 +48,9 @@ const Layout = ({ children }) => {
 
   const navSections = [
     {
-      id: 'standalone',
+      id: 'problem-statements',
+      title: 'Problem Statement Answers',
+      icon: Lightbulb,
       items: [
         {
           path: '/strategic-intelligence',
