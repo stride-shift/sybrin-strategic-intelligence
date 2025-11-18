@@ -354,10 +354,5 @@ To keep this practical and aligned with your exit horizon, here is a step-by-ste
      - A group deal (e.g., ABSA Rest of Africa) that illustrates multi-country influence.
 
 ---
-
-If you like, I can next help by drafting a concrete template for the Account-Influence Canvas tailored to one of your key markets (for example, “Kenya Tier 1/2 bank – instant payments and branch network expansion”) and show how to fill it using your existing data.
-
-
----
 *Generated: 2025-11-16 19:59:12*
 *Model: gpt-5.1 with File Search*

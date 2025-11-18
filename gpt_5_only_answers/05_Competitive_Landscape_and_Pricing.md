@@ -216,13 +216,8 @@ Sybrin will need to tailor numbers per market, but the *structure* can be consis
 - **Reduces technical debt and support cost narrative.**  
   By pushing legacy clients onto modern Smart Teller and Payments platforms under a clear lifecycle policy, Sybrin can credibly show declining support complexity and costs, which boosts margins and justifies price increases.
 
-- **Creates optionality for new owners.**  
+- **Creates optionality for new owners.**
   A clean price architecture with standard archetypes, reference lists, and lifecycle clauses gives the acquirer room to tighten discounts, expand transaction-based pricing, or push more aggressively into SaaS post‑deal.
-
----
-
-If you’d like, I can next help sketch a concrete **sample pricing table** (modules, list prices, discount bands) for Smart Teller v2 and Payments upgrades, tailored separately for (a) mid-size African banks and (b) smaller Philippine/rural-style institutions, taking into account typical regional budgets and procurement rules.
-
 
 ---
 *Generated: 2025-11-16 19:59:12*

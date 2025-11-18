@@ -233,13 +233,8 @@ Post‑exit, deeper institutionalisation of these insights would support sustain
 
 - **Always‑on decision‑maker intelligence.**  
   - Maintain living decision‑maker maps by country and by group (ABSA, FirstRand, Ecobank, Access Bank), tracking executive moves and alumni networks, as illustrated in the Namibia decision‑maker intelligence work.   
-- **Embedding cultural intelligence in product and partner strategy.**  
-  - Use what has been learned about hierarchy, consensus, and trust to choose where to lead with SaaS, where to rely on local SIs, and how to structure donor‑backed programs that shift power dynamics (e.g., Gates in the Philippines).    
-
----
-
-If you’d like, I can next translate this into a practical **checklist or discovery script** your sales teams can use in each first three meetings to uncover the real decision makers and influence network in any given bank.
-
+- **Embedding cultural intelligence in product and partner strategy.**
+  - Use what has been learned about hierarchy, consensus, and trust to choose where to lead with SaaS, where to rely on local SIs, and how to structure donor‑backed programs that shift power dynamics (e.g., Gates in the Philippines).
 
 ---
 *Generated: 2025-11-16 19:59:12*

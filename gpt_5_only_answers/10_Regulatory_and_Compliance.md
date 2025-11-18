@@ -188,7 +188,7 @@ If new owners want to scale further, you can lay out an “association strategy�
 
 - **Deepen membership into regional payments bodies** (e.g., SADC, PAPS governance forums, Pan‑African banking associations) to shape new rails and position Sybrin as default integrator.  
 - **Build a structured donor pipeline** using associations to monitor funding calls and position your NPO as an implementation partner in multiple geographies.  
-- **Use thought leadership** (white papers, reference architectures) through these bodies to promote Sybrin’s expertise in check sunset / EPO migration and instant payments fraud‑risk.
+- **Use thought leadership** (white papers, reference architectures) through these bodies to promote Sybrin's expertise in check sunset / EPO migration and instant payments fraud‑risk.
 
 ---
 
@@ -196,13 +196,9 @@ If new owners want to scale further, you can lay out an “association strategy�
 
 Industry bodies and associations **can** provide faster market access and stronger credibility for Sybrin if they are:
 
-- Carefully selected in line with your immediate product and geography bets (instant payments, EPO, Tazana, Philippines, core African markets).  
-- Used as levers to reduce risk perception, access regulators and schemes, and amplify donor‑funded successes.  
+- Carefully selected in line with your immediate product and geography bets (instant payments, EPO, Tazana, Philippines, core African markets).
+- Used as levers to reduce risk perception, access regulators and schemes, and amplify donor‑funded successes.
 - Integrated into your sales and exit narrative as third‑party validation, rather than pursued as generic branding.
-
-If you would like, I can next:  
-- Propose a short list of specific associations by country/region (Africa + Philippines/ASEAN) with a 0–18 month “effort vs. impact” rating.
-
 
 ---
 *Generated: 2025-11-16 19:59:12*

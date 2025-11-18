@@ -202,13 +202,8 @@ To make the compliance‑first story real and differentiating versus local/regio
      - Local vendors (who lack real‑time, audit‑grade capabilities).  
      - Regional/global vendors (who are too expensive and slow for this segment).    
 
-5. **Marketing & sales narrative discipline.**  
-   - Ensure all Philippines‑facing materials and pitches start with the compliance problem (AFASA, FATF, BSP scrutiny) and then connect to fraud, onboarding and payments, rather than the other way around.    
-
----
-
-If you’d like, I can next turn this into draft external messaging (website copy, 1‑pager, or pitch deck storyline) specifically framed around “AFASA compliance for rural and thrift banks” in the Philippines.
-
+5. **Marketing & sales narrative discipline.**
+   - Ensure all Philippines‑facing materials and pitches start with the compliance problem (AFASA, FATF, BSP scrutiny) and then connect to fraud, onboarding and payments, rather than the other way around.
 
 ---
 *Generated: 2025-11-16 19:59:12*
