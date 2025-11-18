@@ -922,33 +922,33 @@ const JTBDIntelligenceDashboard = () => {
         {activeTab === 'repurposing' && (
           <div className="space-y-8">
             {/* Context Box */}
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+            <div className="bg-sybrin-blue-50 border border-sybrin-blue-200 rounded-lg p-6">
               <div className="flex items-start gap-3">
-                <Info className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
+                <Info className="w-6 h-6 text-sybrin-blue-600 flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-lg font-bold text-purple-900 mb-3">What is Capability Repurposing?</h3>
-                  <p className="text-purple-800 mb-4">
+                  <h3 className="text-lg font-bold text-sybrin-blue-900 mb-3">What is Capability Repurposing?</h3>
+                  <p className="text-sybrin-blue-800 mb-4">
                     Instead of building 20 new products to address 100 customer jobs, Sybrin can <strong>systematically repurpose 5 core capabilities</strong> to solve 20 jobs each through configuration and positioning (not new development).
                   </p>
                   <div className="bg-white rounded p-4 mb-4">
-                    <div className="text-sm font-semibold text-purple-900 mb-2">Example: E-checks aren't just for replacing paper checks</div>
-                    <div className="text-purple-800 text-sm">
+                    <div className="text-sm font-semibold text-sybrin-blue-900 mb-2">Example: E-checks aren't just for replacing paper checks</div>
+                    <div className="text-sybrin-blue-800 text-sm">
                       The underlying capability is "digital workflow with paper-like controls (audit trails, approval workflows, dispute resolution)."
                       This same capability can be repurposed for: loan disbursements, payroll, treasury operations, instant payments with governance, and more.
                     </div>
                   </div>
                   <div className="grid md:grid-cols-3 gap-4 text-sm">
                     <div className="bg-white rounded p-3">
-                      <div className="font-semibold text-purple-900 mb-1">80% Addressable</div>
-                      <div className="text-purple-700">80% of identified jobs can be addressed by repurposing existing capabilities with minimal development</div>
+                      <div className="font-semibold text-sybrin-blue-900 mb-1">80% Addressable</div>
+                      <div className="text-sybrin-blue-700">80% of identified jobs can be addressed by repurposing existing capabilities with minimal development</div>
                     </div>
                     <div className="bg-white rounded p-3">
-                      <div className="font-semibold text-purple-900 mb-1">5 Core Platforms</div>
-                      <div className="text-purple-700">Detect, Connect, Flow, Offline, Approve - each solving 5-10 jobs through repurposing</div>
+                      <div className="font-semibold text-sybrin-blue-900 mb-1">5 Core Platforms</div>
+                      <div className="text-sybrin-blue-700">Detect, Connect, Flow, Offline, Approve - each solving 5-10 jobs through repurposing</div>
                     </div>
                     <div className="bg-white rounded p-3">
-                      <div className="font-semibold text-purple-900 mb-1">Exit Story</div>
-                      <div className="text-purple-700">Platform capabilities that solve emerging jobs faster than competitors (not just point products)</div>
+                      <div className="font-semibold text-sybrin-blue-900 mb-1">Exit Story</div>
+                      <div className="text-sybrin-blue-700">Platform capabilities that solve emerging jobs faster than competitors (not just point products)</div>
                     </div>
                   </div>
                 </div>
