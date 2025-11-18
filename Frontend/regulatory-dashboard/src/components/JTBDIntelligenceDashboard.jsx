@@ -688,19 +688,23 @@ const JTBDIntelligenceDashboard = () => {
                       onClick={() => toggleJob(job.id)}
                       className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
                     >
-                      <div className="flex items-center gap-4 flex-1 text-left">
-                        <div className={`px-3 py-1 rounded text-sm font-medium ${
-                          job.category === 'Regulatory' ? 'bg-red-100 text-red-700' :
-                          job.category === 'Scaling' ? 'bg-blue-100 text-blue-700' :
-                          job.category === 'Rural' ? 'bg-green-100 text-green-700' :
-                          job.category === 'Payments' ? 'bg-purple-100 text-purple-700' :
-                          'bg-orange-100 text-orange-700'
-                        }`}>
-                          {job.category}
+                      <div className="flex-1 text-left">
+                        <div className="flex items-center gap-3 mb-2">
+                          <div className={`px-3 py-1 rounded text-xs font-semibold uppercase tracking-wide ${
+                            job.category === 'Regulatory' ? 'bg-red-100 text-red-700' :
+                            job.category === 'Scaling' ? 'bg-blue-100 text-blue-700' :
+                            job.category === 'Rural' ? 'bg-green-100 text-green-700' :
+                            job.category === 'Payments' ? 'bg-purple-100 text-purple-700' :
+                            'bg-orange-100 text-orange-700'
+                          }`}>
+                            {job.category}
+                          </div>
+                          <div className="text-sm font-medium text-gray-500">
+                            Job {job.number} - {job.customers}
+                          </div>
                         </div>
-                        <div className="flex-1">
-                          <div className="font-semibold text-gray-900">Job {job.number}: {job.title}</div>
-                          <div className="text-sm text-gray-600 mt-1">{job.customers}</div>
+                        <div className="font-semibold text-gray-900 text-lg">
+                          {job.title}
                         </div>
                       </div>
                       {expandedJobs[job.id] ? (
@@ -774,13 +778,20 @@ const JTBDIntelligenceDashboard = () => {
                       onClick={() => toggleJob(job.id)}
                       className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
                     >
-                      <div className="flex items-center gap-4 flex-1 text-left">
-                        <div className="px-3 py-1 rounded text-sm font-medium bg-pink-100 text-pink-700">
-                          {job.level}
+                      <div className="flex-1 text-left">
+                        <div className="flex items-center gap-3 mb-2">
+                          <div className="px-3 py-1 rounded text-xs font-semibold uppercase tracking-wide bg-pink-100 text-pink-700">
+                            {job.level}
+                          </div>
+                          <div className="text-sm font-medium text-gray-500">
+                            Emotional Job
+                          </div>
                         </div>
-                        <div className="flex-1">
-                          <div className="font-semibold text-gray-900">{job.title}</div>
-                          <div className="text-sm text-gray-600 mt-1 italic">{job.statement}</div>
+                        <div className="font-semibold text-gray-900 text-lg mb-1">
+                          {job.title}
+                        </div>
+                        <div className="text-sm text-gray-600 italic">
+                          {job.statement}
                         </div>
                       </div>
                       {expandedJobs[job.id] ? (
@@ -835,13 +846,20 @@ const JTBDIntelligenceDashboard = () => {
                       onClick={() => toggleJob(job.id)}
                       className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
                     >
-                      <div className="flex items-center gap-4 flex-1 text-left">
-                        <div className="px-3 py-1 rounded text-sm font-medium bg-indigo-100 text-indigo-700">
-                          {job.level}
+                      <div className="flex-1 text-left">
+                        <div className="flex items-center gap-3 mb-2">
+                          <div className="px-3 py-1 rounded text-xs font-semibold uppercase tracking-wide bg-indigo-100 text-indigo-700">
+                            {job.level}
+                          </div>
+                          <div className="text-sm font-medium text-gray-500">
+                            Social Job
+                          </div>
                         </div>
-                        <div className="flex-1">
-                          <div className="font-semibold text-gray-900">{job.title}</div>
-                          <div className="text-sm text-gray-600 mt-1 italic">{job.statement}</div>
+                        <div className="font-semibold text-gray-900 text-lg mb-1">
+                          {job.title}
+                        </div>
+                        <div className="text-sm text-gray-600 italic">
+                          {job.statement}
                         </div>
                       </div>
                       {expandedJobs[job.id] ? (
