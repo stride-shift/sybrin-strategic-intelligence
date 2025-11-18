@@ -185,7 +185,7 @@ const CustomersDashboard = () => {
     switch(status) {
       case 'Confirmed': return <CheckCircle2 className="w-4 h-4 text-green-600" />
       case 'Likely': return <Clock className="w-4 h-4 text-yellow-600" />
-      case 'Target': return <Target className="w-4 h-4 text-blue-600" />
+      case 'Target': return <Target className="w-4 h-4 text-sybrin-blue-600" />
       default: return <AlertCircle className="w-4 h-4 text-gray-400" />
     }
   }
@@ -194,7 +194,7 @@ const CustomersDashboard = () => {
     switch(status) {
       case 'Confirmed': return 'text-green-600 bg-green-50'
       case 'Likely': return 'text-yellow-600 bg-yellow-50'
-      case 'Target': return 'text-blue-600 bg-blue-50'
+      case 'Target': return 'text-sybrin-blue-600 bg-sybrin-blue-50'
       default: return 'text-gray-600 bg-gray-50'
     }
   }
@@ -273,9 +273,9 @@ const CustomersDashboard = () => {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600">Potential Customers</p>
-              <p className="text-2xl font-bold text-blue-600">{stats.totalPotential}</p>
+              <p className="text-2xl font-bold text-sybrin-blue-600">{stats.totalPotential}</p>
             </div>
-            <Target className="w-8 h-8 text-blue-200" />
+            <Target className="w-8 h-8 text-sybrin-blue-200" />
           </div>
         </div>
         <div className="bg-white rounded-lg shadow-md p-4">
@@ -308,14 +308,14 @@ const CustomersDashboard = () => {
               placeholder="Search customers..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
             />
           </div>
 
           <select
             value={selectedType}
             onChange={(e) => setSelectedType(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Types</option>
             <option value="Existing">Existing</option>
@@ -325,7 +325,7 @@ const CustomersDashboard = () => {
           <select
             value={selectedStatus}
             onChange={(e) => setSelectedStatus(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Status</option>
             <option value="Confirmed">Confirmed</option>
@@ -336,7 +336,7 @@ const CustomersDashboard = () => {
           <select
             value={selectedCountry}
             onChange={(e) => setSelectedCountry(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Countries</option>
             {countries.map(country => (
@@ -347,7 +347,7 @@ const CustomersDashboard = () => {
           <select
             value={selectedSegment}
             onChange={(e) => setSelectedSegment(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Segments</option>
             {segments.map(segment => (
@@ -355,9 +355,9 @@ const CustomersDashboard = () => {
             ))}
           </select>
 
-          <div className="flex items-center justify-between px-3 py-2 bg-blue-50 rounded-md">
-            <span className="text-sm font-medium text-blue-900">Results:</span>
-            <span className="text-lg font-bold text-blue-600">{filteredData.length}</span>
+          <div className="flex items-center justify-between px-3 py-2 bg-sybrin-blue-50 rounded-md">
+            <span className="text-sm font-medium text-sybrin-blue-900">Results:</span>
+            <span className="text-lg font-bold text-sybrin-blue-600">{filteredData.length}</span>
           </div>
         </div>
 
@@ -366,7 +366,7 @@ const CustomersDashboard = () => {
           <select
             value={selectedGeography}
             onChange={(e) => setSelectedGeography(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Regions</option>
             <option value="Africa">Africa</option>
@@ -376,7 +376,7 @@ const CustomersDashboard = () => {
           <select
             value={selectedPriority}
             onChange={(e) => setSelectedPriority(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Priorities</option>
             <option value="High">High Priority</option>
@@ -387,19 +387,19 @@ const CustomersDashboard = () => {
           <div className="flex gap-2 lg:col-span-2">
             <button
               onClick={() => setViewMode('table')}
-              className={`px-4 py-2 rounded-md transition-colors flex-1 ${viewMode === 'table' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors flex-1 ${viewMode === 'table' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               Table View
             </button>
             <button
               onClick={() => setViewMode('cards')}
-              className={`px-4 py-2 rounded-md transition-colors flex-1 ${viewMode === 'cards' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors flex-1 ${viewMode === 'cards' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               Card View
             </button>
             <button
               onClick={() => setViewMode('stats')}
-              className={`px-4 py-2 rounded-md transition-colors flex-1 ${viewMode === 'stats' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors flex-1 ${viewMode === 'stats' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               Statistics
             </button>
@@ -484,7 +484,7 @@ const CustomersDashboard = () => {
                       </td>
                       <td className="px-4 py-3">
                         <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
-                          item.customer_type === 'Existing' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'
+                          item.customer_type === 'Existing' ? 'bg-green-100 text-green-700' : 'bg-sybrin-blue-100 text-sybrin-blue-700'
                         }`}>
                           {item.customer_type}
                         </span>
@@ -528,7 +528,7 @@ const CustomersDashboard = () => {
                       <td className="px-4 py-3 text-center">
                         <button
                           onClick={() => toggleRowExpansion(item.id)}
-                          className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                          className="text-sybrin-blue-600 hover:text-sybrin-blue-800 text-sm font-medium"
                         >
                           {expandedRows.has(item.id) ? 'Hide' : 'Details'}
                         </button>
@@ -582,7 +582,7 @@ const CustomersDashboard = () => {
                   </div>
                 </div>
                 <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
-                  customer.customer_type === 'Existing' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'
+                  customer.customer_type === 'Existing' ? 'bg-green-100 text-green-700' : 'bg-sybrin-blue-100 text-sybrin-blue-700'
                 }`}>
                   {customer.customer_type}
                 </span>
@@ -646,10 +646,10 @@ const CustomersDashboard = () => {
               </div>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <Target className="w-5 h-5 text-blue-600" />
+                  <Target className="w-5 h-5 text-sybrin-blue-600" />
                   <span className="font-medium">Potential Customers</span>
                 </div>
-                <span className="text-2xl font-bold text-blue-600">{stats.totalPotential}</span>
+                <span className="text-2xl font-bold text-sybrin-blue-600">{stats.totalPotential}</span>
               </div>
               <div className="mt-4 pt-4 border-t">
                 <div className="flex items-center justify-between">
@@ -675,7 +675,7 @@ const CustomersDashboard = () => {
                         <span className="text-xs text-yellow-600">{stats.likely} likely</span>
                       )}
                       {stats.target > 0 && (
-                        <span className="text-xs text-blue-600">{stats.target} targets</span>
+                        <span className="text-xs text-sybrin-blue-600">{stats.target} targets</span>
                       )}
                     </div>
                   </div>

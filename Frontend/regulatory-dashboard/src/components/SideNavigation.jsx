@@ -71,7 +71,7 @@ const SideNavigation = () => {
           {/* Header */}
           <div className="p-6 border-b border-gray-200">
             <div className="flex items-center space-x-2">
-              <Shield className="w-8 h-8 text-blue-600" />
+              <Shield className="w-8 h-8 text-sybrin-blue-600" />
               <div>
                 <h2 className="text-xl font-bold text-gray-900">Sybrin Intel</h2>
                 <p className="text-xs text-gray-500">Strategic Intelligence Hub</p>
@@ -102,22 +102,22 @@ const SideNavigation = () => {
                         to={item.path}
                         className={`flex items-center justify-between p-3 rounded-lg transition-all duration-200 ${
                           isActive(item.path)
-                            ? 'bg-blue-50 border-l-4 border-blue-600'
+                            ? 'bg-sybrin-blue-50 border-l-4 border-sybrin-blue-600'
                             : 'hover:bg-gray-50 border-l-4 border-transparent'
                         }`}
                       >
                         <div className="flex items-center space-x-3">
-                          <Icon className={`w-5 h-5 ${isActive(item.path) ? 'text-blue-600' : 'text-gray-500'}`} />
+                          <Icon className={`w-5 h-5 ${isActive(item.path) ? 'text-sybrin-blue-600' : 'text-gray-500'}`} />
                           <div>
-                            <p className={`text-sm font-medium ${isActive(item.path) ? 'text-blue-900' : 'text-gray-700'}`}>
+                            <p className={`text-sm font-medium ${isActive(item.path) ? 'text-sybrin-blue-900' : 'text-gray-700'}`}>
                               {item.name}
                             </p>
-                            <p className={`text-xs ${isActive(item.path) ? 'text-blue-600' : 'text-gray-500'}`}>
+                            <p className={`text-xs ${isActive(item.path) ? 'text-sybrin-blue-600' : 'text-gray-500'}`}>
                               {item.description}
                             </p>
                           </div>
                         </div>
-                        <ChevronRight className={`w-4 h-4 ${isActive(item.path) ? 'text-blue-600' : 'text-gray-400'}`} />
+                        <ChevronRight className={`w-4 h-4 ${isActive(item.path) ? 'text-sybrin-blue-600' : 'text-gray-400'}`} />
                       </Link>
                     )}
                   </li>

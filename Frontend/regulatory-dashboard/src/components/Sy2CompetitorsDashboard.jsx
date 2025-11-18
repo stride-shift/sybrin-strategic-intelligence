@@ -234,37 +234,37 @@ const Sy2CompetitorsDashboard = () => {
           <div className="flex flex-wrap gap-2">
             <button
               onClick={() => setViewMode('all')}
-              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'all' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'all' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               All Competitors
             </button>
             <button
               onClick={() => setViewMode('direct')}
-              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'direct' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'direct' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               Direct
             </button>
             <button
               onClick={() => setViewMode('major_direct')}
-              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'major_direct' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'major_direct' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               Major Direct
             </button>
             <button
               onClick={() => setViewMode('potential_partners')}
-              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'potential_partners' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'potential_partners' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               Potential Partners
             </button>
             <button
               onClick={() => setViewMode('pan_african')}
-              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'pan_african' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'pan_african' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               Pan-African
             </button>
             <button
               onClick={() => setViewMode('geography_summary')}
-              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'geography_summary' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'geography_summary' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               Geography Summary
             </button>
@@ -336,7 +336,7 @@ const Sy2CompetitorsDashboard = () => {
                       <span className="text-sm text-gray-700">{item.system_integrator_count || 0}</span>
                     </td>
                     <td className="px-4 py-3 text-center">
-                      <span className="text-sm text-blue-600">{item.potential_partner_count || 0}</span>
+                      <span className="text-sm text-sybrin-blue-600">{item.potential_partner_count || 0}</span>
                     </td>
                     <td className="px-4 py-3 text-center">
                       <span className="text-sm font-bold text-gray-900">{item.total_count || 0}</span>
@@ -370,37 +370,37 @@ const Sy2CompetitorsDashboard = () => {
           <div className="flex flex-wrap gap-2">
             <button
               onClick={() => setViewMode('all')}
-              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'all' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'all' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               All Competitors
             </button>
             <button
               onClick={() => setViewMode('direct')}
-              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'direct' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'direct' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               Direct
             </button>
             <button
               onClick={() => setViewMode('major_direct')}
-              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'major_direct' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'major_direct' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               Major Direct
             </button>
             <button
               onClick={() => setViewMode('potential_partners')}
-              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'potential_partners' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'potential_partners' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               Potential Partners
             </button>
             <button
               onClick={() => setViewMode('pan_african')}
-              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'pan_african' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'pan_african' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               Pan-African
             </button>
             <button
               onClick={() => setViewMode('geography_summary')}
-              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'geography_summary' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'geography_summary' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               Geography Summary
             </button>
@@ -434,12 +434,12 @@ const Sy2CompetitorsDashboard = () => {
                   <tr key={idx} className="hover:bg-gray-50 transition-colors">
                     <td className="px-4 py-3">
                       <div className="flex items-center">
-                        <Globe className="w-4 h-4 text-blue-500 mr-2" />
+                        <Globe className="w-4 h-4 text-sybrin-blue-500 mr-2" />
                         <span className="font-medium text-gray-900 text-sm">{item.competitor_name}</span>
                       </div>
                     </td>
                     <td className="px-4 py-3 text-center">
-                      <span className="inline-flex px-3 py-1 rounded-full text-sm font-bold bg-blue-100 text-blue-700">
+                      <span className="inline-flex px-3 py-1 rounded-full text-sm font-bold bg-sybrin-blue-100 text-sybrin-blue-700">
                         {item.geo_count}
                       </span>
                     </td>
@@ -483,37 +483,37 @@ const Sy2CompetitorsDashboard = () => {
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => setViewMode('all')}
-            className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'all' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+            className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'all' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
           >
             All Competitors
           </button>
           <button
             onClick={() => setViewMode('direct')}
-            className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'direct' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+            className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'direct' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
           >
             Direct
           </button>
           <button
             onClick={() => setViewMode('major_direct')}
-            className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'major_direct' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+            className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'major_direct' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
           >
             Major Direct
           </button>
           <button
             onClick={() => setViewMode('potential_partners')}
-            className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'potential_partners' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+            className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'potential_partners' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
           >
             Potential Partners
           </button>
           <button
             onClick={() => setViewMode('pan_african')}
-            className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'pan_african' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+            className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'pan_african' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
           >
             Pan-African
           </button>
           <button
             onClick={() => setViewMode('geography_summary')}
-            className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'geography_summary' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+            className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'geography_summary' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
           >
             Geography Summary
           </button>
@@ -530,14 +530,14 @@ const Sy2CompetitorsDashboard = () => {
               placeholder="Search competitors..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
             />
           </div>
 
           <select
             value={selectedCompetitor}
             onChange={(e) => setSelectedCompetitor(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Competitors</option>
             {competitors.map(comp => (
@@ -548,7 +548,7 @@ const Sy2CompetitorsDashboard = () => {
           <select
             value={selectedGeography}
             onChange={(e) => setSelectedGeography(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Geographies</option>
             {geographies.map(geo => (
@@ -561,7 +561,7 @@ const Sy2CompetitorsDashboard = () => {
           <select
             value={selectedType}
             onChange={(e) => setSelectedType(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Types</option>
             {types.map(type => (
@@ -572,7 +572,7 @@ const Sy2CompetitorsDashboard = () => {
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Categories</option>
             {categories.map(cat => (
@@ -583,7 +583,7 @@ const Sy2CompetitorsDashboard = () => {
           <select
             value={selectedThreatLevel}
             onChange={(e) => setSelectedThreatLevel(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Threat Levels</option>
             <option value="Critical">Critical</option>
@@ -595,9 +595,9 @@ const Sy2CompetitorsDashboard = () => {
             <option value="Minimal">Minimal</option>
           </select>
 
-          <div className="flex items-center justify-between px-3 py-2 bg-blue-50 rounded-md">
-            <span className="text-sm font-medium text-blue-900">Results:</span>
-            <span className="text-lg font-bold text-blue-600">{filteredData.length}</span>
+          <div className="flex items-center justify-between px-3 py-2 bg-sybrin-blue-50 rounded-md">
+            <span className="text-sm font-medium text-sybrin-blue-900">Results:</span>
+            <span className="text-lg font-bold text-sybrin-blue-600">{filteredData.length}</span>
           </div>
         </div>
       </div>
@@ -686,7 +686,7 @@ const Sy2CompetitorsDashboard = () => {
                     <td className="px-4 py-3 text-center">
                       <button
                         onClick={() => toggleRowExpansion(item.id)}
-                        className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                        className="text-sybrin-blue-600 hover:text-sybrin-blue-800 text-sm font-medium"
                       >
                         {expandedRows.has(item.id) ? 'Hide' : 'Details'}
                       </button>
@@ -721,7 +721,7 @@ const Sy2CompetitorsDashboard = () => {
                             {item.market_position && (
                               <div>
                                 <h4 className="text-sm font-semibold text-gray-700 mb-2 flex items-center">
-                                  <BarChart3 className="w-4 h-4 mr-2 text-blue-500" />
+                                  <BarChart3 className="w-4 h-4 mr-2 text-sybrin-blue-500" />
                                   Market Position
                                 </h4>
                                 <p className="text-sm text-gray-600">{item.market_position}</p>
@@ -782,7 +782,7 @@ const Sy2CompetitorsDashboard = () => {
                                   Website
                                 </h4>
                                 <a href={item.website_url} target="_blank" rel="noopener noreferrer"
-                                   className="text-sm text-blue-600 hover:underline">
+                                   className="text-sm text-sybrin-blue-600 hover:underline">
                                   {item.website_url}
                                 </a>
                               </div>

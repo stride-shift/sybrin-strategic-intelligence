@@ -183,7 +183,7 @@ const Sy2RegulatoryDashboard = () => {
 
   const getClassificationColor = (classification) => {
     if (classification?.toLowerCase().includes('tailwind')) return 'text-green-600 bg-green-50'
-    if (classification?.toLowerCase().includes('opportunity')) return 'text-blue-600 bg-blue-50'
+    if (classification?.toLowerCase().includes('opportunity')) return 'text-sybrin-blue-600 bg-sybrin-blue-50'
     if (classification?.toLowerCase().includes('headwind')) return 'text-orange-600 bg-orange-50'
     if (classification?.toLowerCase().includes('compliance')) return 'text-purple-600 bg-purple-50'
     if (classification?.toLowerCase().includes('risk')) return 'text-red-600 bg-red-50'
@@ -197,7 +197,7 @@ const Sy2RegulatoryDashboard = () => {
       case 'in force': return <CheckCircle2 className="w-4 h-4 text-green-600" />
       case 'pending':
       case 'proposed': return <Clock className="w-4 h-4 text-yellow-600" />
-      case 'draft': return <FileText className="w-4 h-4 text-blue-600" />
+      case 'draft': return <FileText className="w-4 h-4 text-sybrin-blue-600" />
       default: return <AlertCircle className="w-4 h-4 text-gray-400" />
     }
   }
@@ -244,9 +244,9 @@ const Sy2RegulatoryDashboard = () => {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600">Total Regulations</p>
-              <p className="text-2xl font-bold text-blue-600">{stats.totalRegulations}</p>
+              <p className="text-2xl font-bold text-sybrin-blue-600">{stats.totalRegulations}</p>
             </div>
-            <FileText className="w-8 h-8 text-blue-200" />
+            <FileText className="w-8 h-8 text-sybrin-blue-200" />
           </div>
         </div>
         <div className="bg-white rounded-lg shadow-md p-4">
@@ -288,14 +288,14 @@ const Sy2RegulatoryDashboard = () => {
               placeholder="Search regulations..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
             />
           </div>
 
           <select
             value={selectedCountry}
             onChange={(e) => setSelectedCountry(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Countries</option>
             {countries.map(country => (
@@ -306,7 +306,7 @@ const Sy2RegulatoryDashboard = () => {
           <select
             value={selectedClassification}
             onChange={(e) => setSelectedClassification(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Classifications</option>
             {classifications.map(cls => (
@@ -317,7 +317,7 @@ const Sy2RegulatoryDashboard = () => {
           <select
             value={selectedImpact}
             onChange={(e) => setSelectedImpact(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Impact Levels</option>
             <option value="Critical">Critical</option>
@@ -330,7 +330,7 @@ const Sy2RegulatoryDashboard = () => {
           <select
             value={selectedStatus}
             onChange={(e) => setSelectedStatus(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Status</option>
             <option value="Active">Active</option>
@@ -341,9 +341,9 @@ const Sy2RegulatoryDashboard = () => {
             <option value="Draft">Draft</option>
           </select>
 
-          <div className="flex items-center justify-between px-3 py-2 bg-blue-50 rounded-md">
-            <span className="text-sm font-medium text-blue-900">Results:</span>
-            <span className="text-lg font-bold text-blue-600">{filteredData.length}</span>
+          <div className="flex items-center justify-between px-3 py-2 bg-sybrin-blue-50 rounded-md">
+            <span className="text-sm font-medium text-sybrin-blue-900">Results:</span>
+            <span className="text-lg font-bold text-sybrin-blue-600">{filteredData.length}</span>
           </div>
         </div>
 
@@ -351,13 +351,13 @@ const Sy2RegulatoryDashboard = () => {
         <div className="flex gap-2 mt-4">
           <button
             onClick={() => setViewMode('table')}
-            className={`px-4 py-2 rounded-md transition-colors flex-1 ${viewMode === 'table' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+            className={`px-4 py-2 rounded-md transition-colors flex-1 ${viewMode === 'table' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
           >
             Table View
           </button>
           <button
             onClick={() => setViewMode('cards')}
-            className={`px-4 py-2 rounded-md transition-colors flex-1 ${viewMode === 'cards' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+            className={`px-4 py-2 rounded-md transition-colors flex-1 ${viewMode === 'cards' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
           >
             Card View
           </button>
@@ -453,7 +453,7 @@ const Sy2RegulatoryDashboard = () => {
                       <td className="px-4 py-3 text-center">
                         <button
                           onClick={() => toggleRowExpansion(item.id)}
-                          className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                          className="text-sybrin-blue-600 hover:text-sybrin-blue-800 text-sm font-medium"
                         >
                           {expandedRows.has(item.id) ? 'Hide' : 'Details'}
                         </button>
@@ -468,7 +468,7 @@ const Sy2RegulatoryDashboard = () => {
                               {item.reason && (
                                 <div>
                                   <h4 className="text-sm font-semibold text-gray-700 mb-2 flex items-center">
-                                    <AlertCircle className="w-4 h-4 mr-2 text-blue-500" />
+                                    <AlertCircle className="w-4 h-4 mr-2 text-sybrin-blue-500" />
                                     Reason
                                   </h4>
                                   <p className="text-sm text-gray-600">{item.reason}</p>
@@ -522,7 +522,7 @@ const Sy2RegulatoryDashboard = () => {
                                 <div>
                                   <h4 className="text-sm font-semibold text-gray-700 mb-2">Source</h4>
                                   <a href={item.source_url} target="_blank" rel="noopener noreferrer"
-                                     className="text-sm text-blue-600 hover:underline break-all">
+                                     className="text-sm text-sybrin-blue-600 hover:underline break-all">
                                     View Source
                                   </a>
                                 </div>
@@ -552,7 +552,7 @@ const Sy2RegulatoryDashboard = () => {
               <div className="mb-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <Globe className="w-5 h-5 text-blue-500" />
+                    <Globe className="w-5 h-5 text-sybrin-blue-500" />
                     <h3 className="text-lg font-bold text-gray-900">{country.country}</h3>
                   </div>
                   <span className="text-2xl font-bold text-gray-900">{country.regulations.length}</span>

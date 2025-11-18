@@ -117,7 +117,7 @@ const RegulatoryDashboard = () => {
 
   const getComplexityColor = (complexity) => {
     if (complexity?.includes('High')) return 'text-purple-600'
-    if (complexity?.includes('Med')) return 'text-blue-600'
+    if (complexity?.includes('Med')) return 'text-sybrin-blue-600'
     return 'text-green-600'
   }
 
@@ -149,14 +149,14 @@ const RegulatoryDashboard = () => {
               placeholder="Search regulations..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
             />
           </div>
 
           <select
             value={selectedCountry}
             onChange={(e) => setSelectedCountry(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Countries</option>
             {countries.map(country => (
@@ -167,7 +167,7 @@ const RegulatoryDashboard = () => {
           <select
             value={selectedScore}
             onChange={(e) => setSelectedScore(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Scores</option>
             <option value="5">5 - Critical</option>
@@ -180,7 +180,7 @@ const RegulatoryDashboard = () => {
           <select
             value={selectedComplexity}
             onChange={(e) => setSelectedComplexity(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Complexity</option>
             <option value="High">High</option>
@@ -190,9 +190,9 @@ const RegulatoryDashboard = () => {
             <option value="Low">Low</option>
           </select>
 
-          <div className="flex items-center justify-between px-3 py-2 bg-blue-50 rounded-md">
-            <span className="text-sm font-medium text-blue-900">Results:</span>
-            <span className="text-lg font-bold text-blue-600">{filteredData.length}</span>
+          <div className="flex items-center justify-between px-3 py-2 bg-sybrin-blue-50 rounded-md">
+            <span className="text-sm font-medium text-sybrin-blue-900">Results:</span>
+            <span className="text-lg font-bold text-sybrin-blue-600">{filteredData.length}</span>
           </div>
         </div>
       </div>
@@ -256,7 +256,7 @@ const RegulatoryDashboard = () => {
                                 <span>Good opportunity with longer sales cycles</span>
                               </div>
                               <div className="flex gap-2">
-                                <span className="font-semibold text-blue-600">2 - Low:</span>
+                                <span className="font-semibold text-sybrin-blue-600">2 - Low:</span>
                                 <span>Limited opportunity or indirect benefits</span>
                               </div>
                               <div className="flex gap-2">
@@ -292,11 +292,11 @@ const RegulatoryDashboard = () => {
                               <span className="ml-2">Significant changes (9-12 months)</span>
                             </div>
                             <div>
-                              <span className="font-semibold text-blue-600">Med:</span>
+                              <span className="font-semibold text-sybrin-blue-600">Med:</span>
                               <span className="ml-2">Moderate changes (6-9 months)</span>
                             </div>
                             <div>
-                              <span className="font-semibold text-blue-500">Low-Med:</span>
+                              <span className="font-semibold text-sybrin-blue-500">Low-Med:</span>
                               <span className="ml-2">Some changes needed (3-6 months)</span>
                             </div>
                             <div>
@@ -354,7 +354,7 @@ const RegulatoryDashboard = () => {
                     <td className="px-4 py-3 text-center">
                       <button
                         onClick={() => toggleRowExpansion(item.id)}
-                        className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                        className="text-sybrin-blue-600 hover:text-sybrin-blue-800 text-sm font-medium"
                       >
                         {expandedRows.has(item.id) ? 'Hide' : 'Details'}
                       </button>

@@ -263,10 +263,10 @@ const MarketIntelligenceDashboard = () => {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600">Total SOM (3-Year)</p>
-              <p className="text-2xl font-bold text-blue-600">{formatCurrency(stats.totalSOM)}</p>
+              <p className="text-2xl font-bold text-sybrin-blue-600">{formatCurrency(stats.totalSOM)}</p>
               <p className="text-xs text-gray-500">from {formatCurrency(stats.totalTAM)} TAM</p>
             </div>
-            <DollarSign className="w-8 h-8 text-blue-200" />
+            <DollarSign className="w-8 h-8 text-sybrin-blue-200" />
           </div>
         </div>
 
@@ -310,7 +310,7 @@ const MarketIntelligenceDashboard = () => {
           <button
             onClick={() => setViewMode('overview')}
             className={`px-4 py-2 rounded-md transition-colors ${
-              viewMode === 'overview' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'
+              viewMode === 'overview' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'
             }`}
           >
             Market Overview
@@ -318,7 +318,7 @@ const MarketIntelligenceDashboard = () => {
           <button
             onClick={() => setViewMode('opportunities')}
             className={`px-4 py-2 rounded-md transition-colors ${
-              viewMode === 'opportunities' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'
+              viewMode === 'opportunities' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'
             }`}
           >
             Top Opportunities
@@ -326,7 +326,7 @@ const MarketIntelligenceDashboard = () => {
           <button
             onClick={() => setViewMode('friction')}
             className={`px-4 py-2 rounded-md transition-colors ${
-              viewMode === 'friction' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'
+              viewMode === 'friction' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'
             }`}
           >
             Market Friction
@@ -334,7 +334,7 @@ const MarketIntelligenceDashboard = () => {
           <button
             onClick={() => setViewMode('detailed')}
             className={`px-4 py-2 rounded-md transition-colors ${
-              viewMode === 'detailed' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'
+              viewMode === 'detailed' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'
             }`}
           >
             Detailed Analysis
@@ -350,14 +350,14 @@ const MarketIntelligenceDashboard = () => {
               placeholder="Search jobs..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
             />
           </div>
 
           <select
             value={selectedGeography}
             onChange={(e) => setSelectedGeography(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Geographies</option>
             {geographies.map(geo => (
@@ -368,7 +368,7 @@ const MarketIntelligenceDashboard = () => {
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Categories</option>
             {categories.map(cat => (
@@ -379,7 +379,7 @@ const MarketIntelligenceDashboard = () => {
           <select
             value={selectedPriority}
             onChange={(e) => setSelectedPriority(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Priorities</option>
             {priorities.map(priority => (
@@ -387,9 +387,9 @@ const MarketIntelligenceDashboard = () => {
             ))}
           </select>
 
-          <div className="flex items-center justify-between px-3 py-2 bg-blue-50 rounded-md">
-            <span className="text-sm font-medium text-blue-900">Results:</span>
-            <span className="text-lg font-bold text-blue-600">{filteredMarketData.length}</span>
+          <div className="flex items-center justify-between px-3 py-2 bg-sybrin-blue-50 rounded-md">
+            <span className="text-sm font-medium text-sybrin-blue-900">Results:</span>
+            <span className="text-lg font-bold text-sybrin-blue-600">{filteredMarketData.length}</span>
           </div>
         </div>
       </div>
@@ -415,7 +415,7 @@ const MarketIntelligenceDashboard = () => {
                         <span className="font-medium">{geo}</span>
                         {friction && getDifficultyIcon(friction.entry_difficulty)}
                       </div>
-                      <span className="text-sm font-bold text-blue-600">{formatCurrency(som)}</span>
+                      <span className="text-sm font-bold text-sybrin-blue-600">{formatCurrency(som)}</span>
                     </div>
                     <div className="grid grid-cols-3 gap-2 text-xs">
                       <div>
@@ -461,7 +461,7 @@ const MarketIntelligenceDashboard = () => {
                           </span>
                         )}
                       </div>
-                      <span className="text-sm font-bold text-blue-600">{formatCurrency(som)}</span>
+                      <span className="text-sm font-bold text-sybrin-blue-600">{formatCurrency(som)}</span>
                     </div>
                     <div className="grid grid-cols-3 gap-2 text-xs">
                       <div>
@@ -564,7 +564,7 @@ const MarketIntelligenceDashboard = () => {
                           <span className="text-sm text-gray-600">{item.job_category}</span>
                         </td>
                         <td className="px-4 py-3 text-center">
-                          <span className="text-sm font-bold text-blue-600">{formatCurrency(item.som_usd)}</span>
+                          <span className="text-sm font-bold text-sybrin-blue-600">{formatCurrency(item.som_usd)}</span>
                         </td>
                         <td className="px-4 py-3 text-center">
                           <span className="text-sm text-gray-600">{formatCurrency(item.sam_usd)}</span>
@@ -585,7 +585,7 @@ const MarketIntelligenceDashboard = () => {
                         <td className="px-4 py-3 text-center">
                           <button
                             onClick={() => toggleRowExpansion(item.id)}
-                            className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                            className="text-sybrin-blue-600 hover:text-sybrin-blue-800 text-sm font-medium"
                           >
                             {expandedRows.has(item.id) ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                           </button>
@@ -708,7 +708,7 @@ const MarketIntelligenceDashboard = () => {
                     .map(item => (
                       <div key={item.id} className="flex items-center justify-between text-sm">
                         <span>{item.customer_job} in {item.geography}</span>
-                        <span className="font-bold text-blue-600">{formatCurrency(item.som_usd)}</span>
+                        <span className="font-bold text-sybrin-blue-600">{formatCurrency(item.som_usd)}</span>
                       </div>
                     ))
                   }
@@ -725,7 +725,7 @@ const MarketIntelligenceDashboard = () => {
                     .map(item => (
                       <div key={item.id} className="flex items-center justify-between text-sm">
                         <span>{item.customer_job} in {item.geography}</span>
-                        <span className="font-bold text-blue-600">{formatCurrency(item.som_usd)}</span>
+                        <span className="font-bold text-sybrin-blue-600">{formatCurrency(item.som_usd)}</span>
                       </div>
                     ))
                   }
@@ -764,7 +764,7 @@ const MarketIntelligenceDashboard = () => {
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
                   <div
-                    className="bg-blue-600 h-2 rounded-full"
+                    className="bg-sybrin-blue-600 h-2 rounded-full"
                     style={{ width: `${(stats.totalSAM / stats.totalTAM) * 100}%` }}
                   />
                 </div>

@@ -263,9 +263,9 @@ const ResearchChat = () => {
                   <button
                     key={idx}
                     onClick={() => handleExampleClick(question)}
-                    className="p-4 bg-white border border-gray-200 rounded-lg text-left hover:border-blue-300 hover:bg-blue-50 transition-all group"
+                    className="p-4 bg-white border border-gray-200 rounded-lg text-left hover:border-sybrin-blue-300 hover:bg-sybrin-blue-50 transition-all group"
                   >
-                    <p className="text-sm text-gray-700 group-hover:text-blue-700">{question}</p>
+                    <p className="text-sm text-gray-700 group-hover:text-sybrin-blue-700">{question}</p>
                   </button>
                 ))}
               </div>

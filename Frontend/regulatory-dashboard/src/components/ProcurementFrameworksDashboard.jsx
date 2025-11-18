@@ -136,7 +136,7 @@ const ProcurementFrameworksDashboard = () => {
 
   const getTrendColor = (trend) => {
     if (trend?.toLowerCase().includes('increasing')) return 'text-green-600 bg-green-50'
-    if (trend?.toLowerCase().includes('stable')) return 'text-blue-600 bg-blue-50'
+    if (trend?.toLowerCase().includes('stable')) return 'text-sybrin-blue-600 bg-sybrin-blue-50'
     return 'text-gray-600 bg-gray-50'
   }
 
@@ -164,9 +164,9 @@ const ProcurementFrameworksDashboard = () => {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600">Total Markets</p>
-              <p className="text-2xl font-bold text-blue-600">{stats.totalMarkets}</p>
+              <p className="text-2xl font-bold text-sybrin-blue-600">{stats.totalMarkets}</p>
             </div>
-            <MapPin className="w-8 h-8 text-blue-200" />
+            <MapPin className="w-8 h-8 text-sybrin-blue-200" />
           </div>
         </div>
         <div className="bg-white rounded-lg shadow-md p-4">
@@ -207,14 +207,14 @@ const ProcurementFrameworksDashboard = () => {
               placeholder="Search markets..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
             />
           </div>
 
           <select
             value={selectedReadinessSaaS}
             onChange={(e) => setSelectedReadinessSaaS(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All SaaS Readiness</option>
             <option value="High">High</option>
@@ -225,7 +225,7 @@ const ProcurementFrameworksDashboard = () => {
           <select
             value={selectedReadinessOpex}
             onChange={(e) => setSelectedReadinessOpex(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All OPEX Readiness</option>
             <option value="High">High</option>
@@ -233,9 +233,9 @@ const ProcurementFrameworksDashboard = () => {
             <option value="Low">Low</option>
           </select>
 
-          <div className="flex items-center justify-between px-3 py-2 bg-blue-50 rounded-md">
-            <span className="text-sm font-medium text-blue-900">Results:</span>
-            <span className="text-lg font-bold text-blue-600">{filteredData.length}</span>
+          <div className="flex items-center justify-between px-3 py-2 bg-sybrin-blue-50 rounded-md">
+            <span className="text-sm font-medium text-sybrin-blue-900">Results:</span>
+            <span className="text-lg font-bold text-sybrin-blue-600">{filteredData.length}</span>
           </div>
         </div>
       </div>
@@ -270,7 +270,7 @@ const ProcurementFrameworksDashboard = () => {
                     </td>
                     <td className="px-4 py-3 text-center">
                       <div className="flex items-center justify-center gap-1">
-                        <Clock className="w-4 h-4 text-blue-500" />
+                        <Clock className="w-4 h-4 text-sybrin-blue-500" />
                         <span className="text-xs text-gray-700">{item.payment_terms_standard || '-'}</span>
                       </div>
                     </td>
@@ -290,7 +290,7 @@ const ProcurementFrameworksDashboard = () => {
                       </span>
                     </td>
                     <td className="px-4 py-3 text-center">
-                      <button onClick={() => toggleRowExpansion(item.id)} className="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                      <button onClick={() => toggleRowExpansion(item.id)} className="text-sybrin-blue-600 hover:text-sybrin-blue-800 text-sm font-medium">
                         {expandedRows.has(item.id) ? 'Hide' : 'Details'}
                       </button>
                     </td>

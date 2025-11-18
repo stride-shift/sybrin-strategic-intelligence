@@ -176,7 +176,7 @@ const CustomerJobsDashboard = () => {
 
   const getJobTypeColor = (type) => {
     switch(type?.toLowerCase()) {
-      case 'functional': return 'text-blue-600 bg-blue-50'
+      case 'functional': return 'text-sybrin-blue-600 bg-sybrin-blue-50'
       case 'emotional': return 'text-red-600 bg-red-50'
       case 'social': return 'text-green-600 bg-green-50'
       default: return 'text-gray-600 bg-gray-50'
@@ -188,7 +188,7 @@ const CustomerJobsDashboard = () => {
       case 1: return 'text-red-600 bg-red-50'
       case 2: return 'text-orange-600 bg-orange-50'
       case 3: return 'text-yellow-600 bg-yellow-50'
-      case 4: return 'text-blue-600 bg-blue-50'
+      case 4: return 'text-sybrin-blue-600 bg-sybrin-blue-50'
       default: return 'text-gray-400 bg-gray-50'
     }
   }
@@ -265,14 +265,14 @@ const CustomerJobsDashboard = () => {
               placeholder="Search jobs, factors, challenges..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
             />
           </div>
 
           <select
             value={selectedSegmentType}
             onChange={(e) => setSelectedSegmentType(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Segments</option>
             {segmentTypes.map(type => (
@@ -283,7 +283,7 @@ const CustomerJobsDashboard = () => {
           <select
             value={selectedGeography}
             onChange={(e) => setSelectedGeography(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Geographies</option>
             {geographies.map(geo => (
@@ -294,7 +294,7 @@ const CustomerJobsDashboard = () => {
           <select
             value={selectedJobType}
             onChange={(e) => setSelectedJobType(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Job Types</option>
             <option value="functional">Functional</option>
@@ -305,7 +305,7 @@ const CustomerJobsDashboard = () => {
           <select
             value={selectedPriority}
             onChange={(e) => setSelectedPriority(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Priorities</option>
             <option value="1">Priority 1</option>
@@ -314,9 +314,9 @@ const CustomerJobsDashboard = () => {
             <option value="4">Priority 4</option>
           </select>
 
-          <div className="flex items-center justify-between px-3 py-2 bg-blue-50 rounded-md">
-            <span className="text-sm font-medium text-blue-900">Results:</span>
-            <span className="text-lg font-bold text-blue-600">{filteredData.length}</span>
+          <div className="flex items-center justify-between px-3 py-2 bg-sybrin-blue-50 rounded-md">
+            <span className="text-sm font-medium text-sybrin-blue-900">Results:</span>
+            <span className="text-lg font-bold text-sybrin-blue-600">{filteredData.length}</span>
           </div>
         </div>
 
@@ -325,7 +325,7 @@ const CustomerJobsDashboard = () => {
           <select
             value={selectedJobCategory}
             onChange={(e) => setSelectedJobCategory(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Categories</option>
             {jobCategories.map(cat => (
@@ -336,7 +336,7 @@ const CustomerJobsDashboard = () => {
           <select
             value={selectedLifecycle}
             onChange={(e) => setSelectedLifecycle(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Lifecycle Stages</option>
             {lifecycleStages.map(stage => (
@@ -347,19 +347,19 @@ const CustomerJobsDashboard = () => {
           <div className="flex gap-2 lg:col-span-2">
             <button
               onClick={() => setViewMode('table')}
-              className={`px-4 py-2 rounded-md transition-colors flex-1 ${viewMode === 'table' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors flex-1 ${viewMode === 'table' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               Table View
             </button>
             <button
               onClick={() => setViewMode('cards')}
-              className={`px-4 py-2 rounded-md transition-colors flex-1 ${viewMode === 'cards' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors flex-1 ${viewMode === 'cards' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               Card View
             </button>
             <button
               onClick={() => setViewMode('matrix')}
-              className={`px-4 py-2 rounded-md transition-colors flex-1 ${viewMode === 'matrix' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors flex-1 ${viewMode === 'matrix' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               Matrix View
             </button>
@@ -410,8 +410,8 @@ const CustomerJobsDashboard = () => {
                             <div className="space-y-3">
                               <div>
                                 <div className="flex items-center gap-2 mb-1">
-                                  <Target className="w-4 h-4 text-blue-600" />
-                                  <span className="font-semibold text-blue-600">Functional</span>
+                                  <Target className="w-4 h-4 text-sybrin-blue-600" />
+                                  <span className="font-semibold text-sybrin-blue-600">Functional</span>
                                 </div>
                                 <p className="text-sm ml-6">Core business tasks they must accomplish</p>
                                 <p className="text-xs text-gray-500 ml-6">Example: "Process payments efficiently"</p>
@@ -470,7 +470,7 @@ const CustomerJobsDashboard = () => {
                                   <p className="text-xs text-gray-500 ml-2">Longer sales cycle expected</p>
                                 </div>
                                 <div>
-                                  <span className="font-semibold text-blue-600">4 - Nice to Have:</span>
+                                  <span className="font-semibold text-sybrin-blue-600">4 - Nice to Have:</span>
                                   <span className="ml-2">Not their main focus</span>
                                   <p className="text-xs text-gray-500 ml-2">Harder to get budget approval</p>
                                 </div>
@@ -525,7 +525,7 @@ const CustomerJobsDashboard = () => {
                       <td className="px-4 py-3 text-center">
                         <button
                           onClick={() => toggleRowExpansion(item.id)}
-                          className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                          className="text-sybrin-blue-600 hover:text-sybrin-blue-800 text-sm font-medium"
                         >
                           {expandedRows.has(item.id) ? 'Hide' : 'Details'}
                         </button>
@@ -586,7 +586,7 @@ const CustomerJobsDashboard = () => {
                                   </h4>
                                   <div className="flex flex-wrap gap-2 ml-6">
                                     {item.examples.map((example, idx) => (
-                                      <span key={idx} className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded">
+                                      <span key={idx} className="px-2 py-1 bg-sybrin-blue-100 text-sybrin-blue-700 text-xs rounded">
                                         {example}
                                       </span>
                                     ))}

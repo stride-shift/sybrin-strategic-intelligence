@@ -502,7 +502,7 @@ Use Gates Foundation as credibility anchor.`,
 
   const getColorClasses = (color) => {
     const colors = {
-      blue: 'bg-blue-50 border-blue-200 text-blue-800',
+      blue: 'bg-sybrin-blue-50 border-sybrin-blue-200 text-sybrin-blue-800',
       orange: 'bg-orange-50 border-orange-200 text-orange-800',
       purple: 'bg-purple-50 border-purple-200 text-purple-800',
       green: 'bg-green-50 border-green-200 text-green-800',
@@ -565,9 +565,9 @@ Use Gates Foundation as credibility anchor.`,
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm text-gray-600">Total Questions</p>
-                  <p className="text-2xl font-bold text-blue-600">20</p>
+                  <p className="text-2xl font-bold text-sybrin-blue-600">20</p>
                 </div>
-                <Lightbulb className="w-8 h-8 text-blue-200" />
+                <Lightbulb className="w-8 h-8 text-sybrin-blue-200" />
               </div>
             </div>
             <div className="bg-white rounded-lg shadow-md p-4">
@@ -600,7 +600,7 @@ Use Gates Foundation as credibility anchor.`,
                 placeholder="Search questions..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10 pr-4 py-3 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm"
+                className="pl-10 pr-4 py-3 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500 shadow-sm"
               />
             </div>
           </div>
@@ -667,14 +667,14 @@ Use Gates Foundation as credibility anchor.`,
                                 {/* Long-term View */}
                                 <div>
                                   <div className="flex items-center mb-3">
-                                    <Calendar className="w-5 h-5 text-blue-600 mr-2" />
-                                    <h4 className="font-bold text-blue-600">{question.longTerm.title}</h4>
+                                    <Calendar className="w-5 h-5 text-sybrin-blue-600 mr-2" />
+                                    <h4 className="font-bold text-sybrin-blue-600">{question.longTerm.title}</h4>
                                   </div>
-                                  <div className="bg-blue-50 p-4 rounded-lg mb-3">
+                                  <div className="bg-sybrin-blue-50 p-4 rounded-lg mb-3">
                                     <div className="text-sm text-gray-700 whitespace-pre-line">{question.longTerm.content}</div>
                                   </div>
                                   <div className="flex items-start">
-                                    <span className="text-xs font-semibold text-blue-600 mr-2">WHY:</span>
+                                    <span className="text-xs font-semibold text-sybrin-blue-600 mr-2">WHY:</span>
                                     <p className="text-sm text-gray-600 italic">{question.longTerm.why}</p>
                                   </div>
                                 </div>

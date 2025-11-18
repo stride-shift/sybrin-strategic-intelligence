@@ -139,14 +139,14 @@ const CompetitiveSweetSpotsDashboard = () => {
 
   const getRatingColor = (rating) => {
     if (rating?.includes('PRIME')) return 'text-green-700 bg-green-100 border-green-300'
-    if (rating?.includes('Strong')) return 'text-blue-700 bg-blue-100 border-blue-300'
+    if (rating?.includes('Strong')) return 'text-sybrin-blue-700 bg-sybrin-blue-100 border-sybrin-blue-300'
     if (rating?.includes('Good')) return 'text-yellow-700 bg-yellow-100 border-yellow-300'
     return 'text-gray-700 bg-gray-100 border-gray-300'
   }
 
   const getRatingIcon = (rating) => {
     if (rating?.includes('PRIME')) return <Star className="w-5 h-5 text-green-600 fill-green-600" />
-    if (rating?.includes('Strong')) return <Award className="w-5 h-5 text-blue-600" />
+    if (rating?.includes('Strong')) return <Award className="w-5 h-5 text-sybrin-blue-600" />
     if (rating?.includes('Good')) return <Target className="w-5 h-5 text-yellow-600" />
     return <Zap className="w-5 h-5 text-gray-600" />
   }
@@ -186,9 +186,9 @@ const CompetitiveSweetSpotsDashboard = () => {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600">Total Prospects</p>
-              <p className="text-2xl font-bold text-blue-600">{stats.totalProspects}</p>
+              <p className="text-2xl font-bold text-sybrin-blue-600">{stats.totalProspects}</p>
             </div>
-            <Users className="w-8 h-8 text-blue-200" />
+            <Users className="w-8 h-8 text-sybrin-blue-200" />
           </div>
         </div>
         <div className="bg-white rounded-lg shadow-md p-4">
@@ -221,14 +221,14 @@ const CompetitiveSweetSpotsDashboard = () => {
               placeholder="Search solutions or markets..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
             />
           </div>
 
           <select
             value={selectedRating}
             onChange={(e) => setSelectedRating(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Ratings</option>
             <option value="PRIME">PRIME Only</option>
@@ -239,7 +239,7 @@ const CompetitiveSweetSpotsDashboard = () => {
           <select
             value={selectedGeography}
             onChange={(e) => setSelectedGeography(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Geographies</option>
             {geographies.map(geo => (
@@ -247,9 +247,9 @@ const CompetitiveSweetSpotsDashboard = () => {
             ))}
           </select>
 
-          <div className="flex items-center justify-between px-3 py-2 bg-blue-50 rounded-md">
-            <span className="text-sm font-medium text-blue-900">Results:</span>
-            <span className="text-lg font-bold text-blue-600">{filteredData.length}</span>
+          <div className="flex items-center justify-between px-3 py-2 bg-sybrin-blue-50 rounded-md">
+            <span className="text-sm font-medium text-sybrin-blue-900">Results:</span>
+            <span className="text-lg font-bold text-sybrin-blue-600">{filteredData.length}</span>
           </div>
         </div>
       </div>
@@ -340,7 +340,7 @@ const CompetitiveSweetSpotsDashboard = () => {
                     </td>
                     <td className="px-4 py-3 text-center">
                       <div className="flex items-center justify-center gap-1">
-                        <Users className="w-4 h-4 text-blue-500" />
+                        <Users className="w-4 h-4 text-sybrin-blue-500" />
                         <span className="text-sm font-medium text-gray-900">{item.total_prospects || 0}</span>
                       </div>
                     </td>
@@ -350,7 +350,7 @@ const CompetitiveSweetSpotsDashboard = () => {
                     <td className="px-4 py-3 text-center">
                       <button
                         onClick={() => toggleRowExpansion(item.geography, item.solution_type)}
-                        className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                        className="text-sybrin-blue-600 hover:text-sybrin-blue-800 text-sm font-medium"
                       >
                         {expandedRows.has(rowKey) ? 'Hide' : 'Details'}
                       </button>

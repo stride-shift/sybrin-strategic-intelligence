@@ -54,7 +54,7 @@ const InfoPopup = ({ title, content, children }) => {
               <div className="px-4 py-3 bg-gray-50 rounded-b-lg">
                 <button
                   onClick={() => setShow(false)}
-                  className="w-full px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors"
+                  className="w-full px-4 py-2 bg-sybrin-blue-600 text-white text-sm font-medium rounded-md hover:bg-sybrin-blue-700 transition-colors"
                 >
                   Got it
                 </button>

@@ -179,9 +179,9 @@ const PricingExpansionDashboard = () => {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600">Total Markets</p>
-              <p className="text-2xl font-bold text-blue-600">{stats.totalGeographies}</p>
+              <p className="text-2xl font-bold text-sybrin-blue-600">{stats.totalGeographies}</p>
             </div>
-            <Globe className="w-8 h-8 text-blue-200" />
+            <Globe className="w-8 h-8 text-sybrin-blue-200" />
           </div>
         </div>
         <div className="bg-white rounded-lg shadow-md p-4">
@@ -224,14 +224,14 @@ const PricingExpansionDashboard = () => {
               placeholder="Search markets..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
             />
           </div>
 
           <select
             value={selectedDifficulty}
             onChange={(e) => setSelectedDifficulty(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Difficulty Levels</option>
             <option value="High">High Difficulty</option>
@@ -242,7 +242,7 @@ const PricingExpansionDashboard = () => {
           <select
             value={selectedIntensity}
             onChange={(e) => setSelectedIntensity(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Competition Levels</option>
             <option value="High">High Competition</option>
@@ -250,9 +250,9 @@ const PricingExpansionDashboard = () => {
             <option value="Low">Low Competition</option>
           </select>
 
-          <div className="flex items-center justify-between px-3 py-2 bg-blue-50 rounded-md">
-            <span className="text-sm font-medium text-blue-900">Results:</span>
-            <span className="text-lg font-bold text-blue-600">{filteredData.length}</span>
+          <div className="flex items-center justify-between px-3 py-2 bg-sybrin-blue-50 rounded-md">
+            <span className="text-sm font-medium text-sybrin-blue-900">Results:</span>
+            <span className="text-lg font-bold text-sybrin-blue-600">{filteredData.length}</span>
           </div>
         </div>
       </div>
@@ -320,7 +320,7 @@ const PricingExpansionDashboard = () => {
                       )}
                     </td>
                     <td className="px-4 py-3 text-center">
-                      <button onClick={() => toggleRowExpansion(item.geography)} className="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                      <button onClick={() => toggleRowExpansion(item.geography)} className="text-sybrin-blue-600 hover:text-sybrin-blue-800 text-sm font-medium">
                         {expandedRows.has(item.geography) ? 'Hide' : 'Details'}
                       </button>
                     </td>
@@ -332,7 +332,7 @@ const PricingExpansionDashboard = () => {
                           {/* Strategic Overview */}
                           <div>
                             <h4 className="text-sm font-bold text-gray-800 mb-3 flex items-center border-b pb-2">
-                              <Target className="w-5 h-5 mr-2 text-blue-600" />
+                              <Target className="w-5 h-5 mr-2 text-sybrin-blue-600" />
                               Strategic Overview
                             </h4>
                             <div className="grid grid-cols-1 md:grid-cols-4 gap-3 mb-3">
@@ -350,14 +350,14 @@ const PricingExpansionDashboard = () => {
                               </div>
                               <div className="bg-white p-3 rounded border border-gray-200">
                                 <p className="text-xs text-gray-500">Time to Market</p>
-                                <p className="text-lg font-bold text-blue-600">{item.estimated_time_to_market_months || '-'} mo</p>
+                                <p className="text-lg font-bold text-sybrin-blue-600">{item.estimated_time_to_market_months || '-'} mo</p>
                               </div>
                               <div className="bg-white p-3 rounded border border-gray-200">
                                 <p className="text-xs text-gray-500">Overall Confidence</p>
                                 <p className="text-sm font-semibold text-gray-700">{item.overall_confidence || '-'}</p>
                               </div>
                             </div>
-                            <div className="bg-blue-50 p-4 rounded mb-3">
+                            <div className="bg-sybrin-blue-50 p-4 rounded mb-3">
                               <h5 className="text-xs font-semibold text-gray-700 mb-2">Recommended Entry Strategy</h5>
                               <p className="text-sm text-gray-700 leading-relaxed">{item.recommended_entry_strategy || 'No strategy defined'}</p>
                             </div>
@@ -440,7 +440,7 @@ const PricingExpansionDashboard = () => {
                               </div>
                               <div className="bg-white p-3 rounded border border-gray-200">
                                 <p className="text-xs text-gray-500">Tier 1 Timeline</p>
-                                <p className="text-sm font-bold text-blue-600">{item.tier1_procurement_timeline_months || '-'} mo</p>
+                                <p className="text-sm font-bold text-sybrin-blue-600">{item.tier1_procurement_timeline_months || '-'} mo</p>
                               </div>
                             </div>
                           </div>
@@ -466,7 +466,7 @@ const PricingExpansionDashboard = () => {
                               </div>
                               <div className="bg-white p-3 rounded border border-gray-200">
                                 <p className="text-xs text-gray-500">Data Localization</p>
-                                <p className="text-lg font-bold text-blue-600">{item.data_localization_required_count || 0}</p>
+                                <p className="text-lg font-bold text-sybrin-blue-600">{item.data_localization_required_count || 0}</p>
                               </div>
                             </div>
                             {item.regulatory_bodies && (
@@ -500,7 +500,7 @@ const PricingExpansionDashboard = () => {
                               </div>
                               <div className="bg-white p-3 rounded border border-gray-200">
                                 <p className="text-xs text-gray-500">Duration</p>
-                                <p className="text-sm font-bold text-blue-600">{item.typical_procurement_duration_months || '-'} mo</p>
+                                <p className="text-sm font-bold text-sybrin-blue-600">{item.typical_procurement_duration_months || '-'} mo</p>
                               </div>
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">

@@ -35,7 +35,7 @@ const iconMap = {
 
 // Color mapping
 const colorClasses = {
-  blue: 'bg-blue-100 text-blue-700 border-blue-300',
+  blue: 'bg-sybrin-blue-100 text-sybrin-blue-700 border-sybrin-blue-300',
   orange: 'bg-orange-100 text-orange-700 border-orange-300',
   purple: 'bg-purple-100 text-purple-700 border-purple-300',
   green: 'bg-green-100 text-green-700 border-green-300',
@@ -115,9 +115,9 @@ const StrategicIntelligenceFAQ2 = () => {
 
             {/* Stats */}
             <div className="grid grid-cols-2 gap-3 mb-6">
-              <div className="bg-blue-50 p-3 rounded-lg">
-                <div className="text-2xl font-bold text-blue-700">{totalQuestions}</div>
-                <div className="text-xs text-blue-600">Questions</div>
+              <div className="bg-sybrin-blue-50 p-3 rounded-lg">
+                <div className="text-2xl font-bold text-sybrin-blue-700">{totalQuestions}</div>
+                <div className="text-xs text-sybrin-blue-600">Questions</div>
               </div>
               <div className="bg-purple-50 p-3 rounded-lg">
                 <div className="text-2xl font-bold text-purple-700">{data.categories.length}</div>
@@ -133,7 +133,7 @@ const StrategicIntelligenceFAQ2 = () => {
                 placeholder="Search questions..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-sybrin-blue-500 focus:border-transparent"
               />
             </div>
 
@@ -292,15 +292,15 @@ const StrategicIntelligenceFAQ2 = () => {
                                   )}
 
                                   {question.longTerm?.keyInsights?.length > 0 && (
-                                    <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                                    <div className="bg-sybrin-blue-50 border border-sybrin-blue-200 rounded-lg p-4">
                                       <div className="flex items-center gap-2 mb-3">
-                                        <Calendar className="w-4 h-4 text-blue-600" />
-                                        <h5 className="font-semibold text-blue-900">Long-Term View: Key Insights</h5>
+                                        <Calendar className="w-4 h-4 text-sybrin-blue-600" />
+                                        <h5 className="font-semibold text-sybrin-blue-900">Long-Term View: Key Insights</h5>
                                       </div>
                                       <ul className="space-y-2">
                                         {question.longTerm.keyInsights.map((insight, i) => (
                                           <li key={i} className="flex items-start gap-2">
-                                            <span className="text-blue-600 mt-0.5 flex-shrink-0">•</span>
+                                            <span className="text-sybrin-blue-600 mt-0.5 flex-shrink-0">•</span>
                                             <div className="text-sm text-gray-700 flex-1">
                                               <ReactMarkdown
                                                 remarkPlugins={[remarkGfm]}
@@ -350,7 +350,7 @@ const StrategicIntelligenceFAQ2 = () => {
                                 <div className="mt-4 pt-4 border-t border-gray-200">
                                   <button
                                     onClick={() => setSelectedQuestion(question)}
-                                    className="flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-700"
+                                    className="flex items-center gap-2 text-sm font-medium text-sybrin-blue-600 hover:text-sybrin-blue-700"
                                   >
                                     <ExternalLink className="w-4 h-4" />
                                     Read Full Analysis

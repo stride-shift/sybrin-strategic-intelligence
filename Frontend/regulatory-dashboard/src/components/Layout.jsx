@@ -297,27 +297,27 @@ const Layout = ({ children }) => {
                                 title={!isOpen ? item.name : ''}
                                 className={`group flex items-center ${isOpen ? 'justify-between' : 'justify-center'} p-3 rounded-lg transition-all duration-200 ${
                                   isActive(item.path)
-                                    ? 'bg-blue-50 border-l-4 border-blue-600 shadow-sm'
+                                    ? 'bg-sybrin-blue-50 border-l-4 border-sybrin-blue-600 shadow-sm'
                                     : 'hover:bg-gray-100 border-l-4 border-transparent hover:border-gray-300'
                                 }`}
                               >
                                 {isOpen ? (
                                   <>
                                     <div className="flex items-center space-x-3">
-                                      <Icon className={`w-5 h-5 transition-colors ${isActive(item.path) ? 'text-blue-600' : 'text-gray-400 group-hover:text-gray-600'}`} />
+                                      <Icon className={`w-5 h-5 transition-colors ${isActive(item.path) ? 'text-sybrin-blue-600' : 'text-gray-400 group-hover:text-gray-600'}`} />
                                       <div>
-                                        <p className={`text-sm font-medium transition-colors ${isActive(item.path) ? 'text-blue-900' : 'text-gray-600 group-hover:text-gray-900'}`}>
+                                        <p className={`text-sm font-medium transition-colors ${isActive(item.path) ? 'text-sybrin-blue-900' : 'text-gray-600 group-hover:text-gray-900'}`}>
                                           {item.name}
                                         </p>
-                                        <p className={`text-xs transition-colors ${isActive(item.path) ? 'text-blue-600' : 'text-gray-400 group-hover:text-gray-600'}`}>
+                                        <p className={`text-xs transition-colors ${isActive(item.path) ? 'text-sybrin-blue-600' : 'text-gray-400 group-hover:text-gray-600'}`}>
                                           {item.description}
                                         </p>
                                       </div>
                                     </div>
-                                    <ChevronRight className={`w-4 h-4 transition-colors ${isActive(item.path) ? 'text-blue-600' : 'text-gray-300 group-hover:text-gray-500'}`} />
+                                    <ChevronRight className={`w-4 h-4 transition-colors ${isActive(item.path) ? 'text-sybrin-blue-600' : 'text-gray-300 group-hover:text-gray-500'}`} />
                                   </>
                                 ) : (
-                                  <Icon className={`w-5 h-5 ${isActive(item.path) ? 'text-blue-600' : 'text-gray-500'}`} />
+                                  <Icon className={`w-5 h-5 ${isActive(item.path) ? 'text-sybrin-blue-600' : 'text-gray-500'}`} />
                                 )}
                               </Link>
                             </li>

@@ -144,7 +144,7 @@ const TopTargetsDashboard = () => {
 
   const getTierColor = (tier) => {
     if (tier?.includes('Tier S') || tier?.includes('Enterprise')) return 'text-purple-600 bg-purple-50 border-purple-200'
-    if (tier?.includes('Tier A') || tier?.includes('Large')) return 'text-blue-600 bg-blue-50 border-blue-200'
+    if (tier?.includes('Tier A') || tier?.includes('Large')) return 'text-sybrin-blue-600 bg-sybrin-blue-50 border-sybrin-blue-200'
     if (tier?.includes('Tier B')) return 'text-green-600 bg-green-50 border-green-200'
     if (tier?.includes('Tier C')) return 'text-yellow-600 bg-yellow-50 border-yellow-200'
     return 'text-gray-600 bg-gray-50 border-gray-200'
@@ -181,9 +181,9 @@ const TopTargetsDashboard = () => {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600">Total Targets</p>
-              <p className="text-2xl font-bold text-blue-600">{stats.totalTargets}</p>
+              <p className="text-2xl font-bold text-sybrin-blue-600">{stats.totalTargets}</p>
             </div>
-            <Target className="w-8 h-8 text-blue-200" />
+            <Target className="w-8 h-8 text-sybrin-blue-200" />
           </div>
         </div>
         <div className="bg-white rounded-lg shadow-md p-4">
@@ -225,14 +225,14 @@ const TopTargetsDashboard = () => {
               placeholder="Search institutions..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
             />
           </div>
 
           <select
             value={selectedTier}
             onChange={(e) => setSelectedTier(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Tiers</option>
             {tiers.map(tier => (
@@ -243,7 +243,7 @@ const TopTargetsDashboard = () => {
           <select
             value={selectedGeography}
             onChange={(e) => setSelectedGeography(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Geographies</option>
             {geographies.map(geo => (
@@ -251,9 +251,9 @@ const TopTargetsDashboard = () => {
             ))}
           </select>
 
-          <div className="flex items-center justify-between px-3 py-2 bg-blue-50 rounded-md">
-            <span className="text-sm font-medium text-blue-900">Results:</span>
-            <span className="text-lg font-bold text-blue-600">{filteredData.length}</span>
+          <div className="flex items-center justify-between px-3 py-2 bg-sybrin-blue-50 rounded-md">
+            <span className="text-sm font-medium text-sybrin-blue-900">Results:</span>
+            <span className="text-lg font-bold text-sybrin-blue-600">{filteredData.length}</span>
           </div>
         </div>
       </div>
@@ -344,7 +344,7 @@ const TopTargetsDashboard = () => {
                     <td className="px-4 py-3 text-center">
                       <button
                         onClick={() => toggleRowExpansion(item.id)}
-                        className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                        className="text-sybrin-blue-600 hover:text-sybrin-blue-800 text-sm font-medium"
                       >
                         {expandedRows.has(item.id) ? 'Hide' : 'Details'}
                       </button>
@@ -365,7 +365,7 @@ const TopTargetsDashboard = () => {
                           <div>
                             <h4 className="text-sm font-semibold text-gray-700 mb-2">Source</h4>
                             {item.source_urls ? (
-                              <a href={item.source_urls} target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline">
+                              <a href={item.source_urls} target="_blank" rel="noopener noreferrer" className="text-sm text-sybrin-blue-600 hover:underline">
                                 View Source
                               </a>
                             ) : (

@@ -192,7 +192,7 @@ const ResearchMethodology = () => {
 
   const getColorClasses = (color) => {
     switch(color) {
-      case 'blue': return 'bg-blue-100 text-blue-700 border-blue-300'
+      case 'blue': return 'bg-sybrin-blue-100 text-sybrin-blue-700 border-sybrin-blue-300'
       case 'green': return 'bg-green-100 text-green-700 border-green-300'
       case 'purple': return 'bg-purple-100 text-purple-700 border-purple-300'
       case 'orange': return 'bg-orange-100 text-orange-700 border-orange-300'
@@ -206,8 +206,8 @@ const ResearchMethodology = () => {
       {/* Header */}
       <div className="mb-8">
         <div className="flex items-center gap-3 mb-4">
-          <div className="p-3 bg-blue-100 rounded-lg">
-            <Microscope className="w-8 h-8 text-blue-600" />
+          <div className="p-3 bg-sybrin-blue-100 rounded-lg">
+            <Microscope className="w-8 h-8 text-sybrin-blue-600" />
           </div>
           <div>
             <h1 className="text-3xl font-bold text-gray-900">Research Methodology</h1>
@@ -225,7 +225,7 @@ const ResearchMethodology = () => {
             return (
               <div key={idx} className="bg-white rounded-lg border border-gray-200 p-4">
                 <div className="flex items-center gap-3 mb-2">
-                  <Icon className="w-5 h-5 text-blue-600" />
+                  <Icon className="w-5 h-5 text-sybrin-blue-600" />
                   <h3 className="font-semibold text-gray-900">{principle.title}</h3>
                 </div>
                 <p className="text-sm text-gray-600">{principle.description}</p>
@@ -342,7 +342,7 @@ const ResearchMethodology = () => {
                                 {subPhase.dashboardPath && (
                                   <a 
                                     href={subPhase.dashboardPath}
-                                    className="text-sm text-blue-600 hover:text-blue-800 flex items-center gap-1"
+                                    className="text-sm text-sybrin-blue-600 hover:text-sybrin-blue-800 flex items-center gap-1"
                                   >
                                     View Dashboard
                                     <ArrowRight className="w-3 h-3" />
@@ -374,7 +374,7 @@ const ResearchMethodology = () => {
       </div>
 
       {/* Benefits */}
-      <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6">
+      <div className="bg-gradient-to-r from-sybrin-blue-50 to-purple-50 rounded-lg p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Why This Approach Works</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="bg-white rounded-lg p-4">

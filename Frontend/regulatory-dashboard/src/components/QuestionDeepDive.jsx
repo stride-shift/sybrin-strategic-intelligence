@@ -54,7 +54,7 @@ const QuestionDeepDive = ({ question, onClose }) => {
                     inline
                       ? <code className="bg-gray-100 px-1 py-0.5 rounded text-sm font-mono text-gray-800" {...props} />
                       : <code className="block bg-gray-100 p-3 rounded text-sm font-mono text-gray-800 overflow-x-auto" {...props} />,
-                  blockquote: ({node, ...props}) => <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-700 my-4" {...props} />
+                  blockquote: ({node, ...props}) => <blockquote className="border-l-4 border-sybrin-blue-500 pl-4 italic text-gray-700 my-4" {...props} />
                 }}
               >
                 {question.shortTerm.fullContent}

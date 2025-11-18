@@ -254,7 +254,7 @@ const Sy2CustomersDashboard = () => {
       case 'medium':
       case 'moderate': return 'text-yellow-600 bg-yellow-50'
       case 'low': return 'text-gray-600 bg-gray-50'
-      default: return 'text-blue-600 bg-blue-50'
+      default: return 'text-sybrin-blue-600 bg-sybrin-blue-50'
     }
   }
 
@@ -299,25 +299,25 @@ const Sy2CustomersDashboard = () => {
           <div className="flex flex-wrap gap-2">
             <button
               onClick={() => setViewMode('all')}
-              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'all' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'all' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               All Customers
             </button>
             <button
               onClick={() => setViewMode('cross_border')}
-              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'cross_border' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'cross_border' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               Cross-Border
             </button>
             <button
               onClick={() => setViewMode('high_priority')}
-              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'high_priority' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'high_priority' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               High Priority
             </button>
             <button
               onClick={() => setViewMode('pan_african_groups')}
-              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'pan_african_groups' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'pan_african_groups' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               Pan-African Groups
             </button>
@@ -351,12 +351,12 @@ const Sy2CustomersDashboard = () => {
                   <tr key={idx} className="hover:bg-gray-50 transition-colors">
                     <td className="px-4 py-3">
                       <div className="flex items-center">
-                        <Globe className="w-4 h-4 text-blue-500 mr-2" />
+                        <Globe className="w-4 h-4 text-sybrin-blue-500 mr-2" />
                         <span className="font-medium text-gray-900 text-sm">{item.pan_african_group}</span>
                       </div>
                     </td>
                     <td className="px-4 py-3 text-center">
-                      <span className="inline-flex px-3 py-1 rounded-full text-sm font-bold bg-blue-100 text-blue-700">
+                      <span className="inline-flex px-3 py-1 rounded-full text-sm font-bold bg-sybrin-blue-100 text-sybrin-blue-700">
                         {item.geography_count}
                       </span>
                     </td>
@@ -399,9 +399,9 @@ const Sy2CustomersDashboard = () => {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600">Total Institutions</p>
-              <p className="text-2xl font-bold text-blue-600">{stats.totalCustomers}</p>
+              <p className="text-2xl font-bold text-sybrin-blue-600">{stats.totalCustomers}</p>
             </div>
-            <Building2 className="w-8 h-8 text-blue-200" />
+            <Building2 className="w-8 h-8 text-sybrin-blue-200" />
           </div>
         </div>
         <div className="bg-white rounded-lg shadow-md p-4">
@@ -438,25 +438,25 @@ const Sy2CustomersDashboard = () => {
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => setViewMode('all')}
-            className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'all' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+            className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'all' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
           >
             All Customers
           </button>
           <button
             onClick={() => setViewMode('cross_border')}
-            className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'cross_border' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+            className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'cross_border' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
           >
             Cross-Border
           </button>
           <button
             onClick={() => setViewMode('high_priority')}
-            className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'high_priority' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+            className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'high_priority' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
           >
             High Priority
           </button>
           <button
             onClick={() => setViewMode('pan_african_groups')}
-            className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'pan_african_groups' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+            className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'pan_african_groups' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
           >
             Pan-African Groups
           </button>
@@ -473,14 +473,14 @@ const Sy2CustomersDashboard = () => {
               placeholder="Search institutions..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
             />
           </div>
 
           <select
             value={selectedGeography}
             onChange={(e) => setSelectedGeography(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Geographies</option>
             {geographies.map(geo => (
@@ -491,7 +491,7 @@ const Sy2CustomersDashboard = () => {
           <select
             value={selectedSegment}
             onChange={(e) => setSelectedSegment(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Segments</option>
             {segments.map(seg => (
@@ -502,7 +502,7 @@ const Sy2CustomersDashboard = () => {
           <select
             value={selectedPriority}
             onChange={(e) => setSelectedPriority(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Priorities</option>
             <option value="P1">P1</option>
@@ -514,9 +514,9 @@ const Sy2CustomersDashboard = () => {
             <option value="Low">Low</option>
           </select>
 
-          <div className="flex items-center justify-between px-3 py-2 bg-blue-50 rounded-md">
-            <span className="text-sm font-medium text-blue-900">Results:</span>
-            <span className="text-lg font-bold text-blue-600">{filteredData.length}</span>
+          <div className="flex items-center justify-between px-3 py-2 bg-sybrin-blue-50 rounded-md">
+            <span className="text-sm font-medium text-sybrin-blue-900">Results:</span>
+            <span className="text-lg font-bold text-sybrin-blue-600">{filteredData.length}</span>
           </div>
         </div>
       </div>
@@ -591,8 +591,8 @@ const Sy2CustomersDashboard = () => {
                     <td className="px-4 py-3">
                       {item.pan_african_group && item.pan_african_group !== 'None' ? (
                         <div className="flex items-center text-sm">
-                          <Globe className="w-3 h-3 text-blue-500 mr-1" />
-                          <span className="text-blue-700">{item.pan_african_group}</span>
+                          <Globe className="w-3 h-3 text-sybrin-blue-500 mr-1" />
+                          <span className="text-sybrin-blue-700">{item.pan_african_group}</span>
                           {item.group_geography_count && (
                             <span className="ml-1 text-xs text-gray-500">({item.group_geography_count})</span>
                           )}
@@ -629,7 +629,7 @@ const Sy2CustomersDashboard = () => {
                     <td className="px-4 py-3 text-center">
                       <button
                         onClick={() => toggleRowExpansion(item.id)}
-                        className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                        className="text-sybrin-blue-600 hover:text-sybrin-blue-800 text-sm font-medium"
                       >
                         {expandedRows.has(item.id) ? 'Hide' : 'Details'}
                       </button>
@@ -644,7 +644,7 @@ const Sy2CustomersDashboard = () => {
                             {item.opportunity_details && (
                               <div>
                                 <h4 className="text-sm font-semibold text-gray-700 mb-2 flex items-center">
-                                  <Target className="w-4 h-4 mr-2 text-blue-500" />
+                                  <Target className="w-4 h-4 mr-2 text-sybrin-blue-500" />
                                   Opportunity Details
                                 </h4>
                                 <p className="text-sm text-gray-600">{item.opportunity_details}</p>

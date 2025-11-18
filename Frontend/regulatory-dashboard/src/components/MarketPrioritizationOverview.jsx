@@ -62,10 +62,10 @@ const MarketPrioritizationOverview = ({ overviewData }) => {
       {/* Header - Clickable */}
       <button
         onClick={() => setExpanded(!expanded)}
-        className="w-full px-6 py-4 flex items-center justify-between border-l-4 border-blue-500 bg-blue-50 hover:bg-blue-100 transition-colors"
+        className="w-full px-6 py-4 flex items-center justify-between border-l-4 border-sybrin-blue-500 bg-sybrin-blue-50 hover:bg-sybrin-blue-100 transition-colors"
       >
         <div className="flex items-center">
-          <Globe className="w-6 h-6 text-blue-600 mr-3" />
+          <Globe className="w-6 h-6 text-sybrin-blue-600 mr-3" />
           <div className="text-left">
             <h2 className="text-lg font-bold text-gray-900">Market Prioritization Matrix</h2>
             <p className="text-xs text-gray-600">Strategic ranking of 14 markets for Sybrin's expansion</p>
@@ -80,7 +80,7 @@ const MarketPrioritizationOverview = ({ overviewData }) => {
           {/* Summary Card */}
           <div className="p-6 border-b border-gray-200">
         <div className="flex items-start gap-3 mb-4">
-          <TrendingUp className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
+          <TrendingUp className="w-5 h-5 text-sybrin-blue-600 mt-1 flex-shrink-0" />
           <div className="flex-1">
             <h3 className="font-semibold text-gray-900 mb-2">Executive Summary</h3>
             <div className="text-gray-700 leading-relaxed prose prose-sm max-w-none">
@@ -108,7 +108,7 @@ const MarketPrioritizationOverview = ({ overviewData }) => {
             onClick={() => setSelectedTimeframe('long-term')}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               selectedTimeframe === 'long-term'
-                ? 'bg-blue-100 text-blue-700 border-2 border-blue-300'
+                ? 'bg-sybrin-blue-100 text-sybrin-blue-700 border-2 border-sybrin-blue-300'
                 : 'bg-gray-100 text-gray-600 border-2 border-transparent hover:bg-gray-200'
             }`}
           >
@@ -171,7 +171,7 @@ const MarketPrioritizationOverview = ({ overviewData }) => {
           <div className="mt-6 text-center">
             <button
               onClick={() => setShowDetailedAnalysis(true)}
-              className="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-2 mx-auto"
+              className="text-sybrin-blue-600 hover:text-sybrin-blue-700 font-medium text-sm flex items-center gap-2 mx-auto"
             >
               View Detailed Country Analysis
               <ChevronDown className="w-4 h-4" />
@@ -214,7 +214,7 @@ const MarketPrioritizationOverview = ({ overviewData }) => {
                         inline
                           ? <code className="bg-gray-100 px-1 py-0.5 rounded text-xs font-mono text-gray-800" {...props} />
                           : <code className="block bg-gray-100 p-3 rounded text-xs font-mono text-gray-800 overflow-x-auto" {...props} />,
-                      blockquote: ({node, ...props}) => <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-700 my-4" {...props} />
+                      blockquote: ({node, ...props}) => <blockquote className="border-l-4 border-sybrin-blue-500 pl-4 italic text-gray-700 my-4" {...props} />
                     }}
                   >
                     {overviewData.fullContent}

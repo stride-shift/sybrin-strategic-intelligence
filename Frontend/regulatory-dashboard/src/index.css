@@ -8,11 +8,43 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom selection colors using Sybrin blue */
+::selection {
+  background-color: #002664;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #002664;
+  color: white;
+}
+
+/* Custom focus ring colors */
+@layer utilities {
+  .focus\:ring-sybrin-blue-500:focus {
+    --tw-ring-color: #002664;
+  }
+
+  .focus\:border-sybrin-blue-500:focus {
+    border-color: #002664;
+  }
+}
+
+/* Custom scrollbar colors */
+::-webkit-scrollbar-thumb:hover {
+  background: #002664;
+}
+
+/* Override default link hover colors */
+a:hover {
+  color: #002664;
 }
 
 body {

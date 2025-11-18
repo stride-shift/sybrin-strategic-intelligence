@@ -105,7 +105,7 @@ const NPOJurisdictionDashboard = () => {
   const getComplexityColor = (complexity) => {
     switch(complexity) {
       case 'Low': return 'text-green-600'
-      case 'Medium': return 'text-blue-600'
+      case 'Medium': return 'text-sybrin-blue-600'
       case 'High': return 'text-orange-600'
       case 'Very High': return 'text-red-600'
       default: return 'text-gray-600'
@@ -179,9 +179,9 @@ const NPOJurisdictionDashboard = () => {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-gray-600">High Ease Score (7+)</p>
-                <p className="text-2xl font-bold text-blue-600">{stats.highEase}</p>
+                <p className="text-2xl font-bold text-sybrin-blue-600">{stats.highEase}</p>
               </div>
-              <TrendingUp className="w-8 h-8 text-blue-600 opacity-20" />
+              <TrendingUp className="w-8 h-8 text-sybrin-blue-600 opacity-20" />
             </div>
           </div>
           <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
@@ -556,7 +556,7 @@ const NPOJurisdictionDashboard = () => {
 
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                <Clock className="w-5 h-5 text-blue-600 mr-2" />
+                <Clock className="w-5 h-5 text-sybrin-blue-600 mr-2" />
                 Quick Setup Options
               </h3>
               <div className="space-y-3">
@@ -564,7 +564,7 @@ const NPOJurisdictionDashboard = () => {
                   .filter(j => j.typical_timeline && (j.typical_timeline.includes('1-') || j.typical_timeline.includes('2-')))
                   .slice(0, 5)
                   .map(jurisdiction => (
-                    <div key={jurisdiction.id} className="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
+                    <div key={jurisdiction.id} className="flex items-center justify-between p-3 bg-sybrin-blue-50 rounded-lg">
                       <div>
                         <p className="font-medium text-gray-900">{jurisdiction.jurisdiction}</p>
                         <p className="text-sm text-gray-600">{jurisdiction.typical_timeline}</p>

@@ -21,7 +21,7 @@ const Login = ({ onLogin }) => {
       <div className="bg-white rounded-lg shadow-xl p-8 w-full max-w-md">
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
-            <Shield className="w-16 h-16 text-blue-600" />
+            <Shield className="w-16 h-16 text-sybrin-blue-600" />
           </div>
           <h1 className="text-2xl font-bold text-gray-900">Sybrin Intel</h1>
           <p className="text-sm text-gray-600 mt-2">Strategic Intelligence Platform</p>
@@ -40,7 +40,7 @@ const Login = ({ onLogin }) => {
                 value={code}
                 onChange={(e) => setCode(e.target.value)}
                 placeholder="Enter access code"
-                className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
                 autoFocus
               />
             </div>
@@ -55,7 +55,7 @@ const Login = ({ onLogin }) => {
 
           <button
             type="submit"
-            className="w-full py-2 px-4 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors"
+            className="w-full py-2 px-4 bg-sybrin-blue-600 text-white font-medium rounded-md hover:bg-sybrin-blue-700 transition-colors"
           >
             Access Dashboard
           </button>

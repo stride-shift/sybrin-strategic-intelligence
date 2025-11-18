@@ -166,9 +166,9 @@ const CashFlowPlanningDashboard = () => {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600">Total Markets</p>
-              <p className="text-2xl font-bold text-blue-600">{stats.totalMarkets}</p>
+              <p className="text-2xl font-bold text-sybrin-blue-600">{stats.totalMarkets}</p>
             </div>
-            <MapPin className="w-8 h-8 text-blue-200" />
+            <MapPin className="w-8 h-8 text-sybrin-blue-200" />
           </div>
         </div>
         <div className="bg-white rounded-lg shadow-md p-4">
@@ -211,23 +211,23 @@ const CashFlowPlanningDashboard = () => {
               placeholder="Search markets..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
             />
           </div>
 
           <select
             value={selectedRiskLevel}
             onChange={(e) => setSelectedRiskLevel(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Risk Levels</option>
             <option value="high">High Risk (Delays Likely)</option>
             <option value="low">Low Risk (Predictable)</option>
           </select>
 
-          <div className="flex items-center justify-between px-3 py-2 bg-blue-50 rounded-md">
-            <span className="text-sm font-medium text-blue-900">Results:</span>
-            <span className="text-lg font-bold text-blue-600">{filteredData.length}</span>
+          <div className="flex items-center justify-between px-3 py-2 bg-sybrin-blue-50 rounded-md">
+            <span className="text-sm font-medium text-sybrin-blue-900">Results:</span>
+            <span className="text-lg font-bold text-sybrin-blue-600">{filteredData.length}</span>
           </div>
         </div>
       </div>
@@ -272,7 +272,7 @@ const CashFlowPlanningDashboard = () => {
                     </td>
                     <td className="px-4 py-3 text-center">
                       <div className="flex items-center justify-center gap-1">
-                        <Clock className="w-4 h-4 text-blue-500" />
+                        <Clock className="w-4 h-4 text-sybrin-blue-500" />
                         <span className={`text-lg font-bold ${getPaymentDaysColor(item.expected_payment_days)}`}>
                           {item.expected_payment_days || 0} days
                         </span>
@@ -295,7 +295,7 @@ const CashFlowPlanningDashboard = () => {
                     <td className="px-4 py-3 text-center">
                       <button
                         onClick={() => toggleRowExpansion(item.geography)}
-                        className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                        className="text-sybrin-blue-600 hover:text-sybrin-blue-800 text-sm font-medium"
                       >
                         {expandedRows.has(item.geography) ? 'Hide' : 'Details'}
                       </button>

@@ -179,9 +179,9 @@ const SegmentIntelligenceDashboard = () => {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600">Total Segments</p>
-              <p className="text-2xl font-bold text-blue-600">{stats.totalSegments}</p>
+              <p className="text-2xl font-bold text-sybrin-blue-600">{stats.totalSegments}</p>
             </div>
-            <Target className="w-8 h-8 text-blue-200" />
+            <Target className="w-8 h-8 text-sybrin-blue-200" />
           </div>
         </div>
         <div className="bg-white rounded-lg shadow-md p-4">
@@ -222,14 +222,14 @@ const SegmentIntelligenceDashboard = () => {
               placeholder="Search segments..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
             />
           </div>
 
           <select
             value={selectedGeography}
             onChange={(e) => setSelectedGeography(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Geographies</option>
             {geographies.map(geo => (
@@ -240,7 +240,7 @@ const SegmentIntelligenceDashboard = () => {
           <select
             value={selectedPriority}
             onChange={(e) => setSelectedPriority(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Priorities</option>
             <option value="Critical">Critical</option>
@@ -248,9 +248,9 @@ const SegmentIntelligenceDashboard = () => {
             <option value="Medium">Medium</option>
           </select>
 
-          <div className="flex items-center justify-between px-3 py-2 bg-blue-50 rounded-md">
-            <span className="text-sm font-medium text-blue-900">Results:</span>
-            <span className="text-lg font-bold text-blue-600">{filteredData.length}</span>
+          <div className="flex items-center justify-between px-3 py-2 bg-sybrin-blue-50 rounded-md">
+            <span className="text-sm font-medium text-sybrin-blue-900">Results:</span>
+            <span className="text-lg font-bold text-sybrin-blue-600">{filteredData.length}</span>
           </div>
         </div>
       </div>
@@ -302,7 +302,7 @@ const SegmentIntelligenceDashboard = () => {
                     </td>
                     <td className="px-4 py-3 text-center">
                       <div className="flex items-center justify-center gap-1">
-                        <Users className="w-4 h-4 text-blue-500" />
+                        <Users className="w-4 h-4 text-sybrin-blue-500" />
                         <span className="text-lg font-bold text-gray-900">{item.total_institutions?.toLocaleString() || 0}</span>
                       </div>
                     </td>
@@ -320,7 +320,7 @@ const SegmentIntelligenceDashboard = () => {
                       <span className="text-sm font-medium text-gray-700">{item.addressable_market_size || '-'}</span>
                     </td>
                     <td className="px-4 py-3 text-center">
-                      <button onClick={() => toggleRowExpansion(item.id)} className="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                      <button onClick={() => toggleRowExpansion(item.id)} className="text-sybrin-blue-600 hover:text-sybrin-blue-800 text-sm font-medium">
                         {expandedRows.has(item.id) ? 'Hide' : 'Details'}
                       </button>
                     </td>
@@ -332,10 +332,10 @@ const SegmentIntelligenceDashboard = () => {
                           {/* GTM Strategy */}
                           <div>
                             <h4 className="text-sm font-semibold text-gray-700 mb-2 flex items-center">
-                              <Target className="w-4 h-4 mr-2 text-blue-600" />
+                              <Target className="w-4 h-4 mr-2 text-sybrin-blue-600" />
                               Go-to-Market Strategy
                             </h4>
-                            <p className="text-sm text-gray-600 bg-blue-50 p-3 rounded">{item.go_to_market_strategy || 'No strategy defined'}</p>
+                            <p className="text-sm text-gray-600 bg-sybrin-blue-50 p-3 rounded">{item.go_to_market_strategy || 'No strategy defined'}</p>
                           </div>
 
                           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

@@ -188,7 +188,7 @@ const CompetitorsDashboard = () => {
   const getPresenceLevelColor = (level) => {
     switch(level) {
       case 'Dominant': return 'text-purple-600'
-      case 'Strong': return 'text-blue-600'
+      case 'Strong': return 'text-sybrin-blue-600'
       case 'Limited': return 'text-yellow-600'
       case 'Emerging': return 'text-green-600'
       default: return 'text-gray-500'
@@ -248,14 +248,14 @@ const CompetitorsDashboard = () => {
               placeholder="Search competitors, positions..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
             />
           </div>
 
           <select
             value={selectedCompetitor}
             onChange={(e) => setSelectedCompetitor(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Competitors</option>
             {competitors.map(comp => (
@@ -266,7 +266,7 @@ const CompetitorsDashboard = () => {
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Categories</option>
             {categories.map(cat => (
@@ -277,7 +277,7 @@ const CompetitorsDashboard = () => {
           <select
             value={selectedGeography}
             onChange={(e) => setSelectedGeography(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Geographies</option>
             {geographies.map(geo => (
@@ -288,7 +288,7 @@ const CompetitorsDashboard = () => {
           <select
             value={selectedThreatLevel}
             onChange={(e) => setSelectedThreatLevel(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Threat Levels</option>
             <option value="Critical">Critical</option>
@@ -297,9 +297,9 @@ const CompetitorsDashboard = () => {
             <option value="Low">Low</option>
           </select>
 
-          <div className="flex items-center justify-between px-3 py-2 bg-blue-50 rounded-md">
-            <span className="text-sm font-medium text-blue-900">Results:</span>
-            <span className="text-lg font-bold text-blue-600">{filteredData.length}</span>
+          <div className="flex items-center justify-between px-3 py-2 bg-sybrin-blue-50 rounded-md">
+            <span className="text-sm font-medium text-sybrin-blue-900">Results:</span>
+            <span className="text-lg font-bold text-sybrin-blue-600">{filteredData.length}</span>
           </div>
         </div>
 
@@ -308,7 +308,7 @@ const CompetitorsDashboard = () => {
           <select
             value={selectedType}
             onChange={(e) => setSelectedType(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Types</option>
             {types.map(type => (
@@ -319,7 +319,7 @@ const CompetitorsDashboard = () => {
           <select
             value={selectedPresence}
             onChange={(e) => setSelectedPresence(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Presence Levels</option>
             <option value="Dominant">Dominant</option>
@@ -331,19 +331,19 @@ const CompetitorsDashboard = () => {
           <div className="flex gap-2 lg:col-span-2">
             <button
               onClick={() => setViewMode('table')}
-              className={`px-4 py-2 rounded-md transition-colors flex-1 ${viewMode === 'table' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors flex-1 ${viewMode === 'table' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               Table View
             </button>
             <button
               onClick={() => setViewMode('cards')}
-              className={`px-4 py-2 rounded-md transition-colors flex-1 ${viewMode === 'cards' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors flex-1 ${viewMode === 'cards' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               Card View
             </button>
             <button
               onClick={() => setViewMode('comparison')}
-              className={`px-4 py-2 rounded-md transition-colors flex-1 ${viewMode === 'comparison' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors flex-1 ${viewMode === 'comparison' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               Comparison
             </button>
@@ -401,7 +401,7 @@ const CompetitorsDashboard = () => {
                                 <p className="text-xs text-gray-500 ml-2">Sets standards, hard to displace</p>
                               </div>
                               <div>
-                                <span className="font-semibold text-blue-600">Strong:</span>
+                                <span className="font-semibold text-sybrin-blue-600">Strong:</span>
                                 <span className="ml-2">Major player with 15-30% share</span>
                                 <p className="text-xs text-gray-500 ml-2">Well-established relationships</p>
                               </div>
@@ -515,7 +515,7 @@ const CompetitorsDashboard = () => {
                       <td className="px-4 py-3 text-center">
                         <button
                           onClick={() => toggleRowExpansion(item.id)}
-                          className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                          className="text-sybrin-blue-600 hover:text-sybrin-blue-800 text-sm font-medium"
                         >
                           {expandedRows.has(item.id) ? 'Hide' : 'Details'}
                         </button>
@@ -546,7 +546,7 @@ const CompetitorsDashboard = () => {
                               {item.sybrin_position && (
                                 <div>
                                   <h4 className="text-sm font-semibold text-gray-700 mb-2 flex items-center">
-                                    <Shield className="w-4 h-4 mr-2 text-blue-500" />
+                                    <Shield className="w-4 h-4 mr-2 text-sybrin-blue-500" />
                                     Sybrin Position
                                   </h4>
                                   <p className="text-sm text-gray-600">{item.sybrin_position}</p>
@@ -611,7 +611,7 @@ const CompetitorsDashboard = () => {
                                   </h4>
                                   <div className="flex flex-wrap gap-1">
                                     {item.target_segments.map((segment, idx) => (
-                                      <span key={idx} className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded">
+                                      <span key={idx} className="px-2 py-1 bg-sybrin-blue-100 text-sybrin-blue-700 text-xs rounded">
                                         {segment}
                                       </span>
                                     ))}
@@ -639,7 +639,7 @@ const CompetitorsDashboard = () => {
                                     Website
                                   </h4>
                                   <a href={item.website} target="_blank" rel="noopener noreferrer" 
-                                     className="text-sm text-blue-600 hover:underline">
+                                     className="text-sm text-sybrin-blue-600 hover:underline">
                                     {item.website}
                                   </a>
                                 </div>
@@ -732,7 +732,7 @@ const CompetitorsDashboard = () => {
                 {competitor.website && (
                   <div className="text-center mt-4">
                     <a href={competitor.website} target="_blank" rel="noopener noreferrer" 
-                       className="text-xs text-blue-600 hover:underline">
+                       className="text-xs text-sybrin-blue-600 hover:underline">
                       Visit Website →
                     </a>
                   </div>
@@ -785,7 +785,7 @@ const CompetitorsDashboard = () => {
                         {mainEntry.competitor_type}
                       </td>
                       <td className="px-4 py-3 text-center">
-                        <span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded">
+                        <span className="px-2 py-1 bg-sybrin-blue-100 text-sybrin-blue-700 text-xs rounded">
                           {competitor.entries.length} markets
                         </span>
                       </td>

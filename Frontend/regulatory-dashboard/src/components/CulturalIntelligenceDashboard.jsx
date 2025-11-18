@@ -131,7 +131,7 @@ const CulturalIntelligenceDashboard = () => {
   }
 
   const getCommunicationColor = (style) => {
-    if (style?.toLowerCase() === 'direct') return 'text-blue-700 bg-blue-100'
+    if (style?.toLowerCase() === 'direct') return 'text-sybrin-blue-700 bg-sybrin-blue-100'
     if (style?.toLowerCase() === 'indirect') return 'text-purple-700 bg-purple-100'
     return 'text-gray-700 bg-gray-100'
   }
@@ -139,7 +139,7 @@ const CulturalIntelligenceDashboard = () => {
   const getDecisionColor = (style) => {
     if (style?.toLowerCase().includes('top-down')) return 'text-orange-700 bg-orange-100'
     if (style?.toLowerCase().includes('hybrid')) return 'text-green-700 bg-green-100'
-    if (style?.toLowerCase().includes('consensus')) return 'text-blue-700 bg-blue-100'
+    if (style?.toLowerCase().includes('consensus')) return 'text-sybrin-blue-700 bg-sybrin-blue-100'
     return 'text-gray-700 bg-gray-100'
   }
 
@@ -167,9 +167,9 @@ const CulturalIntelligenceDashboard = () => {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600">Geographies</p>
-              <p className="text-2xl font-bold text-blue-600">{stats.totalGeographies}</p>
+              <p className="text-2xl font-bold text-sybrin-blue-600">{stats.totalGeographies}</p>
             </div>
-            <Globe className="w-8 h-8 text-blue-200" />
+            <Globe className="w-8 h-8 text-sybrin-blue-200" />
           </div>
         </div>
         <div className="bg-white rounded-lg shadow-md p-4">
@@ -213,14 +213,14 @@ const CulturalIntelligenceDashboard = () => {
               placeholder="Search geographies..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
             />
           </div>
 
           <select
             value={selectedPattern}
             onChange={(e) => setSelectedPattern(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Trust Patterns</option>
             <option value="Relationship-First">Relationship-First</option>
@@ -230,16 +230,16 @@ const CulturalIntelligenceDashboard = () => {
           <select
             value={selectedCommunication}
             onChange={(e) => setSelectedCommunication(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Communication Styles</option>
             <option value="Direct">Direct</option>
             <option value="Indirect">Indirect</option>
           </select>
 
-          <div className="flex items-center justify-between px-3 py-2 bg-blue-50 rounded-md">
-            <span className="text-sm font-medium text-blue-900">Results:</span>
-            <span className="text-lg font-bold text-blue-600">{filteredData.length}</span>
+          <div className="flex items-center justify-between px-3 py-2 bg-sybrin-blue-50 rounded-md">
+            <span className="text-sm font-medium text-sybrin-blue-900">Results:</span>
+            <span className="text-lg font-bold text-sybrin-blue-600">{filteredData.length}</span>
           </div>
         </div>
       </div>
@@ -298,7 +298,7 @@ const CulturalIntelligenceDashboard = () => {
                       <span className="text-xs text-gray-600">{item.typical_sales_cycle_length || '-'}</span>
                     </td>
                     <td className="px-4 py-3 text-center">
-                      <button onClick={() => toggleRowExpansion(item.id)} className="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                      <button onClick={() => toggleRowExpansion(item.id)} className="text-sybrin-blue-600 hover:text-sybrin-blue-800 text-sm font-medium">
                         {expandedRows.has(item.id) ? 'Hide' : 'Details'}
                       </button>
                     </td>
@@ -310,10 +310,10 @@ const CulturalIntelligenceDashboard = () => {
                           {/* Relationship Timeline */}
                           <div>
                             <h4 className="text-sm font-semibold text-gray-700 mb-2 flex items-center">
-                              <Clock className="w-4 h-4 mr-2 text-blue-600" />
+                              <Clock className="w-4 h-4 mr-2 text-sybrin-blue-600" />
                               Relationship Timeline
                             </h4>
-                            <p className="text-sm text-gray-600 bg-blue-50 p-3 rounded">
+                            <p className="text-sm text-gray-600 bg-sybrin-blue-50 p-3 rounded">
                               {item.relationship_timeline || 'No timeline information'}
                             </p>
                           </div>
@@ -396,14 +396,14 @@ const CulturalIntelligenceDashboard = () => {
                           {(item.power_distance_index || item.individualism_collectivism || item.uncertainty_avoidance) && (
                             <div>
                               <h4 className="text-sm font-semibold text-gray-700 mb-2 flex items-center">
-                                <TrendingUp className="w-4 h-4 mr-2 text-blue-600" />
+                                <TrendingUp className="w-4 h-4 mr-2 text-sybrin-blue-600" />
                                 Hofstede Cultural Dimensions
                               </h4>
                               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
                                 {item.power_distance_index && (
                                   <div className="bg-white p-3 rounded border border-gray-200">
                                     <p className="text-xs text-gray-500">Power Distance</p>
-                                    <p className="text-lg font-bold text-blue-600">{item.power_distance_index}</p>
+                                    <p className="text-lg font-bold text-sybrin-blue-600">{item.power_distance_index}</p>
                                   </div>
                                 )}
                                 {item.individualism_collectivism && (

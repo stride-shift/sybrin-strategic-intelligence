@@ -171,7 +171,7 @@ const ProductsJobsDashboard = () => {
 
   const getJobTypeColor = (type) => {
     switch(type) {
-      case 'functional': return 'text-blue-600 bg-blue-50'
+      case 'functional': return 'text-sybrin-blue-600 bg-sybrin-blue-50'
       case 'emotional': return 'text-red-600 bg-red-50'
       case 'social': return 'text-green-600 bg-green-50'
       default: return 'text-gray-600 bg-gray-50'
@@ -181,7 +181,7 @@ const ProductsJobsDashboard = () => {
   const getJobLevelColor = (level) => {
     switch(level) {
       case 'obvious': return 'text-gray-600'
-      case 'higher_level': return 'text-blue-600'
+      case 'higher_level': return 'text-sybrin-blue-600'
       case 'non_obvious': return 'text-purple-600'
       case 'hidden': return 'text-orange-600'
       default: return 'text-gray-500'
@@ -192,7 +192,7 @@ const ProductsJobsDashboard = () => {
     if (priority === 1) return 'text-red-600 bg-red-50'
     if (priority === 2) return 'text-orange-600 bg-orange-50'
     if (priority === 3) return 'text-yellow-600 bg-yellow-50'
-    if (priority === 4) return 'text-blue-600 bg-blue-50'
+    if (priority === 4) return 'text-sybrin-blue-600 bg-sybrin-blue-50'
     if (priority === 5) return 'text-gray-600 bg-gray-50'
     return 'text-gray-400 bg-gray-50'
   }
@@ -239,14 +239,14 @@ const ProductsJobsDashboard = () => {
               placeholder="Search jobs, messages, use cases..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
             />
           </div>
 
           <select
             value={selectedProduct}
             onChange={(e) => setSelectedProduct(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Products</option>
             {products.map(product => (
@@ -257,7 +257,7 @@ const ProductsJobsDashboard = () => {
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Categories</option>
             {categories.map(category => (
@@ -268,7 +268,7 @@ const ProductsJobsDashboard = () => {
           <select
             value={selectedJobType}
             onChange={(e) => setSelectedJobType(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Job Types</option>
             <option value="functional">Functional</option>
@@ -279,7 +279,7 @@ const ProductsJobsDashboard = () => {
           <select
             value={selectedJobLevel}
             onChange={(e) => setSelectedJobLevel(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Levels</option>
             <option value="obvious">Obvious</option>
@@ -288,9 +288,9 @@ const ProductsJobsDashboard = () => {
             <option value="hidden">Hidden</option>
           </select>
 
-          <div className="flex items-center justify-between px-3 py-2 bg-blue-50 rounded-md">
-            <span className="text-sm font-medium text-blue-900">Results:</span>
-            <span className="text-lg font-bold text-blue-600">{filteredData.length}</span>
+          <div className="flex items-center justify-between px-3 py-2 bg-sybrin-blue-50 rounded-md">
+            <span className="text-sm font-medium text-sybrin-blue-900">Results:</span>
+            <span className="text-lg font-bold text-sybrin-blue-600">{filteredData.length}</span>
           </div>
         </div>
 
@@ -299,7 +299,7 @@ const ProductsJobsDashboard = () => {
           <select
             value={selectedGeography}
             onChange={(e) => setSelectedGeography(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Geographies</option>
             {geographies.map(geo => (
@@ -310,7 +310,7 @@ const ProductsJobsDashboard = () => {
           <select
             value={selectedSegment}
             onChange={(e) => setSelectedSegment(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Segments</option>
             {segments.map(segment => (
@@ -321,13 +321,13 @@ const ProductsJobsDashboard = () => {
           <div className="flex gap-2">
             <button
               onClick={() => setViewMode('table')}
-              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'table' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'table' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               Table View
             </button>
             <button
               onClick={() => setViewMode('cards')}
-              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'cards' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+              className={`px-4 py-2 rounded-md transition-colors ${viewMode === 'cards' ? 'bg-sybrin-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
             >
               Card View
             </button>
@@ -367,8 +367,8 @@ const ProductsJobsDashboard = () => {
                             <div className="space-y-3">
                               <div>
                                 <div className="flex items-center gap-2 mb-1">
-                                  <Target className="w-4 h-4 text-blue-600" />
-                                  <span className="font-semibold text-blue-600">Functional</span>
+                                  <Target className="w-4 h-4 text-sybrin-blue-600" />
+                                  <span className="font-semibold text-sybrin-blue-600">Functional</span>
                                 </div>
                                 <p className="text-sm ml-6">Practical tasks customers need to accomplish</p>
                                 <p className="text-xs text-gray-500 ml-6">Examples: Process payments, manage risk, ensure compliance</p>
@@ -410,7 +410,7 @@ const ProductsJobsDashboard = () => {
                                 <p className="text-xs text-gray-500 ml-2">Table stakes for competing</p>
                               </div>
                               <div>
-                                <span className="font-semibold text-blue-600">Higher Level:</span>
+                                <span className="font-semibold text-sybrin-blue-600">Higher Level:</span>
                                 <span className="ml-2">Strategic objectives behind the request</span>
                                 <p className="text-xs text-gray-500 ml-2">Key to consultative selling</p>
                               </div>
@@ -461,7 +461,7 @@ const ProductsJobsDashboard = () => {
                                 <p className="text-xs text-gray-500 ml-2">Requires ROI justification</p>
                               </div>
                               <div>
-                                <span className="font-semibold text-blue-600">4 - Low:</span>
+                                <span className="font-semibold text-sybrin-blue-600">4 - Low:</span>
                                 <span className="ml-2">Nice to have</span>
                                 <p className="text-xs text-gray-500 ml-2">Hard to justify budget</p>
                               </div>
@@ -528,7 +528,7 @@ const ProductsJobsDashboard = () => {
                       <td className="px-4 py-3 text-center">
                         <button
                           onClick={() => toggleRowExpansion(item.id)}
-                          className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                          className="text-sybrin-blue-600 hover:text-sybrin-blue-800 text-sm font-medium"
                         >
                           {expandedRows.has(item.id) ? 'Hide' : 'Details'}
                         </button>
@@ -605,7 +605,7 @@ const ProductsJobsDashboard = () => {
                               <h4 className="text-sm font-semibold text-gray-700 mb-1">Example Institutions</h4>
                               <div className="flex flex-wrap gap-2 ml-6">
                                 {item.institution_examples.map((inst, idx) => (
-                                  <span key={idx} className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded">
+                                  <span key={idx} className="px-2 py-1 bg-sybrin-blue-100 text-sybrin-blue-700 text-xs rounded">
                                     {inst}
                                   </span>
                                 ))}

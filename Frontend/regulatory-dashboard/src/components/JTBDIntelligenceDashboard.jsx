@@ -590,13 +590,13 @@ const JTBDIntelligenceDashboard = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-8">
+      <div className="bg-gradient-to-r from-sybrin-blue-600 to-purple-600 text-white px-6 py-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-3 mb-3">
             <Target className="w-8 h-8" />
             <h1 className="text-3xl font-bold">Jobs-To-Be-Done Intelligence</h1>
           </div>
-          <p className="text-blue-100 text-lg">
+          <p className="text-sybrin-blue-100 text-lg">
             Strategic analysis of customer jobs across 9 functional dimensions, emotional/social contexts, and multiple abstraction levels
           </p>
           <div className="mt-4 flex flex-wrap gap-4 text-sm">
@@ -628,7 +628,7 @@ const JTBDIntelligenceDashboard = () => {
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex items-center gap-2 px-4 py-4 border-b-2 font-medium transition-colors ${
                     activeTab === tab.id
-                      ? 'border-blue-600 text-blue-600'
+                      ? 'border-sybrin-blue-600 text-sybrin-blue-600'
                       : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                   }`}
                 >
@@ -647,27 +647,27 @@ const JTBDIntelligenceDashboard = () => {
         {activeTab === 'jobs' && (
           <div className="space-y-8">
             {/* Executive Summary */}
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+            <div className="bg-sybrin-blue-50 border border-sybrin-blue-200 rounded-lg p-6">
               <div className="flex items-start gap-3">
-                <Info className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+                <Info className="w-6 h-6 text-sybrin-blue-600 flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-lg font-bold text-blue-900 mb-3">Understanding Customer Jobs</h3>
-                  <p className="text-blue-800 mb-4">
+                  <h3 className="text-lg font-bold text-sybrin-blue-900 mb-3">Understanding Customer Jobs</h3>
+                  <p className="text-sybrin-blue-800 mb-4">
                     This analysis identifies the <strong>jobs customers are trying to do</strong> when they "hire" financial services solutions.
                     These are NOT Sybrin's jobs - these are the jobs of banks, MFIs, and financial institutions across Kenya, Zambia, Tanzania, and the Philippines.
                   </p>
                   <div className="grid md:grid-cols-3 gap-4 text-sm">
                     <div className="bg-white rounded p-3">
-                      <div className="font-semibold text-blue-900 mb-1">9 Functional Jobs</div>
-                      <div className="text-blue-700">Operational jobs derived from actual documented customer challenges across 140+ institutions</div>
+                      <div className="font-semibold text-sybrin-blue-900 mb-1">9 Functional Jobs</div>
+                      <div className="text-sybrin-blue-700">Operational jobs derived from actual documented customer challenges across 140+ institutions</div>
                     </div>
                     <div className="bg-white rounded p-3">
-                      <div className="font-semibold text-blue-900 mb-1">8 Emotional Jobs</div>
-                      <div className="text-blue-700">Unstated emotional needs from executives, managers, and frontline staff</div>
+                      <div className="font-semibold text-sybrin-blue-900 mb-1">8 Emotional Jobs</div>
+                      <div className="text-sybrin-blue-700">Unstated emotional needs from executives, managers, and frontline staff</div>
                     </div>
                     <div className="bg-white rounded p-3">
-                      <div className="font-semibold text-blue-900 mb-1">4 Social Jobs</div>
-                      <div className="text-blue-700">How decision-makers want to be perceived by peers, boards, and industry</div>
+                      <div className="font-semibold text-sybrin-blue-900 mb-1">4 Social Jobs</div>
+                      <div className="text-sybrin-blue-700">How decision-makers want to be perceived by peers, boards, and industry</div>
                     </div>
                   </div>
                 </div>
@@ -692,7 +692,7 @@ const JTBDIntelligenceDashboard = () => {
                         <div className="flex items-center gap-3 mb-2">
                           <div className={`px-3 py-1 rounded text-xs font-semibold uppercase tracking-wide ${
                             job.category === 'Regulatory' ? 'bg-red-100 text-red-700' :
-                            job.category === 'Scaling' ? 'bg-blue-100 text-blue-700' :
+                            job.category === 'Scaling' ? 'bg-sybrin-blue-100 text-sybrin-blue-700' :
                             job.category === 'Rural' ? 'bg-green-100 text-green-700' :
                             job.category === 'Payments' ? 'bg-purple-100 text-purple-700' :
                             'bg-orange-100 text-orange-700'
@@ -746,7 +746,7 @@ const JTBDIntelligenceDashboard = () => {
                             <FileText className="w-4 h-4" />
                             Direct Quote from Research
                           </div>
-                          <div className="bg-blue-50 border-l-4 border-blue-400 p-3 italic text-gray-700">
+                          <div className="bg-sybrin-blue-50 border-l-4 border-sybrin-blue-400 p-3 italic text-gray-700">
                             "{job.evidence}"
                           </div>
                         </div>
@@ -759,7 +759,7 @@ const JTBDIntelligenceDashboard = () => {
                           <div className="space-y-2">
                             {job.circumstances.map((circ, idx) => (
                               <div key={idx} className="flex gap-2">
-                                <span className="text-blue-500 mt-1">•</span>
+                                <span className="text-sybrin-blue-500 mt-1">•</span>
                                 <span className="text-gray-700 leading-relaxed">{circ}</span>
                               </div>
                             ))}
@@ -1020,7 +1020,7 @@ const JTBDIntelligenceDashboard = () => {
                                   </div>
                                   <div className={`px-2 py-1 rounded text-xs font-medium ${
                                     app.status === 'deployed' ? 'bg-green-100 text-green-700' :
-                                    app.status === 'deploying' ? 'bg-blue-100 text-blue-700' :
+                                    app.status === 'deploying' ? 'bg-sybrin-blue-100 text-sybrin-blue-700' :
                                     app.status === 'piloting' ? 'bg-yellow-100 text-yellow-700' :
                                     app.status === 'development' ? 'bg-orange-100 text-orange-700' :
                                     app.status === 'bundled' ? 'bg-purple-100 text-purple-700' :
@@ -1130,8 +1130,8 @@ const JTBDIntelligenceDashboard = () => {
                         className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
                       >
                         <div className="flex items-center gap-4">
-                          <div className="p-2 rounded-lg bg-blue-100">
-                            <Icon className="w-5 h-5 text-blue-600" />
+                          <div className="p-2 rounded-lg bg-sybrin-blue-100">
+                            <Icon className="w-5 h-5 text-sybrin-blue-600" />
                           </div>
                           <div className="text-left">
                             <div className="font-bold text-gray-900">{family.name}</div>
@@ -1186,14 +1186,14 @@ const JTBDIntelligenceDashboard = () => {
 
               <div className="space-y-4">
                 {metaJobs.map((job) => (
-                  <div key={job.id} className="bg-white border-2 border-blue-200 rounded-lg overflow-hidden">
+                  <div key={job.id} className="bg-white border-2 border-sybrin-blue-200 rounded-lg overflow-hidden">
                     <button
                       onClick={() => toggleSection(job.id)}
-                      className="w-full px-6 py-4 flex items-center justify-between hover:bg-blue-50 transition-colors"
+                      className="w-full px-6 py-4 flex items-center justify-between hover:bg-sybrin-blue-50 transition-colors"
                     >
                       <div className="flex-1 text-left">
                         <div className="text-lg font-bold text-gray-900">{job.title}</div>
-                        <div className="text-sm text-blue-600 mt-1 font-medium">Reframed: {job.reframe}</div>
+                        <div className="text-sm text-sybrin-blue-600 mt-1 font-medium">Reframed: {job.reframe}</div>
                         <div className="text-xs text-gray-500 mt-2">TAM: {job.tam}</div>
                       </div>
                       {expandedSections[job.id] ? (
@@ -1204,11 +1204,11 @@ const JTBDIntelligenceDashboard = () => {
                     </button>
 
                     {expandedSections[job.id] && (
-                      <div className="px-6 py-5 bg-blue-50 border-t-2 border-blue-200">
+                      <div className="px-6 py-5 bg-sybrin-blue-50 border-t-2 border-sybrin-blue-200">
                         <div className="text-sm font-semibold text-gray-700 mb-3">Solution Space Shift</div>
                         <div className="space-y-2">
                           {job.examples.map((example, idx) => (
-                            <div key={idx} className="bg-white border border-blue-200 rounded p-3 text-sm text-gray-700">
+                            <div key={idx} className="bg-white border border-sybrin-blue-200 rounded p-3 text-sm text-gray-700">
                               {example}
                             </div>
                           ))}
@@ -1221,7 +1221,7 @@ const JTBDIntelligenceDashboard = () => {
             </div>
 
             {/* Strategic Timeline */}
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg p-6">
+            <div className="bg-gradient-to-r from-sybrin-blue-600 to-purple-600 text-white rounded-lg p-6">
               <h3 className="text-xl font-bold mb-4">Strategic Roadmap by Abstraction Level</h3>
               <div className="grid md:grid-cols-3 gap-4">
                 <div className="bg-white bg-opacity-20 backdrop-blur rounded-lg p-4">

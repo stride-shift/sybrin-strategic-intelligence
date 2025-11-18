@@ -126,14 +126,14 @@ const MarketReadinessDashboard = () => {
   const getTemperatureIcon = (temp) => {
     if (temp?.includes('HOT')) return <Flame className="w-5 h-5 text-red-500" />
     if (temp?.includes('WARM')) return <Sun className="w-5 h-5 text-orange-500" />
-    if (temp?.includes('COOL')) return <CloudRain className="w-5 h-5 text-blue-500" />
+    if (temp?.includes('COOL')) return <CloudRain className="w-5 h-5 text-sybrin-blue-500" />
     return <Snowflake className="w-5 h-5 text-gray-400" />
   }
 
   const getTemperatureColor = (temp) => {
     if (temp?.includes('HOT')) return 'text-red-600 bg-red-50 border-red-200'
     if (temp?.includes('WARM')) return 'text-orange-600 bg-orange-50 border-orange-200'
-    if (temp?.includes('COOL')) return 'text-blue-600 bg-blue-50 border-blue-200'
+    if (temp?.includes('COOL')) return 'text-sybrin-blue-600 bg-sybrin-blue-50 border-sybrin-blue-200'
     return 'text-gray-600 bg-gray-50 border-gray-200'
   }
 
@@ -217,14 +217,14 @@ const MarketReadinessDashboard = () => {
               placeholder="Search markets..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="pl-10 pr-3 py-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
             />
           </div>
 
           <select
             value={selectedTemperature}
             onChange={(e) => setSelectedTemperature(e.target.value)}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sybrin-blue-500"
           >
             <option value="all">All Temperatures</option>
             {getUniqueTemperatures().map(temp => (
@@ -232,9 +232,9 @@ const MarketReadinessDashboard = () => {
             ))}
           </select>
 
-          <div className="flex items-center justify-between px-3 py-2 bg-blue-50 rounded-md">
-            <span className="text-sm font-medium text-blue-900">Markets:</span>
-            <span className="text-lg font-bold text-blue-600">{filteredData.length}</span>
+          <div className="flex items-center justify-between px-3 py-2 bg-sybrin-blue-50 rounded-md">
+            <span className="text-sm font-medium text-sybrin-blue-900">Markets:</span>
+            <span className="text-lg font-bold text-sybrin-blue-600">{filteredData.length}</span>
           </div>
         </div>
       </div>
@@ -325,7 +325,7 @@ const MarketReadinessDashboard = () => {
                     </td>
                     <td className="px-4 py-3 text-center">
                       <div className="flex items-center justify-center gap-1">
-                        <Users className="w-4 h-4 text-blue-500" />
+                        <Users className="w-4 h-4 text-sybrin-blue-500" />
                         <span className="text-sm font-medium text-gray-900">{item.total_institutions || 0}</span>
                       </div>
                     </td>
@@ -337,7 +337,7 @@ const MarketReadinessDashboard = () => {
                     <td className="px-4 py-3 text-center">
                       <button
                         onClick={() => toggleRowExpansion(item.geography)}
-                        className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                        className="text-sybrin-blue-600 hover:text-sybrin-blue-800 text-sm font-medium"
                       >
                         {expandedRows.has(item.geography) ? 'Hide' : 'Details'}
                       </button>

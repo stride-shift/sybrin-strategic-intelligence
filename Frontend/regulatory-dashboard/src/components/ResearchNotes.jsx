@@ -98,7 +98,7 @@ const ResearchNotes = () => {
       <div className="bg-white border-b border-gray-200 px-6 py-6 shadow-sm">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-3 mb-4">
-            <div className="bg-gradient-to-br from-purple-500 to-blue-600 p-3 rounded-lg">
+            <div className="bg-gradient-to-br from-purple-500 to-sybrin-blue-600 p-3 rounded-lg">
               <BookMarked className="w-6 h-6 text-white" />
             </div>
             <div>
