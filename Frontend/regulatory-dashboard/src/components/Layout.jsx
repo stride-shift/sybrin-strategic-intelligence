@@ -65,10 +65,17 @@ const Layout = ({ children }) => {
           name: 'JTBD Intelligence',
           icon: Zap,
           description: 'Jobs-to-be-Done strategic analysis'
-        },
+        }
+      ]
+    },
+    {
+      id: 'research',
+      title: 'Research Chat',
+      icon: MessageSquare,
+      items: [
         {
           path: '/research-chat',
-          name: 'Research Assistant',
+          name: 'Chat Assistant',
           icon: MessageSquare,
           description: 'AI-powered research Q&A (GPT-5.1)'
         },
