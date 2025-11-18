@@ -24,7 +24,8 @@ import {
   Clock,
   Lightbulb,
   MessageSquare,
-  Zap
+  Zap,
+  BookMarked
 } from 'lucide-react'
 
 const Layout = ({ children }) => {
@@ -70,6 +71,12 @@ const Layout = ({ children }) => {
           name: 'Research Assistant',
           icon: MessageSquare,
           description: 'AI-powered research Q&A (GPT-5.1)'
+        },
+        {
+          path: '/research-notes',
+          name: 'Saved Notes',
+          icon: BookMarked,
+          description: 'View saved research answers'
         }
       ]
     },

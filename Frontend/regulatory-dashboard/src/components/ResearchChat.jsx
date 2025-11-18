@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { flushSync } from 'react-dom';
-import { Send, Bot, User, FileText, Loader2, Sparkles } from 'lucide-react';
+import { Send, Bot, User, FileText, Loader2, Sparkles, Save, Check } from 'lucide-react';
 import { Streamdown } from 'streamdown';
 
 const ResearchChat = () => {
@@ -8,6 +8,11 @@ const ResearchChat = () => {
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [previousResponseId, setPreviousResponseId] = useState(null);
+  const [savingNoteId, setSavingNoteId] = useState(null);
+  const [savedNoteIds, setSavedNoteIds] = useState(new Set());
+  const [showSaveDialog, setShowSaveDialog] = useState(false);
+  const [noteToSave, setNoteToSave] = useState(null);
+  const [noteName, setNoteName] = useState('');
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
 
@@ -167,6 +172,50 @@ const ResearchChat = () => {
     inputRef.current?.focus();
   };
 
+  const openSaveDialog = (message, userQuestion) => {
+    setNoteToSave({ message, userQuestion });
+    setNoteName('');
+    setShowSaveDialog(true);
+  };
+
+  const closeSaveDialog = () => {
+    setShowSaveDialog(false);
+    setNoteToSave(null);
+    setNoteName('');
+  };
+
+  const saveNote = async () => {
+    if (!noteName.trim() || !noteToSave) return;
+
+    setSavingNoteId(noteToSave.message.id);
+
+    try {
+      const response = await fetch('/api/save-note', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          noteName: noteName.trim(),
+          question: noteToSave.userQuestion,
+          answer: noteToSave.message.content,
+          sources: noteToSave.message.citations || []
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to save note');
+      }
+
+      // Mark this message as saved
+      setSavedNoteIds(prev => new Set([...prev, noteToSave.message.id]));
+      closeSaveDialog();
+    } catch (error) {
+      console.error('Error saving note:', error);
+      alert('Failed to save note. Please try again.');
+    } finally {
+      setSavingNoteId(null);
+    }
+  };
+
   return (
     <div className="flex flex-col h-screen bg-gray-50">
       {/* Header */}
@@ -223,7 +272,13 @@ const ResearchChat = () => {
             </div>
           ) : (
             <div className="space-y-6">
-              {messages.map((message) => (
+              {messages.map((message, idx) => {
+                // Find the user question that corresponds to this assistant answer
+                const userQuestion = message.type === 'assistant' && idx > 0 && messages[idx - 1].type === 'user'
+                  ? messages[idx - 1].content
+                  : '';
+
+                return (
                 <div
                   key={message.id}
                   className={`flex gap-4 ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
@@ -281,6 +336,33 @@ const ResearchChat = () => {
                               </div>
                             </div>
                           )}
+
+                          {/* Save Button */}
+                          {!message.isStreaming && message.content && (
+                            <div className="mt-4 pt-4 border-t border-gray-200">
+                              <button
+                                onClick={() => openSaveDialog(message, userQuestion)}
+                                disabled={savedNoteIds.has(message.id)}
+                                className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                                  savedNoteIds.has(message.id)
+                                    ? 'bg-green-50 text-green-700 cursor-default'
+                                    : 'bg-purple-50 text-purple-700 hover:bg-purple-100'
+                                }`}
+                              >
+                                {savedNoteIds.has(message.id) ? (
+                                  <>
+                                    <Check className="w-4 h-4" />
+                                    Saved to Notes
+                                  </>
+                                ) : (
+                                  <>
+                                    <Save className="w-4 h-4" />
+                                    Save as Note
+                                  </>
+                                )}
+                              </button>
+                            </div>
+                          )}
                         </div>
                       ) : (
                         <p className="text-sm whitespace-pre-wrap">{message.content}</p>
@@ -294,7 +376,8 @@ const ResearchChat = () => {
                     </div>
                   )}
                 </div>
-              ))}
+              );
+              })}
 
               {/* Loading indicator */}
               {isLoading && (
@@ -353,6 +436,80 @@ const ResearchChat = () => {
           </p>
         </div>
       </div>
+
+      {/* Save Note Dialog */}
+      {showSaveDialog && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg shadow-xl max-w-md w-full p-6">
+            <h3 className="text-lg font-bold text-gray-900 mb-4">Save Note</h3>
+
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Note Name
+              </label>
+              <input
+                type="text"
+                value={noteName}
+                onChange={(e) => setNoteName(e.target.value)}
+                placeholder="e.g., Kenya Market Entry Barriers"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                autoFocus
+                onKeyPress={(e) => {
+                  if (e.key === 'Enter' && noteName.trim()) {
+                    saveNote();
+                  }
+                }}
+              />
+            </div>
+
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Question
+              </label>
+              <p className="text-sm text-gray-600 bg-gray-50 rounded p-2">
+                {noteToSave?.userQuestion || 'No question available'}
+              </p>
+            </div>
+
+            <div className="mb-6">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Answer Preview
+              </label>
+              <div className="text-xs text-gray-600 bg-gray-50 rounded p-2 max-h-32 overflow-y-auto">
+                {noteToSave?.message.content.substring(0, 300)}
+                {noteToSave?.message.content.length > 300 && '...'}
+              </div>
+            </div>
+
+            <div className="flex gap-3 justify-end">
+              <button
+                onClick={closeSaveDialog}
+                className="px-4 py-2 text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg font-medium transition-colors"
+                disabled={savingNoteId !== null}
+              >
+                Cancel
+              </button>
+              <button
+                onClick={saveNote}
+                disabled={!noteName.trim() || savingNoteId !== null}
+                className="px-4 py-2 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-300 text-white rounded-lg font-medium transition-colors disabled:cursor-not-allowed flex items-center gap-2"
+              >
+                {savingNoteId ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    Saving...
+                  </>
+                ) : (
+                  <>
+                    <Save className="w-4 h-4" />
+                    Save Note
+                  </>
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

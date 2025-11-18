@@ -25,6 +25,7 @@ import StrategicIntelligenceFAQ from './components/StrategicIntelligenceFAQ'
 import StrategicIntelligenceFAQ2 from './components/StrategicIntelligenceFAQ2'
 import JTBDIntelligenceDashboard from './components/JTBDIntelligenceDashboard'
 import ResearchChat from './components/ResearchChat'
+import ResearchNotes from './components/ResearchNotes'
 import './App.css'
 
 function App() {
@@ -90,6 +91,7 @@ function App() {
           <Route path="/strategic-intelligence" element={<StrategicIntelligenceFAQ2 />} />
           <Route path="/jtbd-intelligence" element={<JTBDIntelligenceDashboard />} />
           <Route path="/research-chat" element={<ResearchChat />} />
+          <Route path="/research-notes" element={<ResearchNotes />} />
 
           {/* Redirect old routes to new Sy2 versions */}
           <Route path="/customers" element={<Navigate to="/sy2-customer-intelligence" replace />} />
