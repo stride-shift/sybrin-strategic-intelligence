@@ -333,9 +333,9 @@ const Layout = ({ children }) => {
 
           {/* Research Methodology - Special Section */}
           {isOpen && (
-            <div className="border-t border-gray-200 bg-gradient-to-br from-purple-50 to-indigo-50">
+            <div className="border-t border-gray-200 bg-gradient-to-br from-sybrin-blue-50 to-gray-50">
               <div className="p-4">
-                <div className="text-xs font-semibold text-purple-900 mb-2 flex items-center gap-1">
+                <div className="text-xs font-semibold text-sybrin-blue-900 mb-2 flex items-center gap-1">
                   <Microscope className="w-3 h-3" />
                   HOW WE WORK
                 </div>
@@ -343,27 +343,27 @@ const Layout = ({ children }) => {
                   to="/research-methodology"
                   className={`group flex items-center justify-between p-3 rounded-lg transition-all duration-200 bg-white/70 backdrop-blur-sm border ${
                     isActive('/research-methodology')
-                      ? 'border-purple-400 shadow-md'
-                      : 'border-purple-200 hover:border-purple-300 hover:shadow-sm'
+                      ? 'border-sybrin-blue-400 shadow-md'
+                      : 'border-sybrin-blue-200 hover:border-sybrin-blue-300 hover:shadow-sm'
                   }`}
                 >
                   <div className="flex items-center space-x-3">
                     <Microscope className={`w-5 h-5 transition-colors ${
-                      isActive('/research-methodology') ? 'text-purple-600' : 'text-purple-400'
+                      isActive('/research-methodology') ? 'text-sybrin-blue-600' : 'text-sybrin-blue-400'
                     }`} />
                     <div>
                       <p className={`text-sm font-medium transition-colors ${
-                        isActive('/research-methodology') ? 'text-purple-900' : 'text-purple-700'
+                        isActive('/research-methodology') ? 'text-sybrin-blue-900' : 'text-sybrin-blue-700'
                       }`}>
                         Research Methodology
                       </p>
-                      <p className="text-xs text-purple-600">
+                      <p className="text-xs text-sybrin-blue-600">
                         Our systematic approach & framework
                       </p>
                     </div>
                   </div>
                   <ChevronRight className={`w-4 h-4 transition-colors ${
-                    isActive('/research-methodology') ? 'text-purple-600' : 'text-purple-300'
+                    isActive('/research-methodology') ? 'text-sybrin-blue-600' : 'text-sybrin-blue-300'
                   }`} />
                 </Link>
               </div>
@@ -372,18 +372,18 @@ const Layout = ({ children }) => {
 
           {/* Collapsed State - Research Methodology Icon */}
           {!isOpen && (
-            <div className="border-t border-gray-200 bg-gradient-to-br from-purple-50 to-indigo-50 p-2">
+            <div className="border-t border-gray-200 bg-gradient-to-br from-sybrin-blue-50 to-gray-50 p-2">
               <Link
                 to="/research-methodology"
                 title="Research Methodology"
                 className={`flex items-center justify-center p-3 rounded-lg transition-all duration-200 ${
                   isActive('/research-methodology')
-                    ? 'bg-purple-100 shadow-sm'
-                    : 'hover:bg-purple-100/50'
+                    ? 'bg-sybrin-blue-100 shadow-sm'
+                    : 'hover:bg-sybrin-blue-100/50'
                 }`}
               >
                 <Microscope className={`w-5 h-5 ${
-                  isActive('/research-methodology') ? 'text-purple-600' : 'text-purple-500'
+                  isActive('/research-methodology') ? 'text-sybrin-blue-600' : 'text-sybrin-blue-500'
                 }`} />
               </Link>
             </div>
