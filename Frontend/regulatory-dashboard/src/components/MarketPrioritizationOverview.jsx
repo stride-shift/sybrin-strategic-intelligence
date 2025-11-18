@@ -4,7 +4,8 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
 const MarketPrioritizationOverview = ({ overviewData }) => {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true); // Start expanded by default
+  const [showDetailedAnalysis, setShowDetailedAnalysis] = useState(false);
   const [selectedTimeframe, setSelectedTimeframe] = useState('18-month');
 
   if (!overviewData) {
@@ -58,31 +59,34 @@ const MarketPrioritizationOverview = ({ overviewData }) => {
 
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-200 mb-6">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-6 rounded-t-lg">
+      {/* Header - Clickable */}
+      <button
+        onClick={() => setExpanded(!expanded)}
+        className="w-full bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-6 rounded-t-lg hover:from-blue-700 hover:to-indigo-800 transition-colors"
+      >
         <div className="flex items-start justify-between">
           <div className="flex items-start gap-4">
             <div className="bg-white/20 p-3 rounded-lg">
               <Globe className="w-8 h-8" />
             </div>
-            <div>
+            <div className="text-left">
               <h2 className="text-2xl font-bold mb-2">Market Prioritization Matrix</h2>
               <p className="text-blue-100 text-sm">
                 Strategic ranking of 14 markets for Sybrin's expansion
               </p>
             </div>
           </div>
-          <button
-            onClick={() => setExpanded(!expanded)}
-            className="bg-white/20 hover:bg-white/30 p-2 rounded-lg transition-colors"
-          >
+          <div className="bg-white/20 p-2 rounded-lg">
             {expanded ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
-          </button>
+          </div>
         </div>
-      </div>
+      </button>
 
-      {/* Summary Card */}
-      <div className="p-6 border-b border-gray-200">
+      {/* Collapsible Content */}
+      {expanded && (
+        <div>
+          {/* Summary Card */}
+          <div className="p-6 border-b border-gray-200">
         <div className="flex items-start gap-3 mb-4">
           <TrendingUp className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
           <div className="flex-1">
@@ -171,10 +175,10 @@ const MarketPrioritizationOverview = ({ overviewData }) => {
         </div>
 
         {/* CTA to detailed analysis */}
-        {!expanded && (
+        {!showDetailedAnalysis && (
           <div className="mt-6 text-center">
             <button
-              onClick={() => setExpanded(true)}
+              onClick={() => setShowDetailedAnalysis(true)}
               className="text-blue-600 hover:text-blue-700 font-medium text-sm flex items-center gap-2 mx-auto"
             >
               View Detailed Country Analysis
@@ -183,9 +187,11 @@ const MarketPrioritizationOverview = ({ overviewData }) => {
           </div>
         )}
       </div>
+    </div>
+  )}
 
       {/* Expanded Full Content */}
-      {expanded && (
+      {showDetailedAnalysis && (
         <div className="border-t border-gray-200 p-6 bg-gray-50">
           <h3 className="text-lg font-bold mb-4 text-gray-900">Detailed Country-by-Country Analysis</h3>
 
@@ -232,7 +238,7 @@ const MarketPrioritizationOverview = ({ overviewData }) => {
 
           <div className="mt-4 text-center">
             <button
-              onClick={() => setExpanded(false)}
+              onClick={() => setShowDetailedAnalysis(false)}
               className="text-gray-600 hover:text-gray-700 font-medium text-sm flex items-center gap-2 mx-auto"
             >
               <ChevronUp className="w-4 h-4" />
