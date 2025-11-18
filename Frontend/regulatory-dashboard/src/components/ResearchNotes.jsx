@@ -98,13 +98,13 @@ const ResearchNotes = () => {
       <div className="bg-white border-b border-gray-200 px-6 py-6 shadow-sm">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-3 mb-4">
-            <div className="bg-gradient-to-br from-purple-500 to-sybrin-blue-600 p-3 rounded-lg">
+            <div className="bg-gradient-to-br from-sybrin-blue-500 to-sybrin-blue-600 p-3 rounded-lg">
               <BookMarked className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">Research Notes</h1>
+              <h1 className="text-2xl font-bold text-gray-900">Saved Notes</h1>
               <p className="text-sm text-gray-600">
-                {notes.length} {notes.length === 1 ? 'note' : 'notes'} saved from Research Assistant
+                {notes.length} {notes.length === 1 ? 'note' : 'notes'} saved from Chat Assistant
               </p>
             </div>
           </div>
@@ -117,7 +117,7 @@ const ResearchNotes = () => {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Search notes by name, question, or answer..."
-              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sybrin-blue-500 focus:border-transparent"
             />
           </div>
         </div>
@@ -128,7 +128,7 @@ const ResearchNotes = () => {
         {isLoading ? (
           <div className="flex items-center justify-center py-12">
             <div className="text-center">
-              <Loader2 className="w-8 h-8 animate-spin text-purple-600 mx-auto mb-3" />
+              <Loader2 className="w-8 h-8 animate-spin text-sybrin-blue-600 mx-auto mb-3" />
               <p className="text-gray-600">Loading notes...</p>
             </div>
           </div>
