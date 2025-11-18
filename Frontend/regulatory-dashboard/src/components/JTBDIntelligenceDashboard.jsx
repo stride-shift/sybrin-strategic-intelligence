@@ -14,7 +14,8 @@ import {
   TrendingUp,
   Layers,
   Lightbulb,
-  Info
+  Info,
+  FileText
 } from 'lucide-react';
 
 const JTBDIntelligenceDashboard = () => {
@@ -710,29 +711,46 @@ const JTBDIntelligenceDashboard = () => {
                     </button>
 
                     {expandedJobs[job.id] && (
-                      <div className="px-6 py-4 bg-gray-50 border-t border-gray-200 space-y-4">
+                      <div className="px-6 py-4 bg-gray-50 border-t border-gray-200 space-y-5">
                         <div>
-                          <div className="text-sm font-semibold text-gray-700 mb-1">Job Statement</div>
-                          <div className="text-gray-900">{job.statement}</div>
+                          <div className="text-sm font-semibold text-gray-700 mb-2 flex items-center gap-2">
+                            <Target className="w-4 h-4" />
+                            What They're Trying to Do
+                          </div>
+                          <div className="text-gray-900 leading-relaxed">{job.statement}</div>
                         </div>
 
                         <div>
-                          <div className="text-sm font-semibold text-gray-700 mb-1">Evidence</div>
-                          <div className="text-gray-700 italic text-sm">"{job.evidence}"</div>
+                          <div className="text-sm font-semibold text-gray-700 mb-2 flex items-center gap-2">
+                            <FileText className="w-4 h-4" />
+                            Direct Quote from Research
+                          </div>
+                          <div className="bg-blue-50 border-l-4 border-blue-400 p-3 italic text-gray-700">
+                            "{job.evidence}"
+                          </div>
                         </div>
 
                         <div>
-                          <div className="text-sm font-semibold text-gray-700 mb-2">Circumstances</div>
-                          <ul className="list-disc list-inside space-y-1">
+                          <div className="text-sm font-semibold text-gray-700 mb-2 flex items-center gap-2">
+                            <AlertCircle className="w-4 h-4" />
+                            Key Challenges
+                          </div>
+                          <div className="space-y-2">
                             {job.circumstances.map((circ, idx) => (
-                              <li key={idx} className="text-gray-700 text-sm">{circ}</li>
+                              <div key={idx} className="flex gap-2">
+                                <span className="text-blue-500 mt-1">•</span>
+                                <span className="text-gray-700 leading-relaxed">{circ}</span>
+                              </div>
                             ))}
-                          </ul>
+                          </div>
                         </div>
 
-                        <div className="bg-yellow-50 border border-yellow-200 rounded p-3">
-                          <div className="text-sm font-semibold text-yellow-900 mb-1">Underserved Need</div>
-                          <div className="text-yellow-800 text-sm">{job.underserved}</div>
+                        <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border border-orange-200 rounded-lg p-4">
+                          <div className="text-sm font-semibold text-orange-900 mb-2 flex items-center gap-2">
+                            <Lightbulb className="w-4 h-4" />
+                            Gap in the Market
+                          </div>
+                          <div className="text-gray-800 leading-relaxed">{job.underserved}</div>
                         </div>
                       </div>
                     )}

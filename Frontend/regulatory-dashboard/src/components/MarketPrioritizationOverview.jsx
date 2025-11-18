@@ -58,28 +58,20 @@ const MarketPrioritizationOverview = ({ overviewData }) => {
     "Based on research, the most attractive opportunities vary between 18-month exit view and longer-term strategic potential.";
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 mb-6">
+    <div className="bg-white rounded-lg shadow-md overflow-hidden mb-6">
       {/* Header - Clickable */}
       <button
         onClick={() => setExpanded(!expanded)}
-        className="w-full bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-6 rounded-t-lg hover:from-blue-700 hover:to-indigo-800 transition-colors"
+        className="w-full px-6 py-4 flex items-center justify-between border-l-4 border-blue-500 bg-blue-50 hover:bg-blue-100 transition-colors"
       >
-        <div className="flex items-start justify-between">
-          <div className="flex items-start gap-4">
-            <div className="bg-white/20 p-3 rounded-lg">
-              <Globe className="w-8 h-8" />
-            </div>
-            <div className="text-left">
-              <h2 className="text-2xl font-bold mb-2">Market Prioritization Matrix</h2>
-              <p className="text-blue-100 text-sm">
-                Strategic ranking of 14 markets for Sybrin's expansion
-              </p>
-            </div>
-          </div>
-          <div className="bg-white/20 p-2 rounded-lg">
-            {expanded ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+        <div className="flex items-center">
+          <Globe className="w-6 h-6 text-blue-600 mr-3" />
+          <div className="text-left">
+            <h2 className="text-lg font-bold text-gray-900">Market Prioritization Matrix</h2>
+            <p className="text-xs text-gray-600">Strategic ranking of 14 markets for Sybrin's expansion</p>
           </div>
         </div>
+        {expanded ? <ChevronUp className="w-5 h-5 text-gray-600" /> : <ChevronDown className="w-5 h-5 text-gray-600" />}
       </button>
 
       {/* Collapsible Content */}
