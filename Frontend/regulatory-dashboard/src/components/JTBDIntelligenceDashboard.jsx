@@ -676,7 +676,7 @@ const JTBDIntelligenceDashboard = () => {
 
             {/* Functional Jobs */}
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Functional Jobs (Data-Grounded)</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Functional Jobs</h2>
               <p className="text-gray-600 mb-6">
                 Jobs derived from documented challenges at 140+ named financial institutions. Evidence-based, not assumptions.
               </p>
@@ -700,12 +700,29 @@ const JTBDIntelligenceDashboard = () => {
                             {job.category}
                           </div>
                           <div className="text-sm font-medium text-gray-500">
-                            Job {job.number} - {job.customers}
+                            Job {job.number}
                           </div>
                         </div>
-                        <div className="font-semibold text-gray-900 text-lg">
-                          {job.title}
-                        </div>
+                        {(() => {
+                          const parts = job.title.split(': ');
+                          if (parts.length >= 2) {
+                            return (
+                              <>
+                                <div className="text-sm font-medium text-gray-600 mb-1">
+                                  {parts[0]}
+                                </div>
+                                <div className="font-semibold text-gray-900 text-lg">
+                                  {parts.slice(1).join(': ')}
+                                </div>
+                              </>
+                            );
+                          }
+                          return (
+                            <div className="font-semibold text-gray-900 text-lg">
+                              {job.title}
+                            </div>
+                          );
+                        })()}
                       </div>
                       {expandedJobs[job.id] ? (
                         <ChevronDown className="w-5 h-5 text-gray-400" />
@@ -765,7 +782,7 @@ const JTBDIntelligenceDashboard = () => {
 
             {/* Emotional Jobs */}
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Emotional Jobs (Inferred from Context)</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Emotional Jobs</h2>
               <p className="text-gray-600 mb-6">
                 Research documents functional jobs extensively but <strong>never directly captures emotional jobs</strong>.
                 However, we can infer these from documented situations and universal human motivations.
@@ -833,7 +850,7 @@ const JTBDIntelligenceDashboard = () => {
 
             {/* Social Jobs */}
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Social Jobs (Reputation & Perception)</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Social Jobs</h2>
               <p className="text-gray-600 mb-6">
                 How decision-makers want to be perceived by peers, boards, staff, and the industry.
                 These social jobs drive hiring/firing decisions but are <strong>disguised in professional language</strong>.
