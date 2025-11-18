@@ -211,7 +211,14 @@ const JTBDIntelligenceDashboard = () => {
       title: 'Sleep at night knowing we won\'t fail the regulatory exam',
       statement: 'Eliminate the 2am anxiety about "what if we fail the BSP exam and I\'m personally liable?"',
       context: 'Philippines AFASA 2025 deadline with penalties for non-compliance. Rural banks with limited IT budgets facing same rules as Tier 1 banks.',
-      whyUnstated: 'Executives don\'t admit fear in research interviews. "Regulatory compliance" sounds professional; "I\'m scared of being fired" doesn\'t.'
+      whyUnstated: 'Executives don\'t admit fear in research interviews. "Regulatory compliance" sounds professional; "I\'m scared of being fired" doesn\'t.',
+      whiteSpace: [
+        '"Compliance Insurance" Product – Offer regulatory guarantee with penalty coverage: "We guarantee BSP compliance or we cover your audit penalties." Turn anxiety into contractual peace-of-mind.',
+        'Regulatory Monitoring Service – Subscription that monitors 50+ regulators across markets, alerts 12-24 months before mandates hit. Predict regulatory change before it\'s mandated.',
+        'Audit-Ready Documentation – Automated compliance reporting that generates BSP-ready audit trails, examination responses, and board attestations. Turn "audit prep panic" into "audit prep automation."',
+        'Compliance-as-Differentiation Marketing – Help banks turn "we\'re compliant" into competitive advantage: "We\'re the ONLY rural bank that passed AFASA exam in first cycle." Co-create marketing campaigns.',
+        'First-Mover Positioning Service – Help banks comply 6+ months early, position as industry leaders vs. late adopters: "While competitors scramble, we\'re already certified."'
+      ]
     },
     {
       id: 'e2',
@@ -219,7 +226,15 @@ const JTBDIntelligenceDashboard = () => {
       title: 'Avoid being the CEO who killed the bank with a bad technology decision',
       statement: 'Make technology investments that won\'t become the case study in "failed digital transformations."',
       context: 'Multiple mentions of "Legacy or EOL core banking systems", multi-million $ core bets. Investrust Bank Zambia closure (2024) = cautionary tale.',
-      whyUnstated: 'Career-ending fear is too vulnerable to admit. Framed as "ROI analysis" or "vendor evaluation" instead.'
+      whyUnstated: 'Career-ending fear is too vulnerable to admit. Framed as "ROI analysis" or "vendor evaluation" instead.',
+      whiteSpace: [
+        'Reference Customer Program – Cultivate 10+ "lighthouse" banks willing to speak publicly: "We\'re live, fraud is down 40%, here\'s our CEO\'s number." Turn vendor claims into peer validation.',
+        'Phased Implementation with Rollback Guarantees – Offer staged deployment: pilot → scale → full, with contractual rollback to previous system if KPIs aren\'t met. Remove career-ending downside risk.',
+        'Proof-of-Value Pilot Pricing – "Pay nothing for 90 days, then pay based on fraud prevented / costs reduced." Let results speak before commitment. Performance-based step-ups reduce upfront risk.',
+        'Migration Insurance – Guarantee zero downtime migration or cover operational losses. Explicitly insure against "we killed the bank" scenario with contractual backstops.',
+        '"Battle-Tested" Positioning – Emphasize 33-year history, 240 solutions, 99.9%+ uptime on mission-critical payments. Position as "proven" vs. "unproven startups" or "risky new vendors."',
+        'Executive Peer Advisory Council – Create closed-door forum where CEOs share "what went wrong" stories. Turn individual fear into collective risk management. Position Sybrin as trusted partner, not vendor.'
+      ]
     },
     {
       id: 'e3',
@@ -227,7 +242,15 @@ const JTBDIntelligenceDashboard = () => {
       title: 'Feel like an innovator (not a dinosaur) when board members are 30 years younger',
       statement: 'Prove to younger board members that I understand digital banking despite being 55+ years old.',
       context: 'KCB, Equity Bank described as "digital leadership". Competition from digital-only banks. Generational shift in financial services.',
-      whyUnstated: 'Ageism concerns are taboo. Imposter syndrome doesn\'t get documented in market research.'
+      whyUnstated: 'Ageism concerns are taboo. Imposter syndrome doesn\'t get documented in market research.',
+      whiteSpace: [
+        'Innovation Showcase Program – Create "Digital Leadership Summits" where bank CEOs present their innovations to regulators, donors, press. Give executives public platforms to be seen as visionaries.',
+        'Thought Leadership Ghost-Writing – Co-author whitepapers, articles, conference keynotes with bank executives: "How [Bank Name] is Transforming African Banking." Turn implementations into executive personal brands.',
+        'Industry Award Nominations – Proactively nominate client banks for "Digital Bank of the Year," "Innovation Leader," etc. Turn technology adoption into executive recognition and reputation building.',
+        'Executive Education Programs – Offer "AI in Banking" / "Digital Transformation Masterclass" certifications for senior executives. Let them learn without admitting they don\'t know. Badge-able credentials.',
+        'Early Adopter Recognition – Create "Sybrin Innovation Council" for first 20 banks adopting new tech. Exclusive club positioning: "You\'re not a follower, you\'re a pioneer." Feed innovator identity.',
+        'Board Presentation Kits – Provide executives with polished, board-ready decks showing their bank vs. industry benchmarks on digital metrics. Make them look smart in boardrooms with younger members.'
+      ]
     },
     {
       id: 'e4',
@@ -235,7 +258,15 @@ const JTBDIntelligenceDashboard = () => {
       title: 'Feel confident I won\'t be scapegoated when this project inevitably has problems',
       statement: 'Protect my reputation and employment when the digital transformation project hits inevitable roadblocks.',
       context: 'Tanzania post-core migration projects. Multiple mentions of "integration," "migration," "system harmonization".',
-      whyUnstated: 'CIOs can\'t admit they expect projects to fail. "Risk management" sounds better than "cover my ass".'
+      whyUnstated: 'CIOs can\'t admit they expect projects to fail. "Risk management" sounds better than "cover my ass".',
+      whiteSpace: [
+        'CYA Documentation Service – Automated project governance: decision logs, stakeholder sign-offs, risk registers with board approvals. Create audit trail proving "I followed best practice."',
+        'Shared Accountability Contracts – Explicitly document shared ownership between bank IT, Sybrin, and third parties. No single scapegoat if things go wrong. Contractual protection from blame.',
+        'Continuous ROI Reporting – Real-time dashboards showing project value delivered month-by-month: "Even if we stopped today, we\'ve already saved $X." Build defensibility before final delivery.',
+        'Pre-Mortem Risk Workshops – Joint sessions identifying "what could go wrong" and documenting mitigation plans signed by bank executives. Make failure everyone\'s problem, not just the CIO\'s.',
+        'Industry Standard Benchmarking – Position every decision as "standard practice": "97% of African banks use this approach." Turn individual decisions into industry norms. Safety in numbers.',
+        'Escalation Fast-Track – Guarantee senior leadership engagement within 4 hours for any project blocker. Show stakeholders that problems get executive attention, not CIO blame.'
+      ]
     },
     {
       id: 'e5',
@@ -243,7 +274,15 @@ const JTBDIntelligenceDashboard = () => {
       title: 'Feel competent when vendors assume I understand technology I don\'t',
       statement: 'Appear knowledgeable in vendor meetings when I don\'t actually understand APIs, cloud architecture, or machine learning.',
       context: 'Tanzania community banks: "Limited IT budgets and small teams". Smaller banks have shortage of skilled IT staff.',
-      whyUnstated: 'Professional competence is core to identity. Admitting ignorance = career risk.'
+      whyUnstated: 'Professional competence is core to identity. Admitting ignorance = career risk.',
+      whiteSpace: [
+        'Simplified Evaluation Frameworks – "Banking Technology Decision Guide" (non-technical): rate vendors on 5 simple criteria. Let non-technical buyers make defensible decisions without technical depth.',
+        'Plain English Documentation – Replace technical jargon with banking language: "API" → "how systems talk to each other," "cloud" → "hosted by us, not you." Make tech accessible without condescension.',
+        'Guided Decision Workshops – Facilitate vendor selection using structured frameworks that don\'t assume technical knowledge. Lead buyers to right answer without exposing their knowledge gaps.',
+        'Technical Translator Service – Assign a "technical liaison" who explains vendor proposals in plain language privately before formal meetings. Let buyers ask "dumb questions" safely.',
+        'Peer Learning Groups – Create cohorts of non-technical IT leaders from similar-sized banks: "We\'re all figuring this out together." Normalize not knowing, reduce shame.',
+        'Pre-Call Briefings – Before vendor demos, send 1-page "What to Listen For" guides: "When they say X, that means Y. Good signs: A, B. Red flags: C, D." Arm buyers with confidence.'
+      ]
     },
     {
       id: 'e6',
@@ -251,7 +290,15 @@ const JTBDIntelligenceDashboard = () => {
       title: 'Avoid feeling stupid when learning new systems that younger colleagues master instantly',
       statement: 'Learn new digital tools without feeling humiliated by my age or education level.',
       context: 'Massive digital transformation. Equity Bank 98% digital target = radical workflow changes. 32k Zanaco agents being "digitized".',
-      whyUnstated: 'Frontline staff rarely interviewed in market research. Vulnerability about learning difficulties is shameful.'
+      whyUnstated: 'Frontline Staff rarely interviewed in market research. Vulnerability about learning difficulties is shameful.',
+      whiteSpace: [
+        'Age-Inclusive Training Design – Training that doesn\'t assume digital native comfort: larger fonts, step-by-step screenshots, no jargon. Designed for 50+ year-olds who\'ve never used smartphones.',
+        'Peer Mentoring (not youth teaching elders) – Pair experienced staff together for mutual learning. Avoid "young person teaches old person" dynamic that reinforces age hierarchy and shame.',
+        'Private Practice Environments – Sandbox systems where staff can practice without anyone watching. Remove performance anxiety; mistakes don\'t have witnesses.',
+        'Gradual Rollout with Opt-Out Escape – Phase new tools in slowly with graceful exits: "If this doesn\'t work for you, stay on old system for 6 more months." Reduce pressure, increase adoption.',
+        'Success Stories from Older Staff – Showcase 55+ year-old staff who mastered new systems. "If I can do it, you can too" messaging from relatable peers, not 25-year-old trainers.',
+        'Accessible Certification Programs – Badge/certificate programs for completing digital training. Give older staff visible proof of competence to display to peers and family.'
+      ]
     },
     {
       id: 'e7',
@@ -259,7 +306,15 @@ const JTBDIntelligenceDashboard = () => {
       title: 'Feel proud of my work (not exploitative) when charging poor customers fees',
       statement: 'Reconcile "we serve the poor" mission with "we charge 30% interest" reality without feeling like a predator.',
       context: 'Agora MFI Zambia: 90% rural poor clients. CARD Bank: poverty eradication mission. MFIs with financial inclusion mandates vs. profit pressures.',
-      whyUnstated: 'Moral discomfort isn\'t professional. Loan officers won\'t admit to guilt in interviews.'
+      whyUnstated: 'Moral discomfort isn\'t professional. Loan officers won\'t admit to guilt in interviews.',
+      whiteSpace: [
+        'Impact Storytelling Tools – Dashboards showing "Because of your work, 47 families bought their first cow, 12 kids went to secondary school." Turn transactions into visible social impact.',
+        'Transparent Pricing Justification – Educational materials explaining cost structures: "30% interest covers 100km bike rides, loan defaults, rural operations." Turn guilt into understanding.',
+        'Client Success Showcases – Regular stories of customer transformations: "Started with $50 loan, now employs 3 people." Give staff proof their work creates opportunity, not exploitation.',
+        'Ethical Product Design – Products with explicit poverty-exit goals: "Graduation Loans" designed to move clients from survival → small business. Make anti-poverty mission tangible.',
+        'Financial Literacy Integration – Require loan officers to teach basic finance alongside lending. Transform role from "debt collector" to "educator and advocate."',
+        'Community Impact Metrics – Track and celebrate community-level outcomes: poverty rates, school enrollment, business creation. Make staff part of measurable social change.'
+      ]
     },
     {
       id: 'e8',
@@ -267,7 +322,15 @@ const JTBDIntelligenceDashboard = () => {
       title: 'Feel safe when traveling alone to remote villages with cash/devices',
       statement: 'Do my job in dangerous environments without constant fear of robbery, assault, or device theft.',
       context: 'Agora MFI Zambia: bike-based field officers. Rural connectivity issues. Agent networks in high-crime areas.',
-      whyUnstated: 'Personal safety concerns sound weak. Employers may dismiss as "part of the job".'
+      whyUnstated: 'Personal safety concerns sound weak. Employers may dismiss as "part of the job".',
+      whiteSpace: [
+        'Cashless Field Operations – Eliminate cash handling entirely: all transactions digital, instant settlement. Remove primary robbery target (cash) from field staff.',
+        'Device Insurance & Replacement Programs – "Your phone gets stolen, we replace it same day, no questions asked." Remove financial fear barrier to reporting theft.',
+        'Safety Check-In Systems – Mandatory location pings every 2 hours with automatic escalation if missed. Staff know someone is watching and will respond.',
+        'Community Safety Partnerships – Partner with village leaders for "safe house" networks: designated homes where field officers can seek help if threatened.',
+        'Visible Security Protocols – Logo-free vehicles, plain-clothes staff, randomized schedules. Make it non-obvious who is carrying value, reduce targeting.',
+        'Peer Travel Programs – Field officers travel in pairs or small teams in high-risk areas. Share costs across efficiency, provide mutual protection and emotional support.'
+      ]
     }
   ];
 
@@ -278,7 +341,15 @@ const JTBDIntelligenceDashboard = () => {
       title: 'Be seen as bold innovator by peers (not cautious bureaucrat)',
       statement: 'When industry peers mention our bank, I want them to say "cutting-edge" not "safe and boring."',
       context: 'NMB Tanzania: "Euromoney Best Digital Bank 2025". CRDB, Equity Bank, KCB all compete on "digital leadership" positioning.',
-      whyUnstated: 'Vanity/ego are socially unacceptable motivations. Disguised as "brand positioning" or "competitive differentiation".'
+      whyUnstated: 'Vanity/ego are socially unacceptable motivations. Disguised as "brand positioning" or "competitive differentiation".',
+      whiteSpace: [
+        'Industry Award Nomination Services – Proactively nominate banks for "Digital Bank of Year," "Innovation Leader" awards. Turn implementations into executive personal brands and peer recognition.',
+        'Executive Speaking Opportunities – Place bank leaders as keynote speakers at regional banking conferences. Give platform to be seen as thought leaders by peers.',
+        'Innovation Showcase Events – Host or co-host "Digital Banking Summit" where executives present their innovations to regulators, press, competitors. Public stage for innovation positioning.',
+        'Media Relations Programs – Secure Forbes/Euromoney features: "How [Bank] is transforming African banking." Turn tech adoption into executive reputation building.',
+        'Early Adopter Councils – Create exclusive "Innovation Council" for first 20 banks adopting new tech. VIP club positioning: "You\'re not a follower, you\'re a pioneer."',
+        'Peer Benchmarking Reports – Publish industry reports showing bank\'s digital metrics vs. competitors. Give executives data to prove "we\'re ahead of the curve" in boardrooms and cocktail parties.'
+      ]
     },
     {
       id: 's2',
@@ -286,7 +357,15 @@ const JTBDIntelligenceDashboard = () => {
       title: 'Maintain status/respect when my branches are closing and staff are being laid off',
       statement: 'Execute digital transformation without being seen as the heartless executive who destroyed people\'s livelihoods.',
       context: 'Equity Bank: 86% → 98% digital target = massive branch reduction implied. Cost-to-income ratio improvements via digitalization.',
-      whyUnstated: 'Compassion fatigue is real but can\'t be admitted. "Shareholder value" sounds better than "I feel guilty about layoffs".'
+      whyUnstated: 'Compassion fatigue is real but can\'t be admitted. "Shareholder value" sounds better than "I feel guilty about layoffs".',
+      whiteSpace: [
+        'Staff Transition Programs – Retraining packages that move branch staff to digital roles, agent network management, or customer service. Show compassion through action, not rhetoric.',
+        'Public Repositioning Narratives – Communications emphasizing "evolution not elimination": "We\'re not closing branches, we\'re opening 500 agent locations." Frame transformation as expansion.',
+        'Community Investment Storytelling – Highlight how savings from branch closures fund rural agent networks, mobile banking access. Turn cost-cutting into financial inclusion story.',
+        'Employee Ownership of Digital – Give displaced staff equity/profit-sharing in new digital channels they helped build. Turn victims into beneficiaries.',
+        'Gradual Transition Timelines – 3-5 year phased approach with generous severance, early retirement packages. Demonstrate humanity through patience, not abruptness.',
+        'Third-Party Transition Services – Partner with HR firms to place displaced staff at other banks. Executive reputation protected: "We took care of our people even as we transformed."'
+      ]
     },
     {
       id: 's3',
@@ -294,7 +373,15 @@ const JTBDIntelligenceDashboard = () => {
       title: 'Maintain authority over my team when they know technology better than I do',
       statement: 'Retain respect and control as a manager when my team members have skills I\'ll never master.',
       context: 'Generational technology skill gaps. Young technical staff vs. older management. Digital transformation requires skills management doesn\'t have.',
-      whyUnstated: 'Authority struggles are politically sensitive. Framed as "leadership" vs. "technical gaps".'
+      whyUnstated: 'Authority struggles are politically sensitive. Framed as "leadership" vs. "technical gaps".',
+      whiteSpace: [
+        'Leadership Framework Training – "Managing Technical Teams Without Being Technical" programs. Legitimize non-technical management through strategic leadership focus.',
+        'Reverse Mentoring Programs – Formalize junior staff teaching seniors as "mentoring," not subordinates correcting bosses. Reframe knowledge transfer as mutual development.',
+        'Decision Framework Tools – Give managers structured evaluation criteria: "Rate vendors on these 8 factors." Enable good decisions without deep technical knowledge.',
+        'Technical Translator Roles – Create "technical liaison" positions that explain tech to managers privately. Managers make informed decisions without exposing knowledge gaps to team.',
+        'Value Repositioning – Training emphasizing "Your job isn\'t to know the tech, it\'s to manage outcomes." Shift authority source from technical expertise to business judgment.',
+        'Executive Coaching – Private coaching for managers struggling with authority: "How to lead when your team is smarter than you." Normalize the challenge, provide strategies.'
+      ]
     },
     {
       id: 's4',
@@ -302,7 +389,15 @@ const JTBDIntelligenceDashboard = () => {
       title: 'Be perceived as responsible fiduciary (not asleep at the wheel) if bank fails',
       statement: 'Protect my reputation and legal standing if this bank becomes the next failure case study.',
       context: 'Investrust Bank Zambia closure (2024). Multiple mentions of regulatory penalties, failed projects. Board liability is real in banking.',
-      whyUnstated: 'Board members won\'t admit they\'re primarily self-interested. Fiduciary duty sounds better than "CYA".'
+      whyUnstated: 'Board members won\'t admit they\'re primarily self-interested. Fiduciary duty sounds better than "CYA".',
+      whiteSpace: [
+        'Board Documentation Services – Automated governance: decision logs, risk acknowledgments, dissenting opinions recorded. Create audit trail proving "I asked hard questions."',
+        'Third-Party Risk Validation – Independent tech assessments that board can commission: "External experts validated this decision." Transfer accountability to credible third parties.',
+        'Benchmark Governance Reports – "Industry Standard Decision Framework" showing board followed best practices. Safety in numbers: "97% of boards approved similar tech this way."',
+        'Board Education Programs – "Technology Risk for Non-Technical Directors" certifications. Give board members credentials proving they took governance seriously.',
+        'Liability Insurance Packages – D&O insurance specifically covering technology project failures. Financial protection reduces personal risk anxiety.',
+        'Exit Documentation Protocols – For dissenting board members: formal process to document objections before project approval. Create paper trail separating them from failures.'
+      ]
     }
   ];
 
@@ -684,10 +779,22 @@ const JTBDIntelligenceDashboard = () => {
                           <div className="text-gray-700 text-sm">{job.context}</div>
                         </div>
 
-                        <div className="bg-pink-50 border border-pink-200 rounded p-3">
-                          <div className="text-sm font-semibold text-pink-900 mb-1">Why Unstated in Research</div>
-                          <div className="text-pink-800 text-sm">{job.whyUnstated}</div>
-                        </div>
+                        {job.whiteSpace && job.whiteSpace.length > 0 && (
+                          <div className="bg-green-50 border border-green-200 rounded p-4">
+                            <div className="text-sm font-semibold text-green-900 mb-3 flex items-center gap-2">
+                              <Lightbulb className="w-4 h-4" />
+                              White Space Opportunities
+                            </div>
+                            <ul className="space-y-2">
+                              {job.whiteSpace.map((opportunity, idx) => (
+                                <li key={idx} className="text-green-800 text-sm flex gap-2">
+                                  <span className="text-green-600 font-bold flex-shrink-0">•</span>
+                                  <span>{opportunity}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
                       </div>
                     )}
                   </div>
@@ -733,10 +840,22 @@ const JTBDIntelligenceDashboard = () => {
                           <div className="text-gray-700 text-sm">{job.context}</div>
                         </div>
 
-                        <div className="bg-indigo-50 border border-indigo-200 rounded p-3">
-                          <div className="text-sm font-semibold text-indigo-900 mb-1">Why Unstated in Research</div>
-                          <div className="text-indigo-800 text-sm">{job.whyUnstated}</div>
-                        </div>
+                        {job.whiteSpace && job.whiteSpace.length > 0 && (
+                          <div className="bg-green-50 border border-green-200 rounded p-4">
+                            <div className="text-sm font-semibold text-green-900 mb-3 flex items-center gap-2">
+                              <Lightbulb className="w-4 h-4" />
+                              White Space Opportunities
+                            </div>
+                            <ul className="space-y-2">
+                              {job.whiteSpace.map((opportunity, idx) => (
+                                <li key={idx} className="text-green-800 text-sm flex gap-2">
+                                  <span className="text-green-600 font-bold flex-shrink-0">•</span>
+                                  <span>{opportunity}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
                       </div>
                     )}
                   </div>
