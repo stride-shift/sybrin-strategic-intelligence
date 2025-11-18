@@ -1083,30 +1083,30 @@ const JTBDIntelligenceDashboard = () => {
         {activeTab === 'higher' && (
           <div className="space-y-8">
             {/* Context Box */}
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+            <div className="bg-sybrin-blue-50 border border-sybrin-blue-200 rounded-lg p-6">
               <div className="flex items-start gap-3">
-                <Info className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+                <Info className="w-6 h-6 text-sybrin-blue-600 flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-lg font-bold text-green-900 mb-3">Job Abstraction Levels</h3>
-                  <p className="text-green-800 mb-4">
+                  <h3 className="text-lg font-bold text-sybrin-blue-900 mb-3">Job Abstraction Levels</h3>
+                  <p className="text-sybrin-blue-800 mb-4">
                     Jobs exist at different levels of abstraction. <strong>Higher abstraction reveals larger opportunities</strong> but takes longer to execute.
                     The same customer evidence reveals different white space depending on how you frame the job.
                   </p>
                   <div className="grid md:grid-cols-3 gap-4 text-sm">
                     <div className="bg-white rounded p-3">
-                      <div className="font-semibold text-green-900 mb-1">Operational Level</div>
-                      <div className="text-green-700 mb-2">Example: "Manage 6M+ digital users with same capacity as 1M users"</div>
-                      <div className="text-xs text-green-600">White Space: AI fraud platform, chatbots ($10-50M TAM)</div>
+                      <div className="font-semibold text-sybrin-blue-900 mb-1">Operational Level</div>
+                      <div className="text-sybrin-blue-700 mb-2">Example: "Manage 6M+ digital users with same capacity as 1M users"</div>
+                      <div className="text-xs text-sybrin-blue-600">White Space: AI fraud platform, chatbots ($10-50M TAM)</div>
                     </div>
                     <div className="bg-white rounded p-3">
-                      <div className="font-semibold text-green-900 mb-1">Fundamental Level</div>
-                      <div className="text-green-700 mb-2">Example: "Achieve operational leverage as we scale"</div>
-                      <div className="text-xs text-green-600">White Space: Customer profitability routing ($100M-$1B TAM)</div>
+                      <div className="font-semibold text-sybrin-blue-900 mb-1">Fundamental Level</div>
+                      <div className="text-sybrin-blue-700 mb-2">Example: "Achieve operational leverage as we scale"</div>
+                      <div className="text-xs text-sybrin-blue-600">White Space: Customer profitability routing ($100M-$1B TAM)</div>
                     </div>
                     <div className="bg-white rounded p-3">
-                      <div className="font-semibold text-green-900 mb-1">Meta Level</div>
-                      <div className="text-green-700 mb-2">Example: "Turn incumbent constraints into competitive advantages"</div>
-                      <div className="text-xs text-green-600">White Space: Trust infrastructure for fintechs ($1-10B TAM)</div>
+                      <div className="font-semibold text-sybrin-blue-900 mb-1">Meta Level</div>
+                      <div className="text-sybrin-blue-700 mb-2">Example: "Turn incumbent constraints into competitive advantages"</div>
+                      <div className="text-xs text-sybrin-blue-600">White Space: Trust infrastructure for fintechs ($1-10B TAM)</div>
                     </div>
                   </div>
                 </div>
