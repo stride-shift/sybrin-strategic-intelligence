@@ -248,7 +248,7 @@ const ResearchNotes = () => {
                 <div className="px-5 pb-3">
                   <button
                     onClick={() => toggleExpand(note.id)}
-                    className="text-sm text-purple-600 hover:text-purple-700 font-medium"
+                    className="text-sm text-sybrin-blue-600 hover:text-sybrin-blue-700 font-medium"
                   >
                     {expandedNoteId === note.id ? 'Show less' : 'Show more'}
                   </button>
