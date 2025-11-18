@@ -75,7 +75,7 @@ const Layout = ({ children }) => {
           path: '/research-chat',
           name: 'Chat Assistant',
           icon: MessageSquare,
-          description: 'AI-powered research Q&A (GPT-5.1)'
+          description: 'AI-powered research Q&A'
         },
         {
           path: '/research-notes',

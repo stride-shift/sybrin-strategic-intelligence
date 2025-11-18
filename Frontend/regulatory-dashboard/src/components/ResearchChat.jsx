@@ -222,12 +222,12 @@ const ResearchChat = () => {
       <div className="bg-white border-b border-gray-200 px-6 py-4 shadow-sm">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="bg-gradient-to-br from-purple-500 to-blue-600 p-2 rounded-lg">
+            <div className="p-2 rounded-lg" style={{ backgroundColor: '#002664' }}>
               <Sparkles className="w-6 h-6 text-white" />
             </div>
             <div>
               <h1 className="text-xl font-bold text-gray-900">Research Assistant</h1>
-              <p className="text-sm text-gray-600">Powered by GPT-5.1 • 248 documents indexed</p>
+              <p className="text-sm text-gray-600">274 research documents indexed • Including NPO & Donor intelligence</p>
             </div>
           </div>
           {messages.length > 0 && (
@@ -246,15 +246,15 @@ const ResearchChat = () => {
         <div className="max-w-4xl mx-auto px-6 py-8">
           {messages.length === 0 ? (
             <div className="text-center py-12">
-              <div className="bg-gradient-to-br from-purple-100 to-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Bot className="w-10 h-10 text-purple-600" />
+              <div className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: '#E6EEF7' }}>
+                <Bot className="w-10 h-10" style={{ color: '#002664' }} />
               </div>
               <h2 className="text-2xl font-bold text-gray-900 mb-3">
                 Ask me anything about Sybrin's research
               </h2>
               <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-                I have access to 248 research documents covering market intelligence, competitive analysis,
-                regulatory landscapes, and strategic insights across African and Southeast Asian markets.
+                I have access to 274 research documents covering market intelligence, competitive analysis,
+                regulatory landscapes, NPO/donor opportunities, and strategic insights across African and Southeast Asian markets.
               </p>
 
               {/* Example Questions */}
@@ -263,9 +263,9 @@ const ResearchChat = () => {
                   <button
                     key={idx}
                     onClick={() => handleExampleClick(question)}
-                    className="p-4 bg-white border border-gray-200 rounded-lg text-left hover:border-purple-300 hover:bg-purple-50 transition-all group"
+                    className="p-4 bg-white border border-gray-200 rounded-lg text-left hover:border-blue-300 hover:bg-blue-50 transition-all group"
                   >
-                    <p className="text-sm text-gray-700 group-hover:text-purple-700">{question}</p>
+                    <p className="text-sm text-gray-700 group-hover:text-blue-700">{question}</p>
                   </button>
                 ))}
               </div>
@@ -284,7 +284,7 @@ const ResearchChat = () => {
                   className={`flex gap-4 ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
                   {message.type === 'assistant' && (
-                    <div className="bg-gradient-to-br from-purple-500 to-blue-600 p-2 rounded-lg h-10 w-10 flex-shrink-0">
+                    <div className="p-2 rounded-lg h-10 w-10 flex-shrink-0" style={{ backgroundColor: '#002664' }}>
                       <Bot className="w-6 h-6 text-white" />
                     </div>
                   )}
@@ -293,11 +293,12 @@ const ResearchChat = () => {
                     <div
                       className={`rounded-lg p-4 ${
                         message.type === 'user'
-                          ? 'bg-purple-600 text-white max-w-xl'
+                          ? 'text-white max-w-xl'
                           : message.type === 'error'
                           ? 'bg-red-50 border border-red-200 text-red-800'
                           : 'bg-white border border-gray-200'
                       }`}
+                      style={message.type === 'user' ? { backgroundColor: '#002664' } : {}}
                     >
                       {message.type === 'assistant' ? (
                         <div className="prose prose-sm max-w-none">
@@ -346,8 +347,9 @@ const ResearchChat = () => {
                                 className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                                   savedNoteIds.has(message.id)
                                     ? 'bg-green-50 text-green-700 cursor-default'
-                                    : 'bg-purple-50 text-purple-700 hover:bg-purple-100'
+                                    : 'text-white hover:opacity-80'
                                 }`}
+                                style={!savedNoteIds.has(message.id) ? { backgroundColor: '#002664' } : {}}
                               >
                                 {savedNoteIds.has(message.id) ? (
                                   <>
@@ -371,8 +373,8 @@ const ResearchChat = () => {
                   </div>
 
                   {message.type === 'user' && (
-                    <div className="bg-purple-200 p-2 rounded-lg h-10 w-10 flex-shrink-0">
-                      <User className="w-6 h-6 text-purple-700" />
+                    <div className="p-2 rounded-lg h-10 w-10 flex-shrink-0" style={{ backgroundColor: '#E6EEF7' }}>
+                      <User className="w-6 h-6" style={{ color: '#002664' }} />
                     </div>
                   )}
                 </div>
@@ -382,7 +384,7 @@ const ResearchChat = () => {
               {/* Loading indicator */}
               {isLoading && (
                 <div className="flex gap-4">
-                  <div className="bg-gradient-to-br from-purple-500 to-blue-600 p-2 rounded-lg h-10 w-10 flex-shrink-0">
+                  <div className="p-2 rounded-lg h-10 w-10 flex-shrink-0" style={{ backgroundColor: '#002664' }}>
                     <Bot className="w-6 h-6 text-white" />
                   </div>
                   <div className="bg-white border border-gray-200 rounded-lg p-4">
@@ -410,9 +412,9 @@ const ResearchChat = () => {
               onChange={(e) => setInputValue(e.target.value)}
               onKeyPress={handleKeyPress}
               placeholder="Ask a question about the research..."
-              className="flex-1 resize-none rounded-lg border border-gray-300 px-4 py-3 text-sm focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              className="flex-1 resize-none rounded-lg border border-gray-300 px-4 py-3 text-sm focus:ring-2 focus:border-transparent"
               rows={1}
-              style={{ minHeight: '44px', maxHeight: '120px' }}
+              style={{ minHeight: '44px', maxHeight: '120px', '--tw-ring-color': '#002664' }}
               onInput={(e) => {
                 e.target.style.height = 'auto';
                 e.target.style.height = e.target.scrollHeight + 'px';
@@ -422,7 +424,20 @@ const ResearchChat = () => {
             <button
               onClick={sendMessage}
               disabled={!inputValue.trim() || isLoading}
-              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 disabled:from-gray-300 disabled:to-gray-400 text-white rounded-lg px-6 py-3 font-medium transition-all disabled:cursor-not-allowed flex items-center gap-2"
+              className="text-white rounded-lg px-6 py-3 font-medium transition-all disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center gap-2"
+              style={{
+                backgroundColor: !inputValue.trim() || isLoading ? '#9CA3AF' : '#002664'
+              }}
+              onMouseEnter={(e) => {
+                if (inputValue.trim() && !isLoading) {
+                  e.target.style.backgroundColor = '#001a42';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (inputValue.trim() && !isLoading) {
+                  e.target.style.backgroundColor = '#002664';
+                }
+              }}
             >
               {isLoading ? (
                 <Loader2 className="w-5 h-5 animate-spin" />
@@ -452,7 +467,8 @@ const ResearchChat = () => {
                 value={noteName}
                 onChange={(e) => setNoteName(e.target.value)}
                 placeholder="e.g., Kenya Market Entry Barriers"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent"
+                style={{ '--tw-ring-color': '#002664' }}
                 autoFocus
                 onKeyPress={(e) => {
                   if (e.key === 'Enter' && noteName.trim()) {
@@ -492,7 +508,20 @@ const ResearchChat = () => {
               <button
                 onClick={saveNote}
                 disabled={!noteName.trim() || savingNoteId !== null}
-                className="px-4 py-2 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-300 text-white rounded-lg font-medium transition-colors disabled:cursor-not-allowed flex items-center gap-2"
+                className="px-4 py-2 text-white rounded-lg font-medium transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed flex items-center gap-2"
+                style={{
+                  backgroundColor: !noteName.trim() || savingNoteId !== null ? '#9CA3AF' : '#002664'
+                }}
+                onMouseEnter={(e) => {
+                  if (noteName.trim() && savingNoteId === null) {
+                    e.target.style.backgroundColor = '#001a42';
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (noteName.trim() && savingNoteId === null) {
+                    e.target.style.backgroundColor = '#002664';
+                  }
+                }}
               >
                 {savingNoteId ? (
                   <>
